@@ -23,11 +23,16 @@ nav {
   backdrop-filter: blur(10px);
   box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.2);
 }
-nav h2 {
+nav #backToMain {
   color: white;
   font-family: Readex Pro, Verdana, sans-serif;
   font-weight: 700;
   font-size: 1.65rem;
+  text-decoration: none;
+  transition: color 0.25s ease-out;
+}
+nav #backToMain:hover {
+  color: #3B2CDD;
 }
 nav .navLink {
   display: inline-block;

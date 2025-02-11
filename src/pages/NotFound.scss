@@ -44,3 +44,14 @@ $textWhite: white;
     }
   }
 }
+
+@media (max-width: 540px) {
+  .notFoundContent {
+    h2 {
+      font-size: 4.2rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -42,4 +42,13 @@
   transform: scale(1.06) rotate(-1deg);
 }
 
+@media (max-width: 540px) {
+  .notFoundContent h2 {
+    font-size: 4.2rem;
+  }
+  .notFoundContent p {
+    font-size: 1.6rem;
+  }
+}
+
 /*# sourceMappingURL=NotFound.css.map */

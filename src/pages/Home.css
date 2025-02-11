@@ -62,4 +62,41 @@
   border: #3B2CDD 2px solid;
 }
 
+@media (max-width: 800px) {
+  #hero .heroContent {
+    width: 80%;
+  }
+  #hero .heroContent h1 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 520px) {
+  #hero .heroContent {
+    width: 90%;
+  }
+  #hero .heroContent h1 {
+    font-size: 4rem;
+  }
+  #hero .heroContent h3 {
+    font-size: 1.5rem;
+  }
+  #hero .heroContent p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 385px) {
+  #hero .heroContent {
+    width: 92%;
+  }
+  #hero .heroContent h1 {
+    font-size: 3.2rem;
+  }
+  #hero .heroContent h3 {
+    font-size: 1.4rem;
+  }
+  #hero .heroContent p {
+    font-size: 1.2rem;
+  }
+}
+
 /*# sourceMappingURL=Home.css.map */

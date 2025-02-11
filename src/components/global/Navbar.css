@@ -8,7 +8,7 @@
 nav {
   position: fixed;
   width: 90%;
-  height: 55px;
+  min-height: 55px;
   top: 18px;
   left: 50%;
   transform: translateX(-50%);
@@ -23,7 +23,11 @@ nav {
   backdrop-filter: blur(10px);
   box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.2);
 }
-nav #backToMain {
+nav #logoAndIco {
+  display: flex;
+  justify-content: space-between;
+}
+nav #logoAndIco #backToMain {
   color: white;
   font-family: Readex Pro, Verdana, sans-serif;
   font-weight: 700;
@@ -31,8 +35,14 @@ nav #backToMain {
   text-decoration: none;
   transition: color 0.25s ease-out;
 }
-nav #backToMain:hover {
+nav #logoAndIco #backToMain:hover {
   color: #3B2CDD;
+}
+nav #logoAndIco .menuBtn {
+  display: none;
+  color: white;
+  font-size: 1.7rem;
+  transform: translateY(5px);
 }
 nav .navLink {
   display: inline-block;
@@ -46,6 +56,36 @@ nav .navLink {
 }
 nav .navLink:hover {
   transform: scale(1.06) rotate(-1deg);
+}
+
+@media (max-width: 640px) {
+  nav {
+    flex-direction: column;
+    align-items: start;
+  }
+  nav #logoAndIco {
+    width: 100%;
+    margin: 10px auto;
+  }
+  nav #logoAndIco .menuBtn {
+    display: inline-block;
+  }
+  nav .menu.close {
+    display: none;
+  }
+  nav .menu.close .navLink {
+    padding: 8px 0;
+  }
+  nav .menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  nav .menu.open .navLink {
+    padding: 8px 0;
+    font-size: 1.2rem;
+  }
 }
 
 /*# sourceMappingURL=Navbar.css.map */

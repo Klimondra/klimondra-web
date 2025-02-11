@@ -9,7 +9,7 @@ $navBg: rgba(255, 255, 255, 0.07);
 nav {
   position: fixed;
   width: 90%;
-  height: 55px;
+  min-height: 55px;
   top: 18px;
   left: 50%;
   transform: translateX(-50%);
@@ -24,16 +24,28 @@ nav {
   backdrop-filter: blur(10px);
   box-shadow: 0px 0px 2px 0px rgba(255,255,255,0.2);
 
-  #backToMain{
-    color: $textWhite;
-    font-family: Readex Pro, Verdana, sans-serif;
-    font-weight: 700;
-    font-size: 1.65rem;
-    text-decoration: none;
-    transition: color 0.25s ease-out;
+  #logoAndIco {
+    display: flex;
+    justify-content: space-between;
 
-    &:hover {
-      color: $blue;
+    #backToMain{
+      color: $textWhite;
+      font-family: Readex Pro, Verdana, sans-serif;
+      font-weight: 700;
+      font-size: 1.65rem;
+      text-decoration: none;
+      transition: color 0.25s ease-out;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    .menuBtn {
+      display: none;
+      color: $textWhite;
+      font-size: 1.7rem;
+      transform: translateY(5px);
     }
   }
 
@@ -49,6 +61,42 @@ nav {
 
     &:hover {
       transform: scale(1.06) rotate(-1deg);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  nav {
+    flex-direction: column;
+    align-items: start;
+
+    #logoAndIco {
+      width: 100%;
+      margin: 10px auto;
+
+      .menuBtn {
+        display: inline-block;
+      }
+    }
+
+    .menu.close {
+      display: none;
+
+      .navLink {
+        padding: 8px 0;
+      }
+    }
+
+    .menu.open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .navLink {
+        padding: 8px 0;
+        font-size: 1.2rem;
+      }
     }
   }
 }

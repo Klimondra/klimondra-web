@@ -14,16 +14,16 @@
 }
 .heroBg .colorDot {
   position: absolute;
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
   transform: translateX(50%) translateY(-50%);
   filter: blur(25px);
 }
 .heroBg #colorDot1 {
-  background-image: radial-gradient(closest-side, rgba(251, 207, 35, 0.17), rgba(0, 0, 0, 0));
+  background-image: radial-gradient(closest-side, rgba(251, 207, 35, 0.2), rgba(0, 0, 0, 0));
 }
 .heroBg #colorDot2 {
-  background-image: radial-gradient(closest-side, rgba(237, 107, 90, 0.17), rgba(0, 0, 0, 0));
+  background-image: radial-gradient(closest-side, rgba(237, 107, 90, 0.2), rgba(0, 0, 0, 0));
 }
 
 /*# sourceMappingURL=animatedDotBg.css.map */

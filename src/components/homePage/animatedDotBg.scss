@@ -1,7 +1,7 @@
 @import "./../../index";
 // ===== VARIABLES ===== //
-$dotColor1: rgba(251, 207, 35, 0.17);
-$dotColor2: rgba(237, 107, 90, 0.17);
+$dotColor1: rgba(251, 207, 35, 0.2);
+$dotColor2: rgba(237, 107, 90, 0.2);
 
 // ===== STYLY ===== //
 
@@ -17,8 +17,8 @@ $dotColor2: rgba(237, 107, 90, 0.17);
     position: absolute;
     //top: 25%;
     //right: 35%;
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     transform: translateX(50%) translateY(-50%);
     filter: blur(25px);
   }

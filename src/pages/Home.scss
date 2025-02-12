@@ -45,7 +45,8 @@ $textWhite: white;
       display: flex;
       flex-direction: row;
 
-      a  {
+      button  {
+        outline: none;
         padding: 10px 15px;
         color: white;
         text-decoration: none;
@@ -61,11 +62,13 @@ $textWhite: white;
         }
       }
 
-      a:nth-of-type(1) {
+      button:nth-of-type(1) {
         background-color: $blue;
+        border: none;
       }
 
-      a:nth-of-type(2) {
+      button:nth-of-type(2) {
+        background: transparent;
         border: $blue 2px solid;
       }
     }

@@ -24,6 +24,11 @@ const Home = () => {
     const countInView = useInView(ref, { once: true })
     const randomNum = Math.floor(Math.random()*999)
 
+    const learnMoreSect = useRef(null);
+    const learnMoreScroll = () => {
+        learnMoreSect.current.scrollIntoView({ behavior: "smooth" });
+    }
+
     return (
         <>
             <section id="hero">
@@ -37,12 +42,12 @@ const Home = () => {
                         "Dělám grafiku", 750,
                         "Dělám grafiku (občas)", 2250 ]} wrapper="span" speed={32}  repeat={Infinity}/></p>
                     <div className="heroCtaBtns">
-                        <a href="#">Zjistit více</a>
-                        <a href="#">Kontakt</a>
+                        <button onClick={learnMoreScroll}>Zjistit více</button>
+                        <button>Kontakt</button>
                     </div>
                 </div>
             </section>
-            <section id="about">
+            <section id="about" ref={learnMoreSect}>
                 <div className="aboutContent">
                     <div className="infoBlock aboutBlock">
                         <h2>Kdo jsem?</h2>

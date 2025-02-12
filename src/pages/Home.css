@@ -189,6 +189,7 @@
 }
 @media (max-width: 550px) {
   #about .aboutContent {
+    width: 80%;
     display: flex;
     flex-direction: column;
   }
@@ -203,6 +204,9 @@
   }
 }
 @media (max-width: 400px) {
+  #about .aboutContent {
+    width: 94%;
+  }
   #about .infoBlock h2, #about .politicsBlock h2, #about .technologiesBlock .techBlockText h2 {
     font-size: 1.6rem;
   }

@@ -9,9 +9,9 @@ $navBg: rgba(255, 255, 255, 0.07);
 nav {
   position: fixed;
   width: 90%;
-  min-height: 55px;
   top: 18px;
   left: 50%;
+  height: 55px;
   transform: translateX(-50%);
   z-index: 10;
   display: flex;
@@ -23,6 +23,9 @@ nav {
   background: $navBg;
   backdrop-filter: blur(10px);
   box-shadow: 0px 0px 2px 0px rgba(255,255,255,0.2);
+  transition: max-height 0.5s ease-out;  // Přesunuto sem
+
+
 
   #logoAndIco {
     display: flex;
@@ -67,8 +70,19 @@ nav {
 
 @media (max-width: 640px) {
   nav {
+    height: auto;
     flex-direction: column;
     align-items: start;
+
+    &.fixHeight {
+      max-height: 55px;
+      overflow: hidden;
+    }
+
+    &.freeHeight {
+      max-height: 50vh;  // Sníženo z 100vh pro plynulejší animaci
+      overflow: hidden;
+    }
 
     #logoAndIco {
       width: 100%;
@@ -80,7 +94,15 @@ nav {
     }
 
     .menu.close {
-      display: none;
+      display: flex;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      transition: all 0.5s ease-out;
+
 
       .navLink {
         padding: 8px 0;
@@ -88,10 +110,14 @@ nav {
     }
 
     .menu.open {
+      transition: all 0.5s ease-out;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
+      min-height: 120px;
+      opacity: 1;
+      overflow: hidden;
 
       .navLink {
         padding: 8px 0;

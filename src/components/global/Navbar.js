@@ -8,7 +8,7 @@ const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(false)
 
     return (
-        <nav>
+        <nav className={openMenu ? "freeHeight" : "fixHeight"}>
             <div id="logoAndIco">
                 <Link to="/" id="backToMain">Klimondra</Link>
                 <GiHamburgerMenu className="menuBtn" onClick={() => {setOpenMenu(!openMenu)}}/>

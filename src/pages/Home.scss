@@ -169,14 +169,32 @@ $textWhite: white;
       }
     }
 
-    .politicsBlock {
+    .numBlock {
       grid-area: 1 / 3 / 3 / 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-      h2 {
+      h4 {
         color: $textWhite;
         font-family: Readex Pro, Verdana, sans-serif;
-        font-size: 2.3rem;
+        font-size: 3rem;
         margin-bottom: 15px;
+      }
+
+      h3 {
+        color: $textWhite;
+        font-family: Readex Pro, Verdana, sans-serif;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      p {
+        color: $textWhite ;
+        font-family: Readex Pro, Verdana, sans-serif;
+        font-size: 1.2rem;
+        font-weight: 300;
       }
 
     }
@@ -245,7 +263,7 @@ $textWhite: white;
         padding: 25px;
       }
 
-      .infoBlock h2, .politicsBlock h2, .technologiesBlock .techBlockText h2 {
+      .infoBlock h2, .technologiesBlock .techBlockText h2 {
         font-size: 2rem;
       }
 
@@ -263,7 +281,7 @@ $textWhite: white;
     .aboutContent {
       width: 94%;
     }
-    .infoBlock h2, .politicsBlock h2, .technologiesBlock .techBlockText h2 {
+    .infoBlock h2, .technologiesBlock .techBlockText h2 {
       font-size: 1.6rem;
     }
   }

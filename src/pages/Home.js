@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import "./Home.css";
 import "./techIcoColors.css"
 import AnimatedDotBg from "../components/homePage/animatedDotBg";
 import { TypeAnimation } from 'react-type-animation';
+import CountUp from "react-countup";
 
 import {
     SiAdobephotoshop,
@@ -12,12 +13,16 @@ import {
     SiWordpress
 } from "react-icons/si";
 import {BsGit, BsGithub} from "react-icons/bs";
-import {IoLogoHtml5, IoLogoNodejs, IoLogoReact, IoLogoSass} from "react-icons/io5";
+import {IoLogoNodejs, IoLogoReact, IoLogoSass} from "react-icons/io5";
 import {DiJsBadge} from "react-icons/di";
 import {TbBrandCSharp} from "react-icons/tb";
+import {useInView} from "framer-motion";
 
 
 const Home = () => {
+    const ref = useRef(null)
+    const countInView = useInView(ref, { once: true })
+    const randomNum = Math.floor(Math.random()*999)
 
     return (
         <>
@@ -43,8 +48,12 @@ const Home = () => {
                         <h2>Kdo jsem?</h2>
                         <p>Jsem student, který studuje programování a IT. Tenhle obor mě začal zajímat, když mi bylo asi 10 let. Tento web vznikl vlastně jenom proto, že jsem se nudil. Možná tu do budoucna přibyde více funkcí a zajímavostí. Kromě programování a technologií mě zajímá také politika, jak v ČR, tak v zahraničí. Proto také dávám na Instagram poměrně často různé politické memes a zprávy.</p>
                     </div>
-                    <div className="politicsBlock aboutBlock">
-                        <h2>Obsah bude přidán brzy...</h2>
+                    <div className="numBlock aboutBlock">
+                        <h4 ref={ref}>
+                            {countInView && <CountUp start={0} end={randomNum} duration={2} />}
+                        </h4>
+                        <h3>je náhodné číslo</h3>
+                        <p>a nic neznamená</p>
                     </div>
                     <div className="technologiesBlock aboutBlock">
                         <div className="techBlockText">

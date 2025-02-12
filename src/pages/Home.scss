@@ -123,3 +123,42 @@ $textWhite: white;
   }
 }
 
+// ===== ABOUT ===== //
+
+#about {
+  height: 100vh;
+  background-color: lighten($bgdark, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .aboutContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    width: 70%;
+    height: 70%;
+
+    .aboutBlock {
+      background-color: lighten($bgdark, 20%);
+      border-radius: 20px;
+      box-shadow: 0 0 5px 0 lighten($bgdark, 15%);
+      }
+
+    .infoBlock {
+      grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .politicsBlock {
+      grid-area: 1 / 3 / 3 / 4;
+    }
+
+    .technologiesBlock {
+      grid-area: 2 / 1 / 3 / 3;
+    }
+
+  }
+}
+

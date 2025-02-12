@@ -1,9 +1,10 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import "./Home.css";
 import "./techIcoColors.css"
 import AnimatedDotBg from "../components/homePage/animatedDotBg";
 import { TypeAnimation } from 'react-type-animation';
 import CountUp from "react-countup";
+import {useLocation} from "react-router-dom";
 
 import {
     SiAdobephotoshop,
@@ -28,6 +29,20 @@ const Home = () => {
     const learnMoreScroll = () => {
         learnMoreSect.current.scrollIntoView({ behavior: "smooth" });
     }
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            // Přidáme malé zpoždění, aby se zajistilo, že DOM je plně načtený
+            setTimeout(() => {
+                const element = document.getElementById(location.hash.slice(1));
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    }, [location]);
 
     return (
         <>

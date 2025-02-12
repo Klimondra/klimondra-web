@@ -99,7 +99,7 @@
   }
 }
 #about {
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgb(34.375, 34.375, 40.625);
   display: flex;
   justify-content: center;
@@ -112,6 +112,7 @@
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   width: 70%;
+  margin: 30px;
 }
 #about .aboutContent .aboutBlock {
   background-color: rgb(57.75, 57.75, 68.25);
@@ -178,6 +179,33 @@
 }
 #about .aboutContent .technologiesBlock .techIcons .Ico:hover {
   transform: translateY(-5px) scale(1.25);
+}
+
+@media (max-width: 1445px) {
+  #about .aboutContent {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 550px) {
+  #about .aboutContent {
+    display: flex;
+    flex-direction: column;
+  }
+  #about .aboutContent .aboutBlock {
+    padding: 25px;
+  }
+  #about .aboutContent .infoBlock h2, #about .aboutContent .politicsBlock h2, #about .aboutContent .technologiesBlock .techBlockText h2 {
+    font-size: 2rem;
+  }
+  #about .aboutContent .infoBlock p {
+    font-size: 1.07rem;
+  }
+}
+@media (max-width: 400px) {
+  #about .infoBlock h2, #about .politicsBlock h2, #about .technologiesBlock .techBlockText h2 {
+    font-size: 1.6rem;
+  }
 }
 
 /*# sourceMappingURL=Home.css.map */

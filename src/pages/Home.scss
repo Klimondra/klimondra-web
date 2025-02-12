@@ -126,7 +126,7 @@ $textWhite: white;
 // ===== ABOUT ===== //
 
 #about {
-  height: 100vh;
+  min-height: 100vh;
   background-color: lighten($bgdark, 10%);
   display: flex;
   justify-content: center;
@@ -139,6 +139,7 @@ $textWhite: white;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     width: 70%;
+    margin: 30px;
     //height: 70%;
 
     .aboutBlock {
@@ -224,3 +225,42 @@ $textWhite: white;
   }
 }
 
+@media (max-width: 1445px) {
+  #about {
+    .aboutContent {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  #about {
+    .aboutContent {
+      display: flex;
+      flex-direction: column;
+
+      .aboutBlock {
+        padding: 25px;
+      }
+
+      .infoBlock h2, .politicsBlock h2, .technologiesBlock .techBlockText h2 {
+        font-size: 2rem;
+      }
+
+      .infoBlock {
+        p {
+          font-size: 1.07rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px ) {
+  #about {
+    .infoBlock h2, .politicsBlock h2, .technologiesBlock .techBlockText h2 {
+      font-size: 1.6rem;
+    }
+  }
+}

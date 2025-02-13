@@ -289,3 +289,19 @@ $textWhite: white;
     }
   }
 }
+
+// ===== GITHUB GRAPH ===== //
+
+#githubActivityGraph {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lighten($bgdark, 20%);
+
+  .react-github-activity-calendar-container {
+    margin: 20px;
+    padding: 10px;
+    font-family: Readex Pro, Verdana, sans-serif;
+  }
+}

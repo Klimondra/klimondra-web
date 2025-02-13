@@ -108,8 +108,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="githubActivityGraph">
                 <Graph
+                    className="githubGraph "
                     userName={githubUserName}
                     githubApiKey={githubApiKey}
                     enableAnimations={false} // optional prop to disable animations

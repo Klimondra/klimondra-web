@@ -230,5 +230,17 @@
     font-size: 1.6rem;
   }
 }
+#githubActivityGraph {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(57.75, 57.75, 68.25);
+}
+#githubActivityGraph .react-github-activity-calendar-container {
+  margin: 20px;
+  padding: 10px;
+  font-family: Readex Pro, Verdana, sans-serif;
+}
 
 /*# sourceMappingURL=Home.css.map */

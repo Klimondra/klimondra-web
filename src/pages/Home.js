@@ -4,18 +4,18 @@ import "./techIcoColors.css"
 import AnimatedDotBg from "../components/homePage/animatedDotBg";
 import { TypeAnimation } from 'react-type-animation';
 import CountUp from "react-countup";
-import {useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import { Graph } from "react-github-activity-calendar";
 
 import {
     SiAdobephotoshop,
     SiBlender,
     SiCss3,
-    SiDavinciresolve, SiHtml5, SiUnity,
+    SiDavinciresolve, SiHtml5, SiInstagram, SiUnity,
     SiWordpress
 } from "react-icons/si";
-import {BsGit, BsGithub} from "react-icons/bs";
-import {IoLogoNodejs, IoLogoReact, IoLogoSass} from "react-icons/io5";
+import {BsDiscord, BsGit, BsGithub} from "react-icons/bs";
+import {IoChatboxEllipses, IoLogoNodejs, IoLogoReact, IoLogoSass, IoMailOutline} from "react-icons/io5";
 import {DiJsBadge} from "react-icons/di";
 import {TbBrandCSharp} from "react-icons/tb";
 import {useInView} from "framer-motion";
@@ -115,6 +115,17 @@ const Home = () => {
                     githubApiKey={githubApiKey}
                     enableAnimations={false} // optional prop to disable animations
                 />
+            </section>
+            <section id="contact">
+                <div className="contactContent">
+                    <div className="contactIcons">
+                        <a href="mailto:klimondra@seznam.cz" target="_blank" rel="noreferrer"><IoMailOutline className="contactMail"/></a>
+                        <a href="https://github.com/Klimondra" target="_blank" rel="noreferrer"><BsGithub className="contactGithub"/></a>
+                        <a href="https://discordapp.com/users/821336004643520512" target="_blank" rel="noreferrer"><BsDiscord className="contactDiscord"/></a>
+                        <a href="https://www.instagram.com/klimondra/" target="_blank" rel="noreferrer"><SiInstagram className={"contactInstagram"}/></a>
+                    </div>
+                    <Link to="/kontakt" className="contactBtn"><IoChatboxEllipses/><p>Více kontaktů</p></Link>
+                </div>
             </section>
         </>
     );

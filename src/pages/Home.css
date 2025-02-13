@@ -120,7 +120,7 @@
 #about .aboutContent .aboutBlock {
   background-color: rgb(57.75, 57.75, 68.25);
   border-radius: 20px;
-  box-shadow: 0 0 5px 0 rgb(46.0625, 46.0625, 54.4375);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
   padding: 40px;
 }
 #about .aboutContent .infoBlock {
@@ -231,7 +231,7 @@
   }
 }
 #githubActivityGraph {
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,6 +241,96 @@
   margin: 20px;
   padding: 10px;
   font-family: Readex Pro, Verdana, sans-serif;
+}
+
+#contact {
+  min-height: 30vh;
+  width: 100%;
+  background-color: rgb(34.375, 34.375, 40.625);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .contactContent {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#contact .contactContent .contactIcons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#contact .contactContent .contactIcons a {
+  color: #3B2CDD;
+  font-size: 3rem;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 8px;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: all 0.25s ease-in;
+}
+#contact .contactContent .contactIcons a .contactMail, #contact .contactContent .contactIcons a .contactGithub, #contact .contactContent .contactIcons a .contactDiscord, #contact .contactContent .contactIcons a .contactInstagram {
+  transform: translateY(6px);
+}
+#contact .contactContent .contactIcons a:hover {
+  color: white;
+  background-color: #3B2CDD;
+}
+#contact .contactContent .contactBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 180px;
+  color: white;
+  background-color: #3B2CDD;
+  font-family: Readex Pro, Verdana, sans-serif;
+  font-size: 2.5rem;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 15px;
+  transition: 0.25s ease-in;
+}
+#contact .contactContent .contactBtn p {
+  font-size: 1.2rem;
+  margin-left: 15px;
+}
+#contact .contactContent .contactBtn:hover {
+  color: #3B2CDD;
+  background-color: white;
+}
+
+@media (max-width: 1350px) {
+  #contact .contactContent {
+    width: 65%;
+  }
+}
+@media (max-width: 890px) {
+  #contact .contactContent {
+    width: 90%;
+  }
+}
+@media (max-width: 640px) {
+  #contact .contactContent {
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+  #contact .contactContent .contactBtn {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 444px) {
+  #contact .contactContent .contactIcons a {
+    font-size: 2.5rem;
+  }
+  #contact .contactContent .contactBtn {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=Home.css.map */

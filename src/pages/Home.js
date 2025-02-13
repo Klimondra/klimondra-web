@@ -5,6 +5,7 @@ import AnimatedDotBg from "../components/homePage/animatedDotBg";
 import { TypeAnimation } from 'react-type-animation';
 import CountUp from "react-countup";
 import {useLocation} from "react-router-dom";
+import { Graph } from "react-github-activity-calendar";
 
 import {
     SiAdobephotoshop,
@@ -21,16 +22,23 @@ import {useInView} from "framer-motion";
 
 
 const Home = () => {
+    // Counter
     const ref = useRef(null)
     const countInView = useInView(ref, { once: true })
     const randomNum = Math.floor(Math.random()*999)
 
+    // About scroll
     const learnMoreSect = useRef(null);
     const learnMoreScroll = () => {
         learnMoreSect.current.scrollIntoView({ behavior: "smooth" });
     }
 
+    // Location
     const location = useLocation();
+
+    // Github contributions
+    const githubApiKey = process.env.REACT_APP_GITHUB_API_KEY; // <your-github-api-key>
+    const githubUserName = "klimondra"; // <github-username>
 
     useEffect(() => {
         if (location.hash) {
@@ -43,6 +51,7 @@ const Home = () => {
             }, 100);
         }
     }, [location]);
+
 
     return (
         <>
@@ -98,6 +107,13 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section>
+                <Graph
+                    userName={githubUserName}
+                    githubApiKey={githubApiKey}
+                    enableAnimations={false} // optional prop to disable animations
+                />
             </section>
         </>
     );

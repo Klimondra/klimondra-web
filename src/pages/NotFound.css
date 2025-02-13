@@ -25,6 +25,12 @@
   font-weight: 400;
   font-size: 2.5rem;
 }
+.notFoundContent .description {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(165.75, 165.75, 165.75);
+}
 .notFoundContent #backBtn {
   margin-top: 20px;
   padding: 10px 15px;

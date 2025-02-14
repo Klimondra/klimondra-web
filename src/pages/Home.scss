@@ -86,7 +86,7 @@ $heroIconBg: rgba(255, 255, 255, 0.07);
     background: $heroIconBg;
     backdrop-filter: blur(10px);
     border-radius: 15px 0 0 15px;
-    box-shadow: 0px 0px 2px 0px rgba(255,255,255,0.2);
+    box-shadow: 0 0 2px 0 rgba(255,255,255,0.2);
 
     a {
       color: $textWhite;
@@ -115,6 +115,11 @@ $heroIconBg: rgba(255, 255, 255, 0.07);
   }
 }
 
+@media (max-width: 570px) {
+  #hero {
+    .heroIcons { display: none }
+  }
+}
 
 @media (max-width:520px) {
   #hero {

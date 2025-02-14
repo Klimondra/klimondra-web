@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Slabo+13px&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
 // ===== VARIABLES ===== //
 $textWhite: white;
+$heroIconBg: rgba(255, 255, 255, 0.07);
 
 // ===== HERO SEKCE ===== //
 
@@ -70,6 +71,31 @@ $textWhite: white;
       button:nth-of-type(2) {
         background: transparent;
         border: $blue 2px solid;
+      }
+    }
+  }
+
+  .heroIcons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: $heroIconBg;
+    backdrop-filter: blur(10px);
+    border-radius: 15px 0 0 15px;
+    box-shadow: 0px 0px 2px 0px rgba(255,255,255,0.2);
+
+    a {
+      color: $textWhite;
+      padding: 5px;
+      font-size: 2rem;
+      transition: all 0.25s ease-in;
+
+      &:hover {
+        transform: scale(1.15);
       }
     }
   }

@@ -290,13 +290,13 @@
   justify-content: center;
 }
 #contact .contactContent .contactIcons a {
-  color: #3B2CDD;
+  color: white;
   font-size: 3rem;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   padding: 8px;
-  background-color: white;
+  background-color: rgb(57.75, 57.75, 68.25);
   text-decoration: none;
   border-radius: 15px;
   transition: all 0.25s ease-in;
@@ -312,9 +312,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  align-self: center;
   min-width: 180px;
-  color: white;
-  background-color: #3B2CDD;
+  color: #3B2CDD;
+  background-color: white;
   font-family: Readex Pro, Verdana, sans-serif;
   font-size: 2.5rem;
   text-decoration: none;
@@ -327,8 +328,8 @@
   margin-left: 15px;
 }
 #contact .contactContent .contactBtn:hover {
-  color: #3B2CDD;
-  background-color: white;
+  color: white;
+  background-color: #3B2CDD;
 }
 
 @media (max-width: 1350px) {

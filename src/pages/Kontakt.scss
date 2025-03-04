@@ -1,0 +1,23 @@
+@import "./../index";
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Slabo+13px&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+// ===== VARIABLES ===== //
+$textWhite: white;
+$heroIconBg: rgba(255, 255, 255, 0.07);
+
+// ===== Texty SEKCE ===== //
+
+#animBg.heroBg {
+  position: fixed;
+}
+
+#texts {
+  padding-top: 120px;
+
+  h2 {
+    color: $textWhite;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: Readex Pro, Verdana, sans-serif;
+    text-align: center;
+  }
+}

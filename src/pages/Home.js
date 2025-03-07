@@ -4,7 +4,7 @@ import "./techIcoColors.css"
 import AnimatedDotBg from "../components/homePage/animatedDotBg";
 import { TypeAnimation } from 'react-type-animation';
 import CountUp from "react-countup";
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import { Graph } from "react-github-activity-calendar";
 
 import {
@@ -52,6 +52,8 @@ const Home = () => {
         }
     }, [location]);
 
+    const navigate = useNavigate();
+
 
     return (
         <>
@@ -67,7 +69,7 @@ const Home = () => {
                         "Dělám grafiku (občas)", 2250 ]} wrapper="span" speed={32}  repeat={Infinity}/></p>
                     <div className="heroCtaBtns">
                         <button onClick={learnMoreScroll}>Zjistit více</button>
-                        <button>Kontakt</button>
+                        <button onClick={() => navigate("/kontakt")}>Kontakt</button>
                     </div>
                 </div>
                 <div className="heroIcons">

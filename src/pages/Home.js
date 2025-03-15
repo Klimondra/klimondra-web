@@ -1,24 +1,16 @@
 import React, {useEffect, useRef} from 'react';
 import "./Home.css";
-import "./techIcoColors.css"
 import AnimatedDotBg from "../components/homePage/animatedDotBg";
 import { TypeAnimation } from 'react-type-animation';
 import CountUp from "react-countup";
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import { Graph } from "react-github-activity-calendar";
+import HomepageTechnologiesList from "../contentData/homepageTechnologiesList";
+import {BsDiscord, BsGithub} from "react-icons/bs";
+import {IoChatboxEllipses, IoMailOutline} from "react-icons/io5";
 
-import {
-    SiAdobephotoshop,
-    SiBlender,
-    SiCss3,
-    SiDavinciresolve, SiHtml5, SiInstagram, SiUnity,
-    SiWordpress
-} from "react-icons/si";
-import {BsDiscord, BsGit, BsGithub} from "react-icons/bs";
-import {IoChatboxEllipses, IoLogoNodejs, IoLogoReact, IoLogoSass, IoMailOutline} from "react-icons/io5";
-import {DiJsBadge} from "react-icons/di";
-import {TbBrandCSharp} from "react-icons/tb";
 import {useInView} from "framer-motion";
+import {SiInstagram} from "react-icons/si";
 
 
 const Home = () => {
@@ -98,20 +90,11 @@ const Home = () => {
                             <h3>které používám</h3>
                         </div>
                         <div className="techIcons">
-                            <SiHtml5 id="htmlIco" className="Ico"/>
-                            <SiCss3 id="cssIco" className="Ico"/>
-                            <IoLogoSass id="sassIco" className="Ico"/>
-                            <DiJsBadge id="jsIco" className="Ico"/>
-                            <IoLogoReact id="reactIco" className="Ico"/>
-                            <IoLogoNodejs id="nodejsIco" className="Ico"/>
-                            <SiWordpress id="wordpressIco" className="Ico"/>
-                            <TbBrandCSharp id="csharpIco" className="Ico"/>
-                            <SiUnity id="unityIco" className="Ico" />
-                            <BsGit id="gitIco" className="Ico"/>
-                            <BsGithub id="githubIco" className="Ico"/>
-                            <SiBlender id="blenderIco" className="Ico"/>
-                            <SiAdobephotoshop id="psIco" className="Ico"/>
-                            <SiDavinciresolve id="drIco" className="Ico"/>
+                            {
+                                HomepageTechnologiesList.map((technology) => {
+                                    return <technology.iconComponent className="Ico" key={technology.id} style={{color: technology.color && technology.color}} />
+                                })
+                            }
                         </div>
                     </div>
                 </div>

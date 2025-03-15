@@ -314,8 +314,8 @@
   justify-content: space-between;
   align-self: center;
   min-width: 180px;
-  color: #3B2CDD;
-  background-color: white;
+  color: white;
+  background-color: rgb(104.5, 104.5, 123.5);
   font-family: Readex Pro, Verdana, sans-serif;
   font-size: 2.5rem;
   text-decoration: none;

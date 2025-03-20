@@ -3,9 +3,9 @@ import {IoLogoDiscord, IoLogoInstagram, IoMail} from "react-icons/io5";
 const ContactPageLinks = [
     {
         id: 1,
-        label: "E-mail: klimondra@seznam.cz",
+        label: "E-mail: klimondra@imbus.org",
         icon: IoMail,
-        link: "mailto:klimondra@seznam.cz?subject=Zpr%C3%A1va%20ze%20str%C3%A1nky%20kontakt%20na%20webu",
+        link: "mailto:klimondra@imbus.org?subject=Zpr%C3%A1va%20ze%20str%C3%A1nky%20kontakt%20na%20webu",
     },
     {
         id: 2,

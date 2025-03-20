@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import "./Home.css";
 import AnimatedDotBg from "../components/homePage/animatedDotBg";
 import { TypeAnimation } from 'react-type-animation';
@@ -8,7 +8,7 @@ import { Graph } from "react-github-activity-calendar";
 import HomepageTechnologiesList from "../contentData/homepageTechnologiesList";
 import {BsDiscord, BsGithub} from "react-icons/bs";
 import {IoChatboxEllipses, IoMailOutline} from "react-icons/io5";
-import { motion } from "framer-motion";
+import {domAnimation, LazyMotion, motion} from "framer-motion";
 import {useInView} from "framer-motion";
 import {SiInstagram} from "react-icons/si";
 
@@ -46,9 +46,9 @@ const Home = () => {
 
     const navigate = useNavigate();
 
-
     return (
         <>
+            <LazyMotion features={domAnimation} >
             <section id="hero">
                 <AnimatedDotBg id="animBg"/>
                 <motion.div className="heroContent"
@@ -161,7 +161,7 @@ const Home = () => {
                                             scale: 1,
                                             transition: {
                                                 duration: 0.7,
-                                                delay: 0.1 * i,
+                                                delay: 0.07 * i,
                                             }
                                         }}>
                                         <technology.iconComponent className="Ico" style={{color: technology.color && technology.color}} />
@@ -173,26 +173,12 @@ const Home = () => {
                 </div>
             </section>
             <section id="githubActivityGraph">
-                <motion.span
-                initial={{
-                    scale: 0.65,
-                    opacity: 0,
-                }}
-                whileInView={{
-                    scale: 1,
-                    opacity: 1,
-                    transition: {
-                        duration: 0.7,
-                        ease: [0.000, 1.245, 0.505, 1.005],
-                    }
-                }}>
                     <Graph
                         className="githubGraph "
                         userName={githubUserName}
                         githubApiKey={githubApiKey}
                         enableAnimations={false} // optional prop to disable animations
                     />
-                </motion.span>
             </section>
             <section id="contact">
                 <div className="contactContent">
@@ -205,6 +191,7 @@ const Home = () => {
                     <Link to="/kontakt" className="contactBtn"><IoChatboxEllipses/><p>Více kontaktů</p></Link>
                 </div>
             </section>
+            </LazyMotion>
         </>
     );
 };

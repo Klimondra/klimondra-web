@@ -17,6 +17,7 @@ const ProjectPage = () => {
 
     return (
         <section id="projectPage">
+
             <div className="container">
                 <div className="Icon box">
                     <img src={project.img} alt="Ikona projektu" />

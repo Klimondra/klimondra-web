@@ -13,15 +13,17 @@
   .container {
     display: grid;
     width: 80%;
-    grid-template-columns: 0.3fr 0.4fr 0.3fr;
-    grid-template-rows: 0.6fr 0.6fr 0.5fr 2.3fr;
+    box-sizing: border-box; // započítává padding do celkové šířky
+    max-width: 100%;
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 2.3fr;
     gap: 15px;
     grid-auto-flow: row;
     grid-template-areas:
-      "Icon Title Title"
-      "Icon Activity Activity"
-      "Icon Tech-stack Tech-stack"
-      "Description Description Links";
+    "Icon Title Title"
+    "Icon Activity Activity"
+    "Icon Tech-stack Tech-stack"
+    "Description Description Links";
 
     .box {
       background-color: lighten($bgdark, 20%);

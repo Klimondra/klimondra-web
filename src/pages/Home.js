@@ -90,7 +90,7 @@ const Home = () => {
                     </motion.div>
                 </motion.div>
                 <div className="heroIcons">
-                    <a href="mailto:klimondra@seznam.cz" target="_blank" rel="noreferrer"><IoMailOutline className="contactMail"/></a>
+                    <a href="mailto:klimondra@imbus.org" target="_blank" rel="noreferrer"><IoMailOutline className="contactMail"/></a>
                     <a href="https://github.com/Klimondra" target="_blank" rel="noreferrer"><BsGithub className="contactGithub"/></a>
                     <a href="https://discordapp.com/users/821336004643520512" target="_blank" rel="noreferrer"><BsDiscord className="contactDiscord"/></a>
                     <a href="https://www.instagram.com/klimondra/" target="_blank" rel="noreferrer"><SiInstagram className={"contactInstagram"}/></a>
@@ -183,7 +183,7 @@ const Home = () => {
             <section id="contact">
                 <div className="contactContent">
                     <div className="contactIcons">
-                        <a href="mailto:klimondra@seznam.cz" target="_blank" rel="noreferrer"><IoMailOutline className="contactMail"/></a>
+                        <a href="mailto:klimondra@imbus.org" target="_blank" rel="noreferrer"><IoMailOutline className="contactMail"/></a>
                         <a href="https://github.com/Klimondra" target="_blank" rel="noreferrer"><BsGithub className="contactGithub"/></a>
                         <a href="https://discordapp.com/users/821336004643520512" target="_blank" rel="noreferrer"><BsDiscord className="contactDiscord"/></a>
                         <a href="https://www.instagram.com/klimondra/" target="_blank" rel="noreferrer"><SiInstagram className={"contactInstagram"}/></a>

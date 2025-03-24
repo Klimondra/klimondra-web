@@ -36,11 +36,11 @@ const ProjectList = [
         endedDate: {...isActive},
         secondBtn: {
             label: "Hlavní stránka >>",
-            link: "https://klimondra.vercel.app/"
+            link: "https://klimondra.imbus.org/"
         },
         description: "Svůj první web jsem začal dělat, v srpnu roku 2023. V té době, no řekněmem vypadal otřesně, ale pokus dobrý. Na pozadí bylo zvláštní video, a responzivita nebyla nic moc. Tenkrát (mimochodem, přijde mi zvláštní mluvit o roce 2023 jako 'tenkrát', ale budiž) web běžel čistě na HTML a CSS. \n\nV září léta páně 2024, jsem si řekl, že by to chtělo nějakou revoluci, a vytvořil jsem druhou verzi webu. Ta už byla o dost lepší, držel jsem se určité barevné palety, dokonce tam byly i nějaké animace. Tenhle web byl hodně obstojný.\n\nJenže pak jsem se začal pořádně učit JavaScript, a přišlo na React. A to je vám úplně jiný svět. A tak ani né po moc dlouhé době od spuštění druhé verze webu, jsem začal vytvářet třetí verzi webu. Stalo se tak letos, v roce 2025, v únoru. \n\nAktuálně web běží na reactu, konkrétně pomocí Create-react-app. Dneska už bych to zase udělal jinak, postavil bych web na Next JS (což je teda rozšíření pro React), takže migrace možná ještě bude :D. Já jsem zatím s podobou webu poměrně spokojen, a budu tady přidávat další věci. Minimílně do chvílě dokud nebudu mít motivaci a skilly o level výš, abych třeba vytvořil verzi 4. Ale trojka je mé oblíbené číslo, tak by tahle verze mohla nějakou dobu vydržet :)",
         links: [
-            { label: "Hlavní stránka", link: "https://klimondra.vercel.app/" },
+            { label: "Hlavní stránka", link: "https://klimondra.imbus.org/" },
             { label: "GitHub", link: "https://github.com/Klimondra/klimondra-web" },
         ],
     },

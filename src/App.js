@@ -8,6 +8,7 @@ import Footer from "./components/global/footer";
 import Kontakt from "./pages/Kontakt";
 import Projekty from "./pages/Projekty";
 import ProjectPage from "./pages/ProjectPage";
+import Linktree from "./pages/Linktree";
 
 const App = () => {
     return (
@@ -32,8 +33,12 @@ const App = () => {
                 <Route path="/projekt/:projectName" element={ <ProjectPage /> } />
                 <Route path="/project/:projectName" element={ <ProjectPage /> } />
 
+                { /*** LINKTREE ***/ }
+                <Route path="/linktree" element={ <Linktree /> } />
+                <Route path="/links" element={ <Linktree /> } />
+                <Route path="/odkazy" element={ <Linktree /> } />
 
-                { /*** ***/}
+                { /*** 404 ***/}
                 <Route path="*" element={ <NotFound /> } />
             </Routes>
             <Footer/>

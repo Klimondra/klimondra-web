@@ -1,5 +1,5 @@
 import imbusLogo from "../assets/projectImages/imbusLogo.png"
-import kLogo from "../assets/projectImages/K-Logo.png"
+import kLogo from "../assets/logos/K-pixel-logo-white.svg"
 
 const isActive = {
     month: new Date().getMonth() + 1,

@@ -16,6 +16,7 @@ const Navbar = () => {
             <div className={openMenu ? "menu open" : "menu close"}>
                 <NavLink to={{ pathname: '/', hash: 'about' }} className="navLink" onClick={() => {setOpenMenu(!openMenu)}}>O mně</NavLink>
                 <NavLink to="/projekty" className="navLink" onClick={() => {setOpenMenu(!openMenu)}}>Projekty</NavLink>
+                <NavLink to="/odkazy" className="navLink" onClick={() => {setOpenMenu(!openMenu)}}>Odkazy</NavLink>
                 <NavLink to="/kontakt" className="navLink" onClick={() => {setOpenMenu(!openMenu)}}>Kontakt</NavLink>
             </div>
         </nav>

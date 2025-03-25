@@ -6,7 +6,9 @@ import linktreeLinks from "../contentData/linktreeLinks"
 const Linktree = () => {
     return (
         <section id="linktreePage">
-            <AnimatedDotBg/>
+            <div className="animBg">
+                <AnimatedDotBg/>
+            </div>
             <div className="linkBoard">
                 <h2>Linktree</h2>
                 <p>Tady jsou nějaké odkazy, co by se mohly hodit...</p>

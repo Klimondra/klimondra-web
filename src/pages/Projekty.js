@@ -4,9 +4,13 @@ import Select from "react-select";
 import homepageTechnologiesList from "../contentData/homepageTechnologiesList";
 import ProjectCard from "../components/project/ProjectCard";
 import ProjectList from "../contentData/projects";
+import {useSearchParams} from "react-router-dom";
 
 
 const Projekty = () => {
+    const [searchParams] = useSearchParams()
+    const predefinedTech = searchParams.get("techName");
+
     const [searchText, setSearchText] = useState("");
     const [selectedTech, setSelectedTech] = useState([]);
 
@@ -18,8 +22,14 @@ const Projekty = () => {
     }))
 
     useEffect(() => {
-        console.log()
-    })
+        if (predefinedTech) {
+            const foundTech = technologiesToSelect.find(tech => predefinedTech === tech.label);
+            if (foundTech) {
+                setSelectedTech([foundTech]);
+            }
+        }
+        // eslint-disable-next-line
+    }, [predefinedTech]);
 
     return (
         <>

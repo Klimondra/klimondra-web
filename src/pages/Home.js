@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 import "./Home.css";
 import AnimatedDotBg from "../components/homePage/animatedDotBg";
 import { TypeAnimation } from 'react-type-animation';
@@ -164,7 +164,7 @@ const Home = () => {
                                                 delay: 0.07 * i,
                                             }
                                         }}>
-                                        <technology.iconComponent className="Ico" style={{color: technology.color && technology.color}} />
+                                        <Link to={"/projekty?techName=" + technology.name}><technology.iconComponent className="Ico" style={{color: technology.color && technology.color}} /></Link>
                                     </motion.span>
                                 })
                             }

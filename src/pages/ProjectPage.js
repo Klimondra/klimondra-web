@@ -47,14 +47,14 @@ const ProjectPage = () => {
 
                 return (
                     <React.Fragment key={tech}>
-                        {index > 0 && <span style={{ color: "white" }}>, </span>}
-                        <span style={{ color: techInfo?.color || "inherit" }}>
-                    {techInfo?.iconComponent &&
-                        React.createElement(techInfo.iconComponent, {
+                        {index > 0 && <span style={{ color: "white", marginRight: "5px" }}>, </span>}
+                        <Link to={"/projekty?techName=" + techInfo.name} style={{ color: techInfo?.color || "inherit" }}>
+                        {techInfo?.iconComponent &&
+                            React.createElement(techInfo.iconComponent, {
                             style: { marginRight: 4 },
                         })}
                             {tech}
-                  </span>
+                  </Link>
                     </React.Fragment>
                 );
             })}

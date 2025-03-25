@@ -5,7 +5,7 @@ import {IoGlobeOutline} from "react-icons/io5";
 const linktreeLinks = [
     {
         label: "Můj web",
-        link: "https.//klimondra.imbus.org/",
+        link: "https://klimondra.imbus.org/",
         iconComponent: IoGlobeOutline,
     },
     {

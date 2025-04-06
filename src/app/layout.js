@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
         <head>
             <meta charSet="UTF-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+            <link rel="icon" href="/logos/K-pixel-logo-blue.svg"/>
             <title>Klimondra</title>
 
             <meta property="og:title" content="Klimondra - Oficiální web"/>

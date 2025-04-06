@@ -1,13 +1,13 @@
 "use client"
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import "./Projekty.css"
 import Select from "react-select";
 import homepageTechnologiesList from "../../contentData/homepageTechnologiesList";
 import ProjectCard from "@/components/project/ProjectCard";
 import ProjectList from "../../contentData/projects";
-import { useSearchParams} from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
-const Projekty = () => {
+const ProjektyContent = () => {
     const searchParams = useSearchParams();
     const predefinedTech = searchParams.get('techName');
 
@@ -105,6 +105,14 @@ const Projekty = () => {
                 }
             </div>
         </section>
+    );
+};
+
+const Projekty = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ProjektyContent />
+        </Suspense>
     );
 };
 

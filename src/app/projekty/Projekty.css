@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Slabo+13px&family=Yantramanav:wght@100;300;400;500;700;900&display=swap");
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Readex Pro, Verdana, "Montserrat", sans-serif;
+}
+
+#projekty {
+  min-height: 93vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(34.375, 34.375, 40.625);
+}
+#projekty .texts {
+  margin-top: 120px;
+}
+#projekty .texts h2 {
+  font-family: Readex Pro, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
+}
+#projekty .texts p {
+  font-family: Readex Pro, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+#projekty .filters {
+  margin: 30px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#projekty .filters #searchInput {
+  width: 65%;
+  padding: 7px;
+  font-size: 1rem;
+  font-family: Readex Pro, Verdana, sans-serif;
+  border-radius: 5px;
+  background-color: rgb(57.75, 57.75, 68.25);
+  outline: none;
+  border: 1px solid rgb(46.0625, 46.0625, 54.4375);
+  color: rgb(191.25, 191.25, 191.25);
+}
+#projekty .filters #techSelectInput {
+  width: 25%;
+  font-size: 1rem;
+  font-family: Readex Pro, Verdana, sans-serif;
+  border-radius: 5px;
+}
+#projekty .filters #techSelectInput .techSelect__control {
+  background-color: rgb(57.75, 57.75, 68.25);
+  outline: none;
+  border: 1px solid rgb(46.0625, 46.0625, 54.4375);
+}
+#projekty .filters #techSelectInput .techSelect__menu {
+  background-color: rgb(57.75, 57.75, 68.25);
+  outline: none;
+  border: 1px solid rgb(46.0625, 46.0625, 54.4375);
+  color: rgb(191.25, 191.25, 191.25);
+}
+#projekty .filters #techSelectInput .techSelect__option:hover, #projekty .filters #techSelectInput .techSelect__option--is-focused {
+  background-color: rgb(69.4375, 69.4375, 82.0625) !important;
+}
+#projekty .filters #techSelectInput .techSelect__multi-value {
+  background-color: rgb(69.4375, 69.4375, 82.0625);
+}
+#projekty .filters #techSelectInput .techSelect__multi-value__label {
+  color: rgb(191.25, 191.25, 191.25);
+}
+#projekty .filteredContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 25px auto 0 auto;
+  width: 90%;
+}
+
+@media screen and (max-width: 1533px) {
+  #projekty .filters {
+    width: 87%;
+  }
+  #projekty .filteredContent {
+    width: 96%;
+  }
+}
+@media screen and (max-width: 1224px) {
+  #projekty .filters #searchInput {
+    width: 69%;
+  }
+  #projekty .filters #techSelectInput {
+    width: 29%;
+  }
+  #projekty .filteredContent {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 965px) {
+  #projekty .filteredContent {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #projekty .filters {
+    width: 94%;
+  }
+  #projekty .filters #searchInput {
+    width: 64%;
+  }
+  #projekty .filters #techSelectInput {
+    width: 34%;
+  }
+  #projekty .filteredContent {
+    width: 96%;
+  }
+}
+@media screen and (max-width: 690px) {
+  #projekty .texts h2 {
+    font-size: 2.4rem;
+  }
+  #projekty .texts p {
+    font-size: 1.1rem;
+  }
+  #projekty .filters {
+    width: 94%;
+    flex-wrap: wrap;
+  }
+  #projekty .filters #searchInput {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #projekty .filters #techSelectInput {
+    width: 100%;
+  }
+  #projekty .filteredContent {
+    width: 96%;
+  }
+}
+
+/*# sourceMappingURL=Projekty.css.map */

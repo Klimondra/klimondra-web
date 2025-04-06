@@ -1,0 +1,33 @@
+@import "./../../index";
+// ===== VARIABLES ===== //
+$dotColor1: rgba(251, 207, 35, 0.2);
+$dotColor2: rgba(237, 107, 90, 0.2);
+
+// ===== STYLY ===== //
+
+.heroBg {
+  height: 100vh;
+  width: 100%;
+  background-color: $bgdark;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+
+  .colorDot {
+    position: absolute;
+    //top: 25%;
+    //right: 35%;
+    height: 500px;
+    width: 500px;
+    transform: translateX(50%) translateY(-50%);
+    filter: blur(25px);
+  }
+
+  #colorDot1 {
+    background-image: radial-gradient(closest-side, $dotColor1, rgba(0,0,0,0));
+  }
+
+  #colorDot2 {
+    background-image: radial-gradient(closest-side, $dotColor2, rgba(0,0,0,0));
+  }
+}

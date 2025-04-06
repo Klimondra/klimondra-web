@@ -1,0 +1,19 @@
+@import "./../../index";
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Slabo+13px&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+// ===== VARIABLES ===== //
+$textWhite: white;
+
+// ===== PATICKA ===== //
+footer {
+  height: 7vh;
+  background-color: $bgdark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-family: Readex Pro, Verdana, sans-serif;
+    color: $textWhite;
+    font-size: 1rem;
+  }
+}

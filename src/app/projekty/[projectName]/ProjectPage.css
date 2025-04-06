@@ -1,0 +1,158 @@
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#projectPage {
+  background-color: rgb(34.375, 34.375, 40.625);
+  min-height: 93vh;
+  width: 100%;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#projectPage .container {
+  display: grid;
+  width: 80%;
+  box-sizing: border-box;
+  max-width: 100%;
+  grid-template-columns: 3fr 4fr 3fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 2.3fr;
+  gap: 15px;
+  grid-auto-flow: row;
+  grid-template-areas: "Icon Title Title" "Icon Activity Activity" "Icon Tech-stack Tech-stack" "Description Description Links";
+}
+#projectPage .container .box {
+  background-color: rgb(57.75, 57.75, 68.25);
+  border-radius: 15px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+#projectPage .container .Icon {
+  grid-area: Icon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#projectPage .container .Icon img {
+  height: 300px;
+}
+#projectPage .container .Title {
+  grid-area: Title;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#projectPage .container .Title h2 {
+  font-family: Readex Pro, Verdana, sans-serif;
+  font-size: 3rem;
+  color: white;
+}
+#projectPage .container .Activity {
+  grid-area: Activity;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#projectPage .container .Activity h4 {
+  font-family: Readex Pro, Verdana, sans-serif;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 500;
+}
+#projectPage .container .Tech-stack {
+  grid-area: Tech-stack;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#projectPage .container .Tech-stack h4 {
+  font-family: Readex Pro, Verdana, sans-serif;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 500;
+}
+#projectPage .container .Tech-stack .techStackIcons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: Readex Pro, Verdana, sans-serif;
+  font-size: 1.2rem;
+}
+#projectPage .container .Tech-stack .techStackIcons a {
+  text-decoration: none;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+#projectPage .container .Tech-stack .techStackIcons a:hover {
+  transform: scale(1.05);
+}
+#projectPage .container .Description {
+  grid-area: Description;
+}
+#projectPage .container .Description p {
+  font-family: Readex Pro, Verdana, sans-serif;
+  font-size: 1.15rem;
+  color: white;
+}
+#projectPage .container .Links {
+  grid-area: Links;
+}
+#projectPage .container .Links h4 {
+  font-family: Readex Pro, Verdana, sans-serif;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+#projectPage .container .Links .projectLink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: rgb(81.125, 81.125, 95.875);
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: Readex Pro, Verdana, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+#projectPage .container .Links .projectLink:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1024px) {
+  #projectPage .container {
+    width: 96%;
+    grid-template-columns: 3fr 4fr 3fr;
+  }
+  #projectPage .container .Icon img {
+    height: 250px;
+  }
+  #projectPage .container .Title h2 {
+    font-size: 2.5rem;
+  }
+  #projectPage .container .Activity h4, #projectPage .container .Tech-stack h4 {
+    font-size: 1.65rem;
+  }
+}
+@media screen and (max-width: 868px) {
+  #projectPage .container {
+    width: 96%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "Icon" "Title" "Activity" "Tech-stack" "Description" "Links";
+  }
+}
+
+/*# sourceMappingURL=ProjectPage.css.map */

@@ -1,0 +1,155 @@
+@import "../../app/globals";
+
+article {
+  display: flex;
+  flex-direction: row;
+  min-height: 140px;
+  width: 49%;
+  margin-bottom: 20px;
+  background-color: lighten($bgdark, 17%);
+  padding: 8px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20);
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
+    transform: scale(1.005) translateY(-1px);
+  }
+
+  img {
+    height: 125px;
+    width: 125px;
+  }
+
+  .info {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    h3 {
+      color: white;
+      font-family: Readex Pro, Verdana, sans-serif;
+      font-size: 2rem;
+    }
+
+    p {
+      color: darken(white, 20%);
+      font-family: Readex Pro, Verdana, sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    p.techStack {
+      margin-top: 5px;
+    }
+
+    p.description {
+      color: darken(white, 25%);
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+  }
+
+  .action {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      color: darken(white, 12%);
+      font-family: Readex Pro, Verdana, sans-serif;
+      font-size: 0.95rem;
+      text-decoration: none;
+      padding: 9px;
+      border-radius: 5px;
+      background-color: lighten($bgdark, 30%);
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.005) translateY(-1px);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20);
+      }
+    }
+
+    a.secondaryLink {
+      margin-top: 15px;
+      color: darken(white, 20%);
+      background-color: transparent;
+      padding: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+// Responzivita
+@media screen and (max-width: 1224px) {
+  article {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  article {
+    flex-wrap: wrap;
+
+    img {
+      max-width: 30%;
+      margin: auto 0;
+    }
+    .info {
+      margin-left: 15px;
+      width: 69%;
+    }
+    .action {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 20px 5px 5px 5px;
+
+      a.secondaryLink {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 555px) {
+  article {
+    img {
+      max-width: 100%;
+      width: auto;
+      height: 100px;
+    }
+
+    .info {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 5px;
+
+      h3 {
+        font-size: 1.7rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+      p.description {
+        font-size: 0.85rem;
+      }
+    }
+
+    .action {
+      a {
+        font-size: 0.95rem;
+      }
+      a.secondaryLink {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

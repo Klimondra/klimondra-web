@@ -1,0 +1,177 @@
+@import "../globals";
+
+#projekty {
+  min-height: 93vh;
+  display: flex;
+  flex-direction: column;
+  background-color: lighten($bgdark, 10%);
+
+  .texts {
+    margin-top: 120px;
+
+    h2 {
+      font-family: Readex Pro, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+      font-weight: 600;
+      font-size: 3rem;
+    }
+
+    p {
+      font-family: Readex Pro, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+  }
+
+  .filters {
+    margin: 30px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    #searchInput {
+      width: 65%;
+      padding: 7px;
+      font-size: 1rem;
+      font-family: Readex Pro, Verdana, sans-serif;
+      border-radius: 5px;
+      background-color: lighten($bgdark, 20%);
+      outline: none;
+      border: 1px solid lighten($bgdark, 15%);
+      color: darken(white, 25%);
+    }
+
+    #techSelectInput {
+      width: 25%;
+      font-size: 1rem;
+      font-family: Readex Pro, Verdana, sans-serif;
+      border-radius: 5px;
+
+      .techSelect__control {
+        background-color: lighten($bgdark, 20%);
+        outline: none;
+        border: 1px solid lighten($bgdark, 15%);
+      }
+
+      .techSelect__menu {
+        background-color: lighten($bgdark, 20%);
+        outline: none;
+        border: 1px solid lighten($bgdark, 15%);
+        color: darken(white, 25%);
+      }
+
+      .techSelect__option:hover, .techSelect__option--is-focused {
+        background-color: lighten($bgdark, 25%) !important;
+      }
+
+      .techSelect__multi-value {
+        background-color: lighten($bgdark, 25%);
+      }
+
+      .techSelect__multi-value__label {
+        color: darken(white, 25%);
+      }
+    }
+  }
+
+  .filteredContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 25px auto 0 auto;
+    width: 90%;
+  }
+}
+
+// Responzivita
+@media screen and (max-width: 1533px) {
+  #projekty {
+    .filters {
+      width: 87%;
+    }
+
+    .filteredContent {
+      width: 96%;
+    }
+  }
+}
+
+@media screen and (max-width: 1224px) {
+  #projekty {
+    .filters {
+      #searchInput {
+        width: 69%;
+      }
+
+      #techSelectInput {
+        width: 29%;
+      }
+    }
+    .filteredContent {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 965px) {
+  #projekty {
+    .filteredContent {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #projekty {
+    .filters {
+      width: 94%;
+
+      #searchInput {
+        width: 64%;
+      }
+
+      #techSelectInput {
+        width: 34%;
+      }
+    }
+    .filteredContent {
+      width: 96%;
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  #projekty {
+    .texts {
+      h2 {
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+    .filters {
+      width: 94%;
+      flex-wrap: wrap;
+
+      #searchInput {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      #techSelectInput {
+        width: 100%;
+      }
+    }
+    .filteredContent {
+      width: 96%;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Slabo+13px&family=Yantramanav:wght@100;300;400;500;700;900&display=swap");
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Readex Pro, Verdana, "Montserrat", sans-serif;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  min-height: 140px;
+  width: 49%;
+  margin-bottom: 20px;
+  background-color: rgb(50.7375, 50.7375, 59.9625);
+  padding: 8px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in-out;
+}
+article:hover {
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  transform: scale(1.005) translateY(-1px);
+}
+article img {
+  height: 125px;
+  width: 125px;
+}
+article .info {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+article .info h3 {
+  color: white;
+  font-family: Readex Pro, Verdana, sans-serif;
+  font-size: 2rem;
+}
+article .info p {
+  color: #cccccc;
+  font-family: Readex Pro, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+article .info p.techStack {
+  margin-top: 5px;
+}
+article .info p.description {
+  color: rgb(191.25, 191.25, 191.25);
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+article .action {
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+article .action a {
+  color: rgb(224.4, 224.4, 224.4);
+  font-family: Readex Pro, Verdana, sans-serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 9px;
+  border-radius: 5px;
+  background-color: rgb(81.125, 81.125, 95.875);
+  transition: all 0.2s ease-in-out;
+}
+article .action a:hover {
+  transform: scale(1.005) translateY(-1px);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+article .action a.secondaryLink {
+  margin-top: 15px;
+  color: #cccccc;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 1224px) {
+  article {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 690px) {
+  article {
+    flex-wrap: wrap;
+  }
+  article img {
+    max-width: 30%;
+    margin: auto 0;
+  }
+  article .info {
+    margin-left: 15px;
+    width: 69%;
+  }
+  article .action {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 5px 5px 5px;
+  }
+  article .action a.secondaryLink {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 555px) {
+  article img {
+    max-width: 100%;
+    width: auto;
+    height: 100px;
+  }
+  article .info {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  article .info h3 {
+    font-size: 1.7rem;
+  }
+  article .info p {
+    font-size: 0.95rem;
+  }
+  article .info p.description {
+    font-size: 0.85rem;
+  }
+  article .action a {
+    font-size: 0.95rem;
+  }
+  article .action a.secondaryLink {
+    font-size: 0.9rem;
+  }
+}
+
+/*# sourceMappingURL=ProjectCard.css.map */

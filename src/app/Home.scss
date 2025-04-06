@@ -1,0 +1,455 @@
+@import "./Globals";
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Slabo+13px&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+// ===== VARIABLES ===== //
+$textWhite: white;
+$heroIconBg: rgba(255, 255, 255, 0.07);
+
+// ===== HERO SEKCE ===== //
+
+#hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .heroContent {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 6rem;
+      font-family: Readex Pro, Verdana, sans-serif;
+      color: $textWhite;
+      font-weight: 700;
+      line-height: 5.5rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-family: Readex Pro, Verdana, sans-serif;
+      font-weight: 400;
+      color: $textWhite;
+    }
+
+    p {
+      font-size: 1.4rem;
+      font-family: Readex Pro, Verdana, sans-serif;
+      font-weight: 300;
+      color: $textWhite;
+    }
+
+    .heroCtaBtns {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+
+      button  {
+        outline: none;
+        padding: 10px 15px;
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: Readex Pro, Verdana, sans-serif;
+        font-weight: 400;
+        border-radius: 8px;
+        margin-right: 15px;
+        transition: 0.25s ease-in-out;
+
+        &:hover {
+          transform: scale(1.06) rotate(-1deg);
+        }
+      }
+
+      button:nth-of-type(1) {
+        background-color: $blue;
+        border: none;
+      }
+
+      button:nth-of-type(2) {
+        background: transparent;
+        border: $blue 2px solid;
+      }
+    }
+  }
+
+  .heroIcons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: $heroIconBg;
+    backdrop-filter: blur(10px);
+    border-radius: 15px 0 0 15px;
+    box-shadow: 0 0 2px 0 rgba(255,255,255,0.2);
+
+    a {
+      color: $textWhite;
+      padding: 5px;
+      font-size: 2rem;
+      transition: all 0.25s ease-in;
+
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+  }
+}
+
+// ===== HERO - RESPONZIVITA ===== //
+
+@media (max-width:800px) {
+  #hero {
+    .heroContent {
+      width: 80%;
+
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  #hero {
+    .heroIcons { display: none }
+  }
+}
+
+@media (max-width:520px) {
+  #hero {
+    .heroContent {
+      width: 90%;
+
+      h1 {
+        font-size: 4rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width:385px) {
+  #hero {
+    .heroContent {
+      width: 92%;
+
+      h1 {
+        font-size: 3.2rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+// ===== ABOUT ===== //
+
+#about {
+  min-height: 100vh;
+  background-color: lighten($bgdark, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .aboutContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 0.5fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    width: 70%;
+    margin: 30px;
+    //height: 70%;
+
+    .aboutBlock {
+      background-color: lighten($bgdark, 20%);
+      border-radius: 20px;
+      box-shadow: 0 0 15px 0 rgba(0,0,0,0.4);
+      padding: 40px;
+    }
+
+    .infoBlock {
+      display: flex;
+      flex-direction: column;
+      grid-area: 1 / 1 / 2 / 3;
+
+      h2 {
+        color: $textWhite;
+        font-family: Readex Pro, Verdana, sans-serif;
+        font-size: 2.3rem;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: $textWhite;
+        font-family: Readex Pro, Verdana, sans-serif;
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+    }
+
+    .numBlock {
+      grid-area: 1 / 3 / 3 / 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        color: $textWhite;
+        font-family: Readex Pro, Verdana, sans-serif;
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        color: $textWhite;
+        font-family: Readex Pro, Verdana, sans-serif;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      p {
+        color: $textWhite ;
+        font-family: Readex Pro, Verdana, sans-serif;
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+
+    }
+
+    .technologiesBlock {
+      grid-area: 2 / 1 / 3 / 3;
+      display: flex;
+      flex-direction: column;
+
+      .techBlockText {
+        margin-bottom: 25px;
+
+        h2 {
+          color: $textWhite;
+          font-family: Readex Pro, Verdana, sans-serif;
+          font-size: 2.3rem;
+        }
+
+        h3 {
+          color: $textWhite;
+          font-family: Readex Pro, Verdana, sans-serif;
+          font-size: 1.3rem;
+          font-weight: 400;
+        }
+      }
+
+      .techIcons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .Ico {
+          font-size: 2rem;
+          margin: 8px;
+          background: radial-gradient(closest-side, rgba(128, 128, 128, 0.1), rgba(0,0,0,0));
+          transition: all 0.2s ease-in;
+
+          &:hover {
+            transform: translateY(-5px) scale(1.25) ;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1445px) {
+  #about {
+    .aboutContent {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  #about {
+    .aboutContent {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+
+      .aboutBlock {
+        padding: 25px;
+      }
+
+      .infoBlock h2, .technologiesBlock .techBlockText h2 {
+        font-size: 2rem;
+      }
+
+      .infoBlock {
+        p {
+          font-size: 1.07rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px ) {
+  #about {
+    .aboutContent {
+      width: 94%;
+    }
+    .infoBlock h2, .technologiesBlock .techBlockText h2 {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// ===== GITHUB GRAPH ===== //
+
+#githubActivityGraph {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lighten($bgdark, 20%);
+  color: $textWhite;
+  padding: 0 20px;
+
+  article {
+    margin: 10px 10px;
+  }
+
+  footer {
+    background-color: transparent;
+  }
+}
+
+// ===== CONTACT ===== //
+#contact {
+  min-height: 30vh;
+  width: 100%;
+  background-color: lighten($bgdark, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .contactContent {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .contactIcons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      a {
+        color: $textWhite;
+        font-size: 3rem;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 8px;
+        background-color: lighten($bgdark, 20%);
+        text-decoration: none;
+        border-radius: 15px;
+        transition: all 0.25s ease-in;
+
+        .contactMail, .contactGithub, .contactDiscord, .contactInstagram { transform: translateY(6px); }
+
+        &:hover {
+          color: white;
+          background-color: $blue;
+        }
+      }
+    }
+
+    .contactBtn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-self: center;
+      min-width: 180px;
+      color: $textWhite;
+      background-color: lighten($bgdark, 40%);
+      font-family: Readex Pro, Verdana, sans-serif;
+      font-size: 2.5rem;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 15px;
+      transition: 0.25s ease-in;
+
+      p {
+        font-size: 1.2rem;
+        margin-left: 15px;
+      }
+
+      &:hover {
+        color: $textWhite;
+        background-color: $blue;
+      }
+    }
+  }
+}
+
+// ===== CONTACT RESPONSIVITY ===== //
+@media (max-width: 1350px) {
+  #contact {
+    .contactContent {
+      width: 65%;
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  #contact {
+    .contactContent {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  #contact {
+    .contactContent {
+      flex-direction: column;
+      justify-content: center;
+      width: 90%;
+
+      .contactBtn {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 444px) {
+  #contact {
+    .contactContent {
+      .contactIcons a {
+        font-size: 2.5rem;
+      }
+
+      .contactBtn {
+        font-size: 2rem;
+      }
+    }
+  }
+}

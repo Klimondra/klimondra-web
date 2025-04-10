@@ -1,0 +1,21 @@
+@import "../../Globals.scss";
+
+main { // Bude doděláno později
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 93vh;
+  background-color: $bgdark;
+
+  * {
+    margin: 5px;
+    font-family: Readex Pro, Verdana, sans-serif;
+    color: white;
+  }
+
+  button {
+    padding: 5px 10px;
+    background-color: mediumblue;
+  }
+}

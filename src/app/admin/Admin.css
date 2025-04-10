@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Slabo+13px&family=Yantramanav:wght@100;300;400;500;700;900&display=swap");
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Readex Pro, Verdana, "Montserrat", sans-serif;
+}
+
+main {
+  padding: 20px;
+  background-color: antiquewhite;
+  min-height: 93vh;
+}
+main header {
+  margin-top: 100px;
+}
+
+/*# sourceMappingURL=Admin.css.map */

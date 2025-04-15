@@ -4,6 +4,7 @@ import Navbar from "@/components/global/Navbar";
 import Footer from "@/components/global/footer";
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="cs" suppressHydrationWarning>
         <head>

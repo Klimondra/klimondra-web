@@ -1,4 +1,4 @@
-@import "./../../index";
+@import "../../app/Globals";
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Slabo+13px&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
 // ===== VARIABLES ===== //
 $textWhite: white;
@@ -22,10 +22,16 @@ nav {
   border-radius: 10px;
   background: $navBg;
   backdrop-filter: blur(10px);
-  box-shadow: 0px 0px 2px 0px rgba(255,255,255,0.2);
+  box-shadow: 0 0 2px 0 rgba(255,255,255,0.2);
   transition: max-height 0.5s ease-out;  // Přesunuto sem
 
+  &.isAdmin {
+    background-color: $bgdark;
 
+    #logoAndIco .menuBtn {
+      transform: translateY(3px);
+    }
+  }
 
   #logoAndIco {
     display: flex;
@@ -123,6 +129,14 @@ nav {
         padding: 8px 0;
         font-size: 1.2rem;
       }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  nav.isAdmin {
+    #logoAndIco #backToMain{
+      font-size: 1.4rem;
     }
   }
 }

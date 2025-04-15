@@ -4,42 +4,32 @@ import { useSession, signOut } from "next-auth/react";
 import "./Admin.css";
 import getLinks from "@/services/linkService";
 import Link from "next/link";
+import Unauthorized from "@/components/admin/Unauthorized";
+import Loading from "@/components/admin/Loading";
 
 const Admin = () => {
     const { data: session, status } = useSession();
-    const [linktreeLinks, setLinktreeLinks] = useState([]);
 
-    useEffect(() => {
-        (async () => {
-            try {
-                setLinktreeLinks(await getLinks());
-            } catch (error) {
-                console.error("Chyba při načítání odkazů:", error);
-            }
-        })();
-    }, []); // Získá data
-
-    if (status === "loading") {
-        return <div>Loading...</div>; // Můžeš přidat indikátor načítání
-    }
-    if (!session) {
-        return <div>Access Denied</div>; // Pokud uživatel není přihlášen
-    }
+    if (status === "loading") return <Loading />;
+    if (!session) return <Unauthorized/>;
     return (
         <main>
-            <header>
-                <h1>Admin</h1>
-                <p>Nazdar, {session.user.name}</p>
-                <button onClick={() => signOut({ callbackUrl: "/login" })}>Odhlásit se</button>
-                <br/>
-                <h2>Odkazy:</h2>
-                {linktreeLinks.map((link) => (
-                    <div key={link.id}>
-                        <h4>{link.label}</h4>
-                        <Link href={link.link}>Odkaz zde</Link>
-                    </div>
-                ))}
-            </header>
+            <section>
+                <header>
+                    <h2>Nazdar, {session.user.name}</h2>
+                    <button onClick={() => signOut({ callbackUrl: "/login" })}>Odhlásit se</button>
+                </header>
+                <div className="bodyRow1">
+                    <section className="webManageBox">
+                        <p>Spravovat obsah</p>
+                        <div className="webManageLinks">
+                            <Link href="/admin/projekty">Spravovat projekty</Link>
+                            <Link href="/admin/technologie">Spravovat tech-stack</Link>
+                            <Link href="/admin/odkazy">Spravovat linktree</Link>
+                        </div>
+                    </section>
+                </div>
+            </section>
         </main>
     );
 };

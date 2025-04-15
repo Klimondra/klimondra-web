@@ -6,31 +6,26 @@
   font-family: Readex Pro, Verdana, "Montserrat", sans-serif;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.loading {
   min-height: 93vh;
-  background-color: #0b0b0d;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  flex-direction: column;
 }
-main h2 {
-  font-size: 3rem;
-  margin-bottom: 24px;
+
+main {
+  min-height: 93vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-main h3 {
-  color: white;
-  font-size: 1.7rem;
-  font-weight: 400;
-}
-main p {
-  font-size: 1.2rem;
-  color: white;
-  font-weight: 400;
-  margin-bottom: 24px;
-}
-main button {
+
+button {
+  margin-top: 24px;
   display: flex;
   align-items: center;
   padding: 12px 36px;
@@ -42,14 +37,10 @@ main button {
   font-size: 1.2rem;
   transition: all 0.3s ease;
 }
-main button .loginIcon {
-  font-size: 1.6rem;
-  margin-right: 12px;
-}
-main button:hover {
+button:hover {
   background-color: rgb(42.8, 29.6979591837, 184.3020408163);
   scale: 1.02;
   border-radius: 7px;
 }
 
-/*# sourceMappingURL=Login.css.map */
+/*# sourceMappingURL=LoadAndAuth.css.map */

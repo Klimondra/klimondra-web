@@ -14,6 +14,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 main section {
   padding-top: 90px;
@@ -49,6 +50,11 @@ main section .adminLinksWorkspace {
   min-height: 65vh;
   width: 100%;
   padding: 16px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 36px;
 }
 main section .adminLinksWorkspace .linkList {
   width: 42%;
@@ -59,10 +65,36 @@ main section .adminLinksWorkspace .linkList {
   padding: 16px;
   border-radius: 10px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  height: auto;
 }
-main section .adminLinksWorkspace .linkList h3 {
+main section .adminLinksWorkspace .linkList .linkListHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main section .adminLinksWorkspace .linkList .linkListHeader h3 {
   font-size: 1.5rem;
   margin-bottom: 4px;
+}
+main section .adminLinksWorkspace .linkList .linkListHeader .addLinkAdminButton {
+  padding: 4px 16px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 1px solid #0b0b0d;
+  border-radius: 5px;
+  background: rgb(252.45, 252.45, 252.45);
+  transition: all 0.25s ease;
+}
+main section .adminLinksWorkspace .linkList .linkListHeader .addLinkAdminButton:hover {
+  background: rgb(242.25, 242.25, 242.25);
+  scale: 1.01;
+}
+main section .adminLinksWorkspace .linkList .linkListHeader .addLinkAdminButton .addLinkAdminButtonIcon {
+  margin-right: 6px;
 }
 main section .adminLinksWorkspace .linkList .linkInList {
   margin-top: 12px;
@@ -128,6 +160,47 @@ main section .adminLinksWorkspace .linkList .linkInList .linkActions button.mana
 main section .adminLinksWorkspace .linkList .linkInList .linkActions button.manageLinkDelete {
   background-color: #ff3333;
   color: white;
+}
+main section .adminLinksWorkspace .adminLinksWorkspaceForm {
+  flex: 1;
+  min-height: 65vh;
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+}
+main section .adminLinksWorkspace .adminLinksWorkspaceForm h3 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+main section .adminLinksWorkspace .adminLinksWorkspaceForm form {
+  position: relative;
+}
+main section .adminLinksWorkspace .adminLinksWorkspaceForm form input {
+  font-size: 1.2rem;
+  padding: 6px;
+  width: 100%;
+  margin-bottom: 16px;
+  margin-top: 4px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgb(18.0125, 18.0125, 21.2875);
+}
+main section .adminLinksWorkspace .adminLinksWorkspaceForm form .adminLinkSubmitForm {
+  width: 15%;
+  min-width: 120px;
+  outline: none;
+  background-color: rgb(79.4, 65.9612244898, 224.5387755102);
+  color: white;
+  border: none;
+  transition: all 0.25s ease;
+}
+main section .adminLinksWorkspace .adminLinksWorkspaceForm form .adminLinkSubmitForm:hover {
+  background-color: rgb(63.08, 48.392244898, 221.707755102);
+}
+main section .adminLinksWorkspace .adminLinksWorkspaceForm form label {
+  font-size: 1.07rem;
+  padding-bottom: 2px;
 }
 
 @media screen and (max-width: 768px) {

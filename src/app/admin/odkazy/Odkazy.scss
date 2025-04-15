@@ -8,6 +8,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
   section {
     padding-top: 90px;
@@ -47,6 +48,11 @@ main {
       min-height: 65vh;
       width: 100%;
       padding: 16px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 36px;
 
       .linkList {
         width: 42%;
@@ -57,11 +63,40 @@ main {
         padding: 16px;
         border-radius: 10px;
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+        height: auto;
 
-        h3 {
-          font-size: 1.5rem;
-          margin-bottom: 4px;
+        .linkListHeader {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
 
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+          }
+
+          .addLinkAdminButton {
+            padding: 4px 16px;
+            font-size: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            border: 1px solid $bgdark;
+            border-radius: 5px;
+            background: darken(white, 1%);
+            transition: all 0.25s ease;
+
+            &:hover {
+              background: darken(white, 5%);
+              scale: 1.01;
+            }
+
+            .addLinkAdminButtonIcon {
+              margin-right: 6px;
+            }
+          }
         }
 
         .linkInList {
@@ -138,6 +173,53 @@ main {
                 color: white;
               }
             }
+          }
+        }
+      }
+
+      .adminLinksWorkspaceForm {
+        flex: 1;
+        min-height: 65vh;
+        background: #fff;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 24px;
+        }
+
+        form {
+          position: relative;
+          input {
+            font-size: 1.2rem;
+            padding: 6px;
+            width: 100%;
+            margin-bottom: 16px;
+            margin-top: 4px;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid lighten($bgdark, 3%);
+          }
+
+          .adminLinkSubmitForm {
+            width: 15%;
+            min-width: 120px;
+            outline: none;
+            background-color: lighten($blue, 5%);
+            color: white;
+            border: none;
+            transition: all 0.25s ease;
+
+            &:hover {
+              background-color: lighten($blue, 1%);
+            }
+          }
+
+          label {
+            font-size: 1.07rem;
+            padding-bottom: 2px;
           }
         }
       }

@@ -24,7 +24,7 @@ main {
   flex-direction: column;
 }
 
-button {
+.unauhtorizedBtn {
   margin-top: 24px;
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@ button {
   font-size: 1.2rem;
   transition: all 0.3s ease;
 }
-button:hover {
+.unauhtorizedBtn:hover {
   background-color: rgb(42.8, 29.6979591837, 184.3020408163);
   scale: 1.02;
   border-radius: 7px;

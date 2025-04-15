@@ -2,7 +2,6 @@
 import React, {useEffect, useState} from 'react';
 import { useSession, signOut } from "next-auth/react";
 import "./Admin.css";
-import getLinks from "@/services/linkService";
 import Link from "next/link";
 import Unauthorized from "@/components/admin/Unauthorized";
 import Loading from "@/components/admin/Loading";

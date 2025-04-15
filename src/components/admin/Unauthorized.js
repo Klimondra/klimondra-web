@@ -9,7 +9,7 @@ const Unauthorized = () => {
         <main>
         <div className="loading">
             <p>Nepovolen přístup!</p>
-            <button onClick={() => {router.push("/login")}}>Přihlásit se</button>
+            <button onClick={() => {router.push("/login")}} className={"unauthorizedBtn"}>Přihlásit se</button>
         </div>
         </main>
     );

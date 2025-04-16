@@ -1,21 +1,28 @@
 const getLinks = async () => {
     try {
-        const res = await fetch("https://klimondra.imbus.org/api/db/linktree-links", {
+        // Použijte vaši skutečnou doménu
+        const baseUrl = "https://klimondra.imbus.org";
+        const url = `${baseUrl}/api/db/linktree-links`;
+
+        console.log("Fetching from URL:", url); // Pro debugging
+
+        const res = await fetch(url, {
             cache: "no-cache",
+            next: { revalidate: 0 }
         });
 
         if (!res.ok) {
-            throw new Error("Failed to fetch links from server");
+            throw new Error(`Failed to fetch links from server: ${res.status} ${res.statusText}`);
         }
 
         const data = await res.json();
+        console.log("Received data:", data); // Pro debugging
         return data.links || [];
     } catch (e) {
-        console.log("GetLinks method error: " + e);
+        console.error("GetLinks method error:", e);
         return [];
     }
 };
-
 const deleteLink = async (id) => {
     try {
         const res = await fetch(`https://klimondra.imbus.org/api/db/linktree-links/?id=${id}`, {

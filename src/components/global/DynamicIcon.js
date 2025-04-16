@@ -1,3 +1,4 @@
+"use client"
 // components/global/DynamicIcon.js
 import { useEffect, useState } from "react";
 import iconLibraries from "@/contentData/iconLibraries";

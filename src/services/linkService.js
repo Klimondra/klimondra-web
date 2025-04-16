@@ -1,6 +1,6 @@
 const getLinks = async () => {
     try {
-        const res = await fetch("/api/db/linktree-links", {
+        const res = await fetch("http://localhost:3000/api/db/linktree-links", {
             cache: "no-cache",
         });
 
@@ -18,7 +18,7 @@ const getLinks = async () => {
 
 const deleteLink = async (id) => {
     try {
-        const res = await fetch(`/api/db/linktree-links/?id=${id}`, {
+        const res = await fetch(`http://localhost:3000/api/db/linktree-links/?id=${id}`, {
             method: "DELETE",
         });
 
@@ -34,7 +34,7 @@ const deleteLink = async (id) => {
 
 const createLink = async (dataToUpload) => {
     try {
-        const res = await fetch(`/api/db/linktree-links/`, {
+        const res = await fetch(`http://localhost:3000/api/db/linktree-links/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const createLink = async (dataToUpload) => {
 
 const getLinkById = async (id) => {
     try {
-        const res = await fetch(`/api/db/linktree-links/${id}`, {
+        const res = await fetch(`http://localhost:3000/api/db/linktree-links/${id}`, {
             cache: "no-store",
         });
 
@@ -70,7 +70,7 @@ const getLinkById = async (id) => {
 
 const editLink = async (id, data) => {
     try {
-        const res = await fetch(`/api/db/linktree-links/${id}`, {
+        const res = await fetch(`http://localhost:3000/api/db/linktree-links/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

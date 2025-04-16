@@ -11,9 +11,9 @@ export async function PUT(request, {params}) {
     }
 
     const {id} = params
-    const {newLabel: label, newLink: link} = await request.json()
+    const {newLabel: label, newLink: link, newIcon: icon} = await request.json()
     await connectMongoDb()
-    await Link.findByIdAndUpdate(id, {label, link})
+    await Link.findByIdAndUpdate(id, {label, link, icon})
     return NextResponse.json({message: "Link updated", status: 200})
 }
 

@@ -10,9 +10,9 @@ export async function POST(request)  { // POST metoda pro api přidává odkazy
         return NextResponse.json({message: "Unauthorized"},{status: 401});
     }
 
-    const {label, link} = await request.json()
+    const {label, link, icon} = await request.json()
     await connectMongoDb()
-    await Link.create({label, link});
+    await Link.create({label, link, icon});
     return NextResponse.json({message: "Link added"}, {status: 201})
 }
 

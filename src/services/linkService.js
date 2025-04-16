@@ -1,40 +1,95 @@
 const getLinks = async () => {
     try {
-        const res = await fetch("http://localhost:3000/api/db/linktree-links", {
+        const res = await fetch("/api/db/linktree-links", {
             cache: "no-cache",
-        })
+        });
 
         if (!res.ok) {
-            throw new Error("Failed to fetch links from server")
+            throw new Error("Failed to fetch links from server");
         }
 
         const data = await res.json();
-        return data.links || []
+        return data.links || [];
     } catch (e) {
-        console.log("GetLinks method error: " + e)
-        return []
+        console.log("GetLinks method error: " + e);
+        return [];
     }
-}
+};
 
 const deleteLink = async (id) => {
-    await fetch(`http://localhost:3000/api/db/linktree-links/?id=${id}`, {
-        method: "DELETE",
-    })
-}
+    try {
+        const res = await fetch(`/api/db/linktree-links/?id=${id}`, {
+            method: "DELETE",
+        });
+
+        if (!res.ok) {
+            throw new Error("Failed to delete link");
+        }
+
+        return await res.json();
+    } catch (error) {
+        console.log("DeleteLink error: " + error);
+    }
+};
 
 const createLink = async (dataToUpload) => {
     try {
-        const res = await fetch(`http://localhost:3000/api/db/linktree-links/`, {
+        const res = await fetch(`/api/db/linktree-links/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(dataToUpload)
-        })
-    }
-    catch (error) {
-        console.log("CreateLink error: " + error)
-    }
-}
+        });
 
-export { getLinks, deleteLink, createLink }
+        if (!res.ok) {
+            throw new Error("Failed to create link");
+        }
+
+        return await res.json();
+    } catch (error) {
+        console.log("CreateLink error: " + error);
+    }
+};
+
+const getLinkById = async (id) => {
+    try {
+        const res = await fetch(`/api/db/linktree-links/${id}`, {
+            cache: "no-store",
+        });
+
+        if (!res.ok) {
+            throw new Error("Failed to fetch one link from server");
+        }
+
+        return res.json();
+    } catch (e) {
+        console.log("GetLinkById error: " + e);
+    }
+};
+
+const editLink = async (id, data) => {
+    try {
+        const res = await fetch(`/api/db/linktree-links/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                newLabel: data.label,
+                newLink: data.link,
+                newIcon: data.icon
+            }),
+        });
+
+        if (!res.ok) {
+            throw new Error("Failed to update link from server");
+        }
+
+        return await res.json();
+    } catch (e) {
+        console.log("UpdateLink error: " + e);
+    }
+};
+
+export { getLinks, deleteLink, createLink, getLinkById, editLink };

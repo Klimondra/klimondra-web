@@ -1,0 +1,313 @@
+@import "./../../Globals";
+
+main {
+  background-color: #fffafa;
+  width: 100%;
+  height: 100%;
+  min-height: 93vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  section {
+    padding-top: 90px;
+    width: 85%;
+
+    header {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 2.7rem;
+      }
+
+      button {
+        font-size: 1.1rem;
+        padding: 10px 12px;
+        outline: none;
+        border: none;
+        background: lighten($blue, 3%);
+        color: white;
+        border-radius: 5px;
+        transition: all 0.25s ease;
+
+        &:hover {
+          background: lighten($blue, 0%);
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+          transform: scale(1.007);
+        }
+      }
+    }
+
+    .adminLinksWorkspace {
+      min-height: 65vh;
+      width: 100%;
+      padding: 16px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 36px;
+
+      .linkList {
+        width: 42%;
+        min-width: 530px;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+        height: auto;
+
+        .linkListHeader {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+          }
+
+          .addLinkAdminButton {
+            padding: 4px 16px;
+            font-size: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            border: 1px solid $bgdark;
+            border-radius: 5px;
+            background: darken(white, 1%);
+            transition: all 0.25s ease;
+
+            &:hover {
+              background: darken(white, 5%);
+              scale: 1.01;
+            }
+
+            .addLinkAdminButtonIcon {
+              margin-right: 6px;
+            }
+          }
+        }
+
+        .linkInList {
+          margin-top: 12px;
+          background-color: white;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          flex-direction: row;
+          padding: 8px;
+          border-radius: 5px;
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+
+          &:hover {
+
+          }
+
+          .linkInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 82%;
+            color: black;
+
+            h4 {
+              font-size: 1.4rem;
+            }
+            p {
+              font-size: 1.1rem;
+            }
+          }
+
+          .linkActions {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 6px;
+            height: 100%;
+            width: 18%;
+            min-width: 75px;
+
+            button {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 30%;
+              padding: 4px;
+              width: 100%;
+              font-size: 0.9rem;
+              outline: none;
+              border: none;
+              border-radius: 5px;
+              transition: all 0.25s ease;
+
+              .linkIcon {
+                font-size: 1rem;
+                margin-right: 4px;
+              }
+
+              &:hover {
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+                transform: scale(1.03);
+              }
+
+              &.manageLinkOpen {
+                background-color: lighten($bgdark, 30%);
+                color: white;
+              }
+              &.manageLinkEdit {
+                background-color: lighten($blue, 3%);
+                color: white;
+              }
+              &.manageLinkDelete {
+                background-color: lighten(red, 10%);
+                color: white;
+              }
+            }
+          }
+        }
+      }
+
+      .adminLinksWorkspaceForm {
+        flex: 1;
+        min-height: 65vh;
+        background: #fff;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 24px;
+        }
+
+        form {
+          position: relative;
+          input {
+            font-size: 1.2rem;
+            padding: 6px;
+            width: 100%;
+            margin-bottom: 16px;
+            margin-top: 4px;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid lighten($bgdark, 3%);
+          }
+
+          .adminLinkIconInputCont {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 12px;
+          }
+
+          .adminLinkIconOneInput {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            width: 50%;
+          }
+
+          .adminLinkIconInput {
+            width: 100%;
+          }
+
+          .adminLinkSubmitForm {
+            max-width: 250px;
+            min-width: 120px;
+            outline: none;
+            background-color: lighten($blue, 5%);
+            color: white;
+            border: none;
+            transition: all 0.25s ease;
+
+            &:hover {
+              background-color: lighten($blue, 1%);
+            }
+          }
+
+          label {
+            font-size: 1.07rem;
+            padding-bottom: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1136px) {
+  main section .adminLinksWorkspace {
+    flex-direction: column;
+
+    .linkList {
+      width: 100%;
+    }
+
+    .adminLinksWorkspaceForm {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main section {
+    width: 92%;
+    header {
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      button {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  main section .adminLinksWorkspace {
+    .linkList {
+      min-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main section {
+    header {
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .adminLinksWorkspace {
+      .linkList {
+        .linkInList .linkInfo h4 {
+          font-size: 1.2rem;
+        }
+
+        .linkInList .linkInfo p {
+          font-size: 1rem;
+          word-break: break-all
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  main section header h2{
+    font-size: 1.9rem;
+  }
+}

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Slabo+13px&family=Yantramanav:wght@100;300;400;500;700;900&display=swap");
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Readex Pro, Verdana, "Montserrat", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 93vh;
+  background-color: #0b0b0d;
+  color: white;
+}
+main h2 {
+  font-size: 3rem;
+  margin-bottom: 24px;
+}
+main h3 {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+main p {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+main button {
+  display: flex;
+  align-items: center;
+  padding: 12px 36px;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(71.24, 57.1767346939, 223.1232653061);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+main button .loginIcon {
+  font-size: 1.6rem;
+  margin-right: 12px;
+}
+main button:hover {
+  background-color: rgb(42.8, 29.6979591837, 184.3020408163);
+  scale: 1.02;
+  border-radius: 7px;
+}
+
+/*# sourceMappingURL=Login.css.map */

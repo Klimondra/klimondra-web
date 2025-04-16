@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["footer.scss","../../index.scss"],"names":[],"mappings":"AACQ;ACMR;EACE;EACA;EACA;;;ADJF;EACE;EACA,kBCPO;EDQP;EACA;EACA;;AAEA;EACE;EACA,OAZQ;EAaR","file":"footer.css"}
+{"version":3,"sourceRoot":"","sources":["../../app/Globals.scss","footer.scss"],"names":[],"mappings":"AAAQ;ACCA;ADQR;EACE;EACA;EACA;EACA;;;ACPF;EACE;EACA,kBDLO;ECMP;EACA;EACA;;AAEA;EACE;EACA,OAZQ;EAaR;;AAEA;EACE","file":"footer.css"}

@@ -1,5 +1,5 @@
 // app/linktree/page.js
-export const revalidate = 60; // Stránka se zkontroluje a případně aktualizuje každých 60 sekund
+export const revalidate = 90;
 
 import { getLinks } from "@/services/linkService";
 import AnimatedDotBg from "../../components/homePage/animatedDotBg";

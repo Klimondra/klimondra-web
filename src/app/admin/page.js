@@ -22,8 +22,8 @@ const Admin = () => {
                     <section className="webManageBox">
                         <p>Spravovat obsah</p>
                         <div className="webManageLinks">
-                            <Link href="/admin/projekty">Spravovat projekty</Link>
-                            <Link href="/admin/technologie">Spravovat tech-stack</Link>
+                            <Link href="/admin/projekty">Spravovat projekty [WIP]</Link>
+                            <Link href="/admin/technologie">Spravovat tech-stack [WIP]</Link>
                             <Link href="/admin/odkazy">Spravovat linktree</Link>
                         </div>
                     </section>

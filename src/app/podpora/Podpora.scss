@@ -1,0 +1,40 @@
+@import "../Globals";
+
+#podporaPage {
+  min-height: 93vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .animBg {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .qrPayContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex-grow: 1;
+
+    img {
+      width: 65vh;
+      height: 65vh;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #podporaPage .qrPayContent img {
+    width: 90vw;
+    height: 90vw;
+  }
+}

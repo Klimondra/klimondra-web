@@ -7,7 +7,6 @@ import DynamicIcon from "@/components/global/DynamicIcon";
 import "./Linktree.css";
 
 export default async function LinktreePage() {
-    // Data se načtou během generování stránky, NE až při zobrazení uživateli
     const linktreeLinks = await getLinks();
 
     return (

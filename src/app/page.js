@@ -30,10 +30,6 @@ const Home = () => {
   // Location
   const router = useRouter();
 
-  // Github contributions
-  const githubApiKey = process.env.NEXT_PUBLIC_GITHUB_API_KEY; // <your-github-api-key>
-  const githubUserName = "klimondra"; // <github-username>
-
   useEffect(() => {
     if (window.location.hash) {
       // Přidáme malé zpoždění, aby se zajistilo, že DOM je plně načtený

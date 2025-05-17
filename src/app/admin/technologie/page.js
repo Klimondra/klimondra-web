@@ -2,7 +2,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import "./Odkazy.css"
 import {useRouter} from "next/navigation";
-import {createLink, deleteLink, editLink, getLinks} from "@/services/linkService";
 import {MdDelete, MdModeEdit, MdOpenInNew} from "react-icons/md";
 import {useSession} from "next-auth/react";
 import Loading from "@/components/admin/Loading";

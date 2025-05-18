@@ -30,14 +30,14 @@ const iconLibraries = {
     tb, tfi, ti, vsc, wi,
 };
 
-export default function DynamicIcon({ lib, name, className }) {
+export default function DynamicIcon({ lib, name, className, style }) {
     if (!lib || !name) {
         return null;
     }
     const iconLib = iconLibraries[lib?.toLowerCase()];
     if (iconLib && iconLib[name]) {
         const IconComponent = iconLib[name];
-        return <IconComponent className={className} />;
+        return <IconComponent className={className} style={style}/>;
     } else {
         console.warn(`Ikona ${name} v knihovně ${lib} nenalezena.`);
         return null;

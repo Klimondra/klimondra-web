@@ -42,13 +42,15 @@ const NavHeader = () => {
             <AnimatePresence>
                 {openMenu &&
                 <motion.section
-                    className={"hidden max-md:block fixed w-screen h-screen bg-bgDark/25 z-20 top-0 left-0 backdrop-blur-sm px-16 pt-26 pb-20"}
+                    className={"hidden max-md:block fixed w-screen h-screen bg-bgDark/30 z-20 top-0 left-0 backdrop-blur-lg px-16 pt-26 pb-20"}
                     initial={{
                         opacity: 0,
+                        backdropFilter: "blur(0px)",
                         y: "-100%",
                     }}
                     animate={{
                         opacity: 1,
+                        backdropFilter: "blur(16px)",
                         y: 0,
                     }}
                     exit={{

@@ -1,26 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Slabo+13px&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+    --font-readex: "Readex Pro", "Segoe Ui", Verdana, sans-serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+    --color-bgDark: oklch(15.052% 0.00425 285.88);
+    --color-bgDark-50: oklch(80.768% 0.01392 286.08);
+    --color-bgDark-100: oklch(77.331% 0.01549 286.03);
+    --color-bgDark-200: oklch(70.374% 0.02022 285.87);
+    --color-bgDark-300: oklch(62.983% 0.02829 285.56);
+    --color-bgDark-400: oklch(55.955% 0.03226 285.31);
+    --color-bgDark-500: oklch(49.171% 0.02697 285.37);
+    --color-bgDark-600: oklch(42.186% 0.02307 285.37);
+    --color-bgDark-700: oklch(35.239% 0.01723 285.48);
+    --color-bgDark-800: oklch(27.566% 0.01282 285.53);
+    --color-bgDark-900: oklch(19.306% 0.008 285.63);
+    --color-bgDark-950: oklch(15.052% 0.00425 285.88);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    --color-primaryBlue: oklch(45.634% 0.24897 274);
+    --color-primaryBlue-50: oklch(85.652% 0.0608 289.21);
+    --color-primaryBlue-100: oklch(81.029% 0.08271 288.29);
+    --color-primaryBlue-200: oklch(71.259% 0.12805 286.79);
+    --color-primaryBlue-300: oklch(61.852% 0.17241 283.98);
+    --color-primaryBlue-400: oklch(53.152% 0.2152 280.1);
+    --color-primaryBlue-500: oklch(45.634% 0.24897 274);
+    --color-primaryBlue-600: oklch(38.363% 0.21828 272.86);
+    --color-primaryBlue-700: oklch(31.041% 0.17107 273.94);
+    --color-primaryBlue-800: oklch(23.123% 0.1189 275.54);
+    --color-primaryBlue-900: oklch(15.007% 0.05931 280.25);
+    --color-primaryBlue-950: oklch(9.8013% 0.02924 287.93);
 }

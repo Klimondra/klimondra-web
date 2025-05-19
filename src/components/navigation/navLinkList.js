@@ -1,6 +1,6 @@
 export const navbarLinks = [
-    { label: "Něco", link: "/projekty" },
-    { label: "Další", link: "/odkazy" },
+    { label: "Projekty", link: "/projekty" },
+    { label: "Linktree", link: "/odkazy" },
 ]
 
 export const sidebarLinks = [

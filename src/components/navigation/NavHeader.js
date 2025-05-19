@@ -13,10 +13,11 @@ const NavHeader = () => {
 
     return (
         <div className="overflow-x-hidden" >
-            <header className="w-9/10 h-14 z-30 flex justify-between items-center bg-white/10 rounded-xl shadow-md backdrop-blur-sm py-4 px-6 fixed top-4 left-1/2 transform -translate-x-1/2">
+            <header className="w-9/10 h-14 z-30 flex justify-between items-center bg-white/10 rounded-xl shadow-md backdrop-blur-sm py-4 px-6 fixed top-4 left-1/2 transform -translate-x-1/2 border-1 border-white/3">
                 <Link
                     href="/"
                     className="font-readex text-2xl text-gray-200 font-bold hover:text-primaryBlue-400 transition-all duration-300"
+                    onClick={() => { if (openMenu) toggleMenu();} }
                 >
                     Klimondra
                 </Link>

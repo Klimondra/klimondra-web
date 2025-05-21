@@ -42,7 +42,7 @@ export const techstackList = [
         color: "#00749C"
     },
     {
-        name: "C Sharp",
+        name: "C#",
         icon_lib: "tb",
         icon_component: "TbBrandCSharp",
         color: "#9179E4"

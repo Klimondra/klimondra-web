@@ -1,6 +1,7 @@
 export const navbarLinks = [
     { label: "Projekty", link: "/projekty" },
     { label: "Linktree", link: "/odkazy" },
+    { label: "Kontakt", link: "/kontakt" },
 ]
 
 export const sidebarLinks = [

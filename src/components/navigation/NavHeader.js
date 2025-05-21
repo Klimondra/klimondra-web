@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react"
 import MenuBtn from "@/components/navigation/menuBtn";
@@ -10,6 +10,19 @@ import DynamicIcon from "@/components/utils/DynamicIcon";
 const NavHeader = () => {
     const [openMenu, setOpenMenu] = useState(false);
     const toggleMenu = () => {setOpenMenu(!openMenu);};
+
+    useEffect(() => {
+        if (openMenu) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        // Reset on unmount (např. při změně stránky)
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [openMenu]);
 
     return (
         <div className="overflow-x-hidden" >

@@ -23,6 +23,4 @@ export const linktreeList = [
         icon_lib: "io5",
         icon_component: "IoLogoGithub",
     },
-
-
 ]

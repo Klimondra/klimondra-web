@@ -11,11 +11,14 @@ import DynamicIcon from "@/components/utils/DynamicIcon";
 import GitHubCalendar from "react-github-calendar";
 import Link from "next/link";
 import {sidebarLinks} from "@/components/navigation/navLinkList";
+import {router} from "next/client";
 
 const Home = () => {
-    const ref = useRef(null)
-    const countInView = useInView(ref, { once: true })
+    const randomNumRef = useRef(null)
+    const countInView = useInView(randomNumRef, { once: true })
     const randomNum = Math.floor(Math.random()*999)
+
+    const aboutMeRef = useRef(null)
 
     return (
         <main className={"w-full min-h-dvh"}>
@@ -34,15 +37,16 @@ const Home = () => {
                         whileInView={{opacity: 1, y: 0}}
                         transition={{duration: 0.4, delay: 0.8}}
                     >
-                        <PrimaryButton label={"Zjistit více"}/>
+                        <PrimaryButton label={"Zjistit více"} onClick={() => aboutMeRef.current?.scrollIntoView({ behavior: "smooth" })}/>
                         <SecondaryButton label={"Kontakt"}/>
                     </motion.div>
                 </motion.div>
             </section>
-            <section className="w-full py-16 bg-bgDark-800 flex flex-col items-center justify-center">
+            <section className="w-full py-16 bg-bgDark-800 flex flex-col items-center justify-center" ref={aboutMeRef}>
                 <div className="grid w-4/5 gap-4 grid-cols-1 lg:grid-cols-3 lg:grid-rows-[auto,1fr]">
                     <motion.div
-                        className="w-full lg:col-span-2 bg-darkCombo-700 rounded-3xl p-8 shadow-lg flex flex-col items-start justify-between"
+                        className={`w-full lg:col-span-2 bg-darkCombo-700 rounded-3xl p-8 shadow-lg flex flex-col items-start justify-between
+                                    ${"" /* KONCEPT DESIGNOVÉHO SMĚRU POZADÍ: bg-gradient-to-b from-darkCombo-200/15 to-darkCombo-200/25 border-2 border-darkCombo-300/12 */}`}
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{
                             opacity: 1,
@@ -65,7 +69,7 @@ const Home = () => {
                             transition: { duration: 0.5, delay: 0.25 },
                         }}
                     >
-                        <h4 ref={ref} className="font-readex text-white text-5xl font-bold mb-4">
+                        <h4 ref={randomNumRef} className="font-readex text-white text-5xl font-bold mb-4">
                             {countInView && <CountUp start={0} end={randomNum} duration={2} />}
                         </h4>
                         <h3 className="font-readex text-white text-3xl">je náhodné číslo</h3>
@@ -87,13 +91,17 @@ const Home = () => {
                         </div>
                         <div className="flex flex-row gap-4 flex-wrap justify-center items-center mt-8 w-full">
                             {techstackList.map((tech, index) => (
-                                <DynamicIcon
-                                    lib={tech.icon_lib}
-                                    name={tech.icon_component}
-                                    className="text-4xl hover:scale-110 active:scale-95 transition-all duration-200"
-                                    style={{ color: tech.color }}
-                                    key={index}
-                                />
+                                <Link key={index} href={`/projekty?tech=${tech.name}`}
+                                    className={"hover:scale-110 active:scale-95 transition-all duration-200"}
+                                >
+                                    <DynamicIcon
+                                        lib={tech.icon_lib}
+                                        name={tech.icon_component}
+                                        className="text-4xl"
+                                        style={{ color: tech.color }}
+
+                                    />
+                                </Link>
                             ))}
                         </div>
                     </motion.div>

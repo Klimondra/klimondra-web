@@ -9,8 +9,6 @@ const getRandomPosition = (max) => {
     return Math.random() * (max - SIZE_OFFSET);
 };
 
-const POINTS_COUNT = 1; // teď budeme generovat vždy 1 pozici na pohyb (nemusíme pole)
-
 const MainBg = ({ className }) => {
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
     const controlsRed = useAnimation();
@@ -37,7 +35,7 @@ const MainBg = ({ className }) => {
         await controls.start({
             x: newX,
             y: newY,
-            transition: { duration: 4 + Math.random() * 4, ease: "easeInOut" },
+            transition: { duration: 1 + Math.random() * 2.5, ease: "easeInOut" },
         });
 
         // po dokončení animace spustí další pohyb

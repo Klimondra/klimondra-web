@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const NotFound = () => {
     return (
-        <main className={"w-full min-h-dvh flex flex-col items-center justify-center"}>
+        <main className={"w-full min-h-svh flex flex-col items-center justify-center"}>
             <MainBg/>
             <h2 className={"font-readex font-bold text-8xl text-white"}>404</h2>
             <p className={"font-readex text-center text-white text-2xl mt-4"}>Další stránky webu jsou bohužel ohořelé...</p>

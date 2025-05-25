@@ -46,7 +46,6 @@ const NavHeader = () => {
                         </Link>
                     ))}
                 </nav>
-
                 <MenuBtn 
                     className="md:hidden max-md:inline p-2"
                     onClick={toggleMenu} 
@@ -56,7 +55,7 @@ const NavHeader = () => {
             <AnimatePresence>
                 {openMenu &&
                 <motion.section
-                    className={"hidden max-md:block fixed w-screen h-screen bg-bgDark/30 z-20 top-0 left-0 backdrop-blur-lg px-16 pt-26 pb-20"}
+                    className={"hidden max-md:block fixed w-screen h-dvh bg-bgDark/30 z-20 top-0 left-0 backdrop-blur-lg px-16 pt-26 pb-20"}
                     initial={{
                         opacity: 0,
                         backdropFilter: "blur(0px)",

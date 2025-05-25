@@ -43,7 +43,7 @@ const ProjektyUi = ({projectsData = [], techstackData}) => {
     }, [filter, projectsData]);
 
     return (
-        <main className={`w-full min-h-dvh bg-bgDark-800 pt-22`}>
+        <main className={`w-full min-h-svh bg-bgDark-800 pt-22`}>
             <h2 className={`font-readex text-white text-5xl font-semibold text-center mt-6`}>Projekty</h2>
             <p className={`font-readex text-white text-xl md:text-2xl text-center mt-4 px-2`}>Zde jsou některé mé práce, které jsou jakžtakž publikovatelné :D</p>
 

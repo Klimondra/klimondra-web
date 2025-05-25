@@ -11,18 +11,21 @@ import DynamicIcon from "@/components/utils/DynamicIcon";
 import GitHubCalendar from "react-github-calendar";
 import Link from "next/link";
 import {sidebarLinks} from "@/components/navigation/navLinkList";
-import {router} from "next/client";
+import {useRouter} from "next/navigation";
+
 
 const Home = () => {
+    const router = useRouter();
     const randomNumRef = useRef(null)
     const countInView = useInView(randomNumRef, { once: true })
     const randomNum = Math.floor(Math.random()*999)
 
     const aboutMeRef = useRef(null)
 
+
     return (
-        <main className={"w-full min-h-dvh"}>
-            <section className={"w-full h-dvh flex flex-col items-start justify-center"}>
+        <main className={"w-full min-h-svh"}>
+            <section className={"w-full h-svh flex flex-col items-start justify-center relative"}>
                 <MainBg/>
                 <motion.div className={"w-9/10 sm:w-4/5 lg:w-8/12 h-auto mx-auto"}
                     initial={{opacity: 0, x: -100}}
@@ -38,9 +41,16 @@ const Home = () => {
                         transition={{duration: 0.4, delay: 0.8}}
                     >
                         <PrimaryButton label={"Zjistit více"} onClick={() => aboutMeRef.current?.scrollIntoView({ behavior: "smooth" })}/>
-                        <SecondaryButton label={"Kontakt"}/>
+                        <SecondaryButton label={"Kontakt"} onClick={() => {router.push("/kontakt");}}/>
                     </motion.div>
                 </motion.div>
+                <div className={"hidden md:flex absolute bg-gradient-to-b from-white/5 to-white/7 backdrop-blur-lg rounded-tl-lg rounded-bl-lg right-0 top-1/2 z-10 transform -translate-y-1/2 flex-col  border-1 border-white/10 items-center justify-center overflow-hidden "}>
+                    {sidebarLinks.map((link, index) => (
+                        <Link href={link.link} key={index} className={"w-16 h-16 p-1 flex justify-center items-center rounded-lg hover:scale-110 active:scale-95 transition-all duration-200"}>
+                            <DynamicIcon lib={link.icon_lib} name={link.icon_component} className={"text-4xl text-white"}/>
+                        </Link>
+                    ))}
+                </div>
             </section>
             <section className="w-full py-16 bg-bgDark-800 flex flex-col items-center justify-center" ref={aboutMeRef}>
                 <div className="grid w-4/5 gap-4 grid-cols-1 lg:grid-cols-3 lg:grid-rows-[auto,1fr]">

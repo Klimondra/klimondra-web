@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjektyUi from "@/app/projekty/ProjektyUi";
+import ProjektyUi from "@/app/(main)/projekty/ProjektyUi";
 import {projektyList} from "@/db/projekty";
 import {techstackList} from "@/db/techstack";
 

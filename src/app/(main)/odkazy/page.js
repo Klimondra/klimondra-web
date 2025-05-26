@@ -1,5 +1,5 @@
 import React from 'react';
-import LinktreeUi from "@/app/odkazy/LinktreeUi";
+import LinktreeUi from "@/app/(main)/odkazy/LinktreeUi";
 import {linktreeList} from "@/db/linktree";
 
 const Linktree = () => {

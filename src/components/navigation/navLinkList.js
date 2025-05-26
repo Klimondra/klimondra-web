@@ -30,3 +30,31 @@ export const sidebarLinks = [
         icon_component: "SiInstagram",
     },
 ]
+
+export const adminNavLinks = [
+    {
+        name: "Dashboard",
+        link: "/admin",
+        icon_lib: "md",
+        icon_component: "MdOutlineSpaceDashboard",
+    },
+    {
+        name: "Kolekce2",
+        link: "/admin/collections",
+        icon_lib: "io5",
+        icon_component: "IoGridOutline",
+    },
+    {
+        name: "Kolekce3",
+        link: "/admin/collections",
+        icon_lib: "io5",
+        icon_component: "IoGridOutline",
+    },
+    {
+        name: "Kolekce4",
+        link: "/admin/collections",
+        icon_lib: "io5",
+        icon_component: "IoGridOutline",
+    },
+
+]

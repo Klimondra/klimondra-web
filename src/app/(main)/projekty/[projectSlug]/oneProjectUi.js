@@ -6,7 +6,7 @@ import DynamicIcon from "@/components/utils/DynamicIcon";
 import Link from "next/link";
 
 
-const SingleProjectPage = ({technologyData, projektyList, technologieProjektu}) => {
+const SingleProjectPage = ({projektyList, technologieProjektu}) => {
     const {projectSlug} = useParams();
     const projectData = projektyList.find((project) => project.slug === projectSlug);
     const techstackList = technologieProjektu.filter((tech) => tech.projekty_id === projectData.id);

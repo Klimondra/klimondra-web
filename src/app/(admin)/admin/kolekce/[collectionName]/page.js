@@ -6,7 +6,7 @@ import {collections} from "@/db/collections";
 import {
     createDbData, createDbDataAndReturn,
     deleteDbDataById, deleteDbDataEq,
-    getColumnInfo, getDbDataEq,
+    getColumnInfo,
     getDbDataList,
     updateDbDataById
 } from "@/db/db-actions";
@@ -307,16 +307,8 @@ const EditorKolekce = () => {
                                            placeholder={`Vlože data formátu: ${columnInfo.data_type}`}/>
                                 </div>
                             }
+
                             return null
-                            // TODO: Dodělat:
-                            // - Kontrola zda sloupec nemá vlastní pole/editor = DONE
-                            // - Podmínky pro různé typy sloupců (text, číslo, datum, atd.) a jejich inputy  = DONE
-                            // - Přidat validace pro inputy = DONE
-                            // - Přidat logiku odesílání formuláře a uložení dat do databáze = ČÁSTEČNĚ
-                            // - Přidat logiku pořadí (order) = DONE
-                            // - Přidat logiku relací kolekcí: https://chatgpt.com/share/6838b7c6-139c-8002-a915-df7d42df9e47 = DONE
-                            // - Přidat fetchování na samotných stránkách
-                            // - Test, deploy, doména
                         })}
 
                         {collectionInfo.relations?.map((relation) => {

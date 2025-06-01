@@ -3,13 +3,12 @@ import SingleProjectPage from "@/app/(main)/projekty/[projectSlug]/oneProjectUi"
 import {getDbDataList} from "@/db/db-actions";
 
 const SingleProject = async () => {
-    const technologyData = await getDbDataList("technologie")
     const projectData = await getDbDataList("projekty")
     const technologieProjektu = await getDbDataList("relations_projekty_technologie", {technologie: true});
 
     return (
         <>
-          <SingleProjectPage technologyData={technologyData} projektyList={projectData} technologieProjektu={technologieProjektu}/>
+          <SingleProjectPage projektyList={projectData} technologieProjektu={technologieProjektu}/>
         </>
     );
 };

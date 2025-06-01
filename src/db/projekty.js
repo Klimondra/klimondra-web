@@ -3,7 +3,7 @@ export const projektyList = [
         visible_name: "Imbus",
         slug: "imbus",
         image: "https://i.ibb.co/xK794WZH/image.png",
-        techStack: ["C#", "Git", "Github", "React", "Node JS"],
+        techStack: ["HTML", "CSS"],
         category: "Desktopová aplikace",
         startedDate: new Date(2024,11),
         endedDate: null,
@@ -17,7 +17,7 @@ export const projektyList = [
             { label: "Webová stránka", link: "https://imbus.org/" },
         ],
     },
-    {
+    /* {
         visible_name: "Imbus",
         slug: "imbus",
         image: "https://i.ibb.co/xK794WZH/image.png",
@@ -78,6 +78,6 @@ export const projektyList = [
         links: [
             { label: "Webová stránka", link: "https://imbus.org/" },
         ],
-    },
+    },*/
 
 ]

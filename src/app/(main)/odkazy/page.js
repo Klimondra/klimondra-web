@@ -1,10 +1,12 @@
 import React from 'react';
 import LinktreeUi from "@/app/(main)/odkazy/LinktreeUi";
-import {linktreeList} from "@/db/linktree";
+import {getDbDataList} from "@/db/db-actions";
 
-const Linktree = () => {
+const Linktree = async () => {
+    const data = await getDbDataList("linktree")
+
     return (
-        <LinktreeUi data={linktreeList}/>
+        <LinktreeUi data={data}/>
     );
 };
 

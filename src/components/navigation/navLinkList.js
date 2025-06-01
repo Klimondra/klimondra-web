@@ -39,22 +39,16 @@ export const adminNavLinks = [
         icon_component: "MdOutlineSpaceDashboard",
     },
     {
-        name: "Kolekce2",
-        link: "/admin/collections",
+        name: "Kolekce",
+        link: "/admin/kolekce",
         icon_lib: "io5",
-        icon_component: "IoGridOutline",
+        icon_component: "IoLayers",
     },
     {
-        name: "Kolekce3",
-        link: "/admin/collections",
-        icon_lib: "io5",
-        icon_component: "IoGridOutline",
-    },
-    {
-        name: "Kolekce4",
-        link: "/admin/collections",
-        icon_lib: "io5",
-        icon_component: "IoGridOutline",
+        name: "Hlavní strana",
+        link: "/",
+        icon_lib: "ri",
+        icon_component: "RiHome4Line",
     },
 
 ]

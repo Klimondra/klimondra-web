@@ -1,11 +1,13 @@
 import React from 'react';
 import ProjektyUi from "@/app/(main)/projekty/ProjektyUi";
-import {projektyList} from "@/db/projekty";
-import {techstackList} from "@/db/techstack";
+import {getDbDataList} from "@/db/db-actions";
 
-const Projekty = () => {
+const Projekty = async () => {
+    const technologyData = await getDbDataList("technologie")
+    const projektyList = await getDbDataList("projekty")
+    const technologieProjektu = await getDbDataList("relations_projekty_technologie", {technologie: true});
     return (
-        <ProjektyUi projectsData={projektyList} techstackData={techstackList}/>
+        <ProjektyUi projectsData={projektyList} techstackData={technologyData} technologieProjektu={technologieProjektu}/>
     );
 };
 

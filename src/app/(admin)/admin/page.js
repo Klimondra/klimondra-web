@@ -6,7 +6,7 @@ const Page = () => {
     const { user, isLoaded } = useUser();
     return (
         <>
-            <h2 className={`text-black font-readex text-4xl font-bold`}>{`Nazdar${isLoaded && `, ${user.fullName}`}!`}</h2>
+            <h2 className={`text-black font-readex text-4xl font-bold`}>{`Nazdar${isLoaded ? `, ${user.fullName}` : ""}!`}</h2>
         </>
     );
 };

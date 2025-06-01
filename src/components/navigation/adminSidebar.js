@@ -18,7 +18,7 @@ const AdminSidebar = () => {
         <>
             {/* PC Verze (Od breakpointu MD nahoru) */}
             <motion.aside
-                className="hidden md:flex h-screen bg-bgDark-950 flex-col shrink-0 border-r border-bgDark-800"
+                className="hidden md:flex h-screen static bg-bgDark-950 flex-col shrink-0 border-r border-bgDark-800"
                 animate={{
                     width: isOpen ? sidebarOpenWidth : sidebarClosedWidth,
                 }}

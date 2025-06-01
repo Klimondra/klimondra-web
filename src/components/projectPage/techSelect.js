@@ -6,8 +6,8 @@ import DynamicIcon from "@/components/utils/DynamicIcon";
 
 const ProjektySelect = ({ filter, setFilter, techstackData }) => {
     const options = techstackData.map((tech) => ({
-        label: tech.name,
-        value: tech.name,
+        label: tech.label,
+        value: tech.id,
         icon: {
             lib: tech.icon_lib,
             name: tech.icon_component,

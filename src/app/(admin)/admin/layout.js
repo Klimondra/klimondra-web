@@ -5,9 +5,9 @@ import AdminSidebar from "@/components/navigation/adminSidebar";
 const AdminLayout = ({children}) => {
     return (
         <ClerkProvider>
-            <main className={`w-full min-h-svh flex flex-col md:flex-row`}>
+            <main className={`w-full h-svh flex flex-col md:flex-row relative overflow-hidden`}>
                 <AdminSidebar/>
-                <section className={`flex-1 p-6 overflow-auto`}>
+                <section className={`flex-1 p-6 overflow-y-auto overflow-x-hidden`}>
                     {children}
                 </section>
             </main>

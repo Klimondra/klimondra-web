@@ -7,7 +7,7 @@ import ProjektySelect from "@/components/projectPage/techSelect";
 import ProjectCard from "@/components/projectPage/projectCard";
 import {useSearchParams} from "next/navigation";
 
-const ProjektyUi = ({projectsData = [], techstackData}) => {
+const ProjektyUi = ({projectsData = [], techstackData, technologieProjektu}) => {
     const [filterVisible, setFilterVisible] = useState(false);
     const [filter, setFilter] = useState({search: "", tech: []});
     const [filterData, setFilterData] = useState(projectsData);
@@ -24,16 +24,20 @@ const ProjektyUi = ({projectsData = [], techstackData}) => {
     useEffect(() => {
         if (filter.search === "" && filter.tech.length === 0) setFilterData(projectsData)
         else {
-            const techFilter = filter.tech.length === 0 ? projectsData
-                : projectsData.filter(
-                    (project) => (filter.tech.every(
-                        (tech) => project.techStack.includes(tech)
-                    )));
+            const techFilter = filter.tech.length === 0 ?
+                projectsData :
+                projectsData.filter(
+                    (project) => {
+                        const projectTechIds = technologieProjektu
+                            .filter((tech) => tech.projekty_id === project.id)
+                            .map((tech) => tech.technologie_id);
+                        return filter.tech.every((techId) => projectTechIds.includes(techId));
+                    });
             const result = filter.search === "" ?
                 techFilter :
                 techFilter.filter(
                     (project) => (
-                        project.visible_name
+                        project.label
                             .toLowerCase().includes(filter.search.toLowerCase())
                         || project.description.toLowerCase().includes(filter.search.toLowerCase())
                         || project.category.toLowerCase().includes(filter.search.toLowerCase())
@@ -92,7 +96,7 @@ const ProjektyUi = ({projectsData = [], techstackData}) => {
             </section>
             <section className={`w-9/10 mx-auto mt-6 py-6 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4`}>
                 {filterData.map((project, index) => (
-                    <ProjectCard key={index} data={project}/>
+                    <ProjectCard key={index} data={project} technologieProjektu={technologieProjektu.filter((tech)=> tech.projekty_id === project.id)}/>
                 ))}
             </section>
         </main>

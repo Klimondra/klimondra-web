@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PrimaryButton = ({className, onClick, label}) => {
+const PrimaryButton = ({className, onClick, label, children, ...props}) => {
     return (
         <button
             onClick={onClick}
@@ -8,7 +8,9 @@ const PrimaryButton = ({className, onClick, label}) => {
                         hover:scale-102 hover:shadow-lg hover:border-primaryBlue-500/15 hover:brightness-107 
                         active:scale-98 active:brightness-99 transition-all duration-200
                         ${className || ''}`}
+            {...props}
         >
+            {children}
             {label}
         </button>
     );

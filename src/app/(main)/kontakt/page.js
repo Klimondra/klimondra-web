@@ -18,7 +18,7 @@ const Kontakt = () => {
                         <IoLogoInstagram className={`text-white text-3xl`} />
                         <h4 className={`text-white font-readex text-lg`}>Instagram</h4>
                     </Link>
-                    <Link href={"mailto:klimondra@imbus.org"}
+                    <Link href={"mailto:klimondra@klimondra.eu"}
                           className={`w-full flex flex-row items-center justify-between p-2 bg-gradient-to-br from-amber-500/5 to-amber-500/10 rounded-md backdrop-blur-lg border-1 border-amber-500/10 shadow-lg hover:scale-101 hover:from-amber-500/12 active:scale-95 transition-all duration-200`}
                     >
                         <IoMailOutline className={`text-white text-3xl`}/>

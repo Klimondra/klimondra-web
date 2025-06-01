@@ -7,7 +7,7 @@ export const navbarLinks = [
 export const sidebarLinks = [
     {
         name: "E-mail",
-        link: "mailto:klimondra@imbus.org",
+        link: "mailto:klimondra@klimondra.eu",
         icon_lib: "io5",
         icon_component: "IoMailOutline",
     },

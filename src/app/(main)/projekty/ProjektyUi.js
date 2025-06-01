@@ -15,7 +15,8 @@ const ProjektyUi = ({projectsData = [], techstackData, technologieProjektu}) => 
 
     useEffect(() => {
         if (searchParams.get("tech") !== null) {
-            setFilter({...filter, tech: [...filter.tech , searchParams.get("tech")]});
+            const techToFind = techstackData.find((tech) => tech.label === searchParams.get("tech"));
+            setFilter({...filter, tech: [...filter.tech , techToFind.id]});
             setFilterVisible(true);
         }
     }, []);

@@ -130,7 +130,7 @@ const Home = ({technologyData}) => {
                         ))
                     }
                 </div>
-                <PrimaryButton label={"Kontakt"} className={"h-16 text-xl font-readex px-6"}/>
+                <PrimaryButton label={"Kontakt"} className={"h-16 text-xl font-readex px-6"} onClick={router.push("/kontakt")}/>
             </section>
         </main>
     );

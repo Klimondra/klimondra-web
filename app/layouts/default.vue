@@ -1,5 +1,5 @@
 <script setup>
-import NavigationHeader from "~/components/composites/NavigationHeader.vue";
+import NavigationHeader from "~/components/composites/NavigationHeader/NavigationHeader.vue";
 
 const theme = useThemeStore()
 onMounted(() => {

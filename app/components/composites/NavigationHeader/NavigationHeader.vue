@@ -1,0 +1,68 @@
+<script setup>
+import IconToggleButton from "~/components/ui/buttons/IconToggleButton.vue";
+import IconSingleRounded from "~/components/ui/buttons/IconSingleRounded.vue";
+import NavHeaderDetails from "~/components/composites/NavigationHeader/NavHeaderDetails.vue";
+
+const {locale, setLocale} = useI18n()
+
+const theme = useThemeStore()
+
+
+const isEnglish = ref(locale.value === 'en')
+
+const langSwitch = () => {
+  isEnglish.value = !isEnglish.value
+  setLocale(isEnglish.value ? 'en' : 'cs')
+}
+
+const settingsDetails = useTemplateRef('settingsDetails')
+</script>
+
+<template>
+  <header class="w-full h-18 fixed top-0 z-30 flex flex-row items-end justify-center px-4 sm:px-8">
+    <div
+        class="w-full max-w-7xl h-14 flex items-center justify-between px-4
+        bg-white/10 backdrop-blur-xl rounded-2xl border-1 border-slate-950/5 shadow-sm/5 dark:shadow-white
+        dark:border-white/5 transition-all duration-200"
+    >
+      <NuxtLink to="/public"
+                class="font-bold text-2xl font-main text-black dark:text-white hover:text-iris-400 active:text-iris-500 transition-colors duration-200 ">
+        Klimondra
+      </NuxtLink>
+      <nav class="flex items-center gap-4">
+        <ul>
+          <!-- Seznam odkazů -->
+        </ul>
+
+        <div class="flex items-center justify-center relative">
+          <IconSingleRounded icon="material-symbols:settings-outline" @click="settingsDetails?.toggle" />
+          <NavHeaderDetails ref="settingsDetails">
+            <div class="flex flex-col gap-2">
+              <IconToggleButton
+                  icon-true="material-symbols:dark-mode-outline"
+                  icon-false="material-symbols:light-mode-outline"
+                  :value="theme.isDark"
+                  :size="32"
+                  :button-props="{
+              ariaLabel: theme.isDark ? $t('composites.navigation.themeSwitcher.switchToLight') : $t('composites.navigation.themeSwitcher.switchToDark'),
+            }"
+                  @toggle="theme.toggleTheme"
+              />
+
+              <IconToggleButton
+                  icon-true="circle-flags:lang-en"
+                  icon-false="circle-flags:cz"
+                  :value="isEnglish"
+                  :size="32"
+                  :button-props="{
+              ariaLabel: theme.isDark ? $t('composites.navigation.themeSwitcher.switchToLight') : $t('composites.navigation.themeSwitcher.switchToDark'),
+            }"
+                  @toggle="langSwitch"
+              />
+            </div>
+          </NavHeaderDetails>
+        </div>
+      </nav>
+    </div>
+  </header>
+</template>

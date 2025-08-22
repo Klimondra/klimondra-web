@@ -1,0 +1,24 @@
+{
+  "pages": {
+    "home": {
+      "hero": {
+        "hiIam": "Ahoj, já jsem",
+        "typewriter": {
+          "1": "Dělám weby",
+          "2": "Dělám software",
+          "3": "Dělám grafiku",
+          "4": "Dělám grafiku (občas)"
+        },
+        "learnMore": "Zjistit více"
+      }
+    }
+  },
+  "composites": {
+    "navigation": {
+      "themeSwitcher": {
+        "switchToLight": "Přepnout do světlého režimu",
+        "switchToDark": "Přepnout do tmavého režimu"
+      }
+    }
+  }
+}

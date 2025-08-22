@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-main: 'Geologica', sans-serif;
+
+    --color-iris-50: oklch(95.85% 0.019 282.83);
+    --color-iris-100: oklch(90.76% 0.041 281.04);
+    --color-iris-200: oklch(81.48% 0.085 279.9);
+    --color-iris-300: oklch(72.11% 0.131 277.28);
+    --color-iris-400: oklch(63.08% 0.176 273.75);
+    --color-iris-500: oklch(54.24% 0.221 268.07);
+    --color-iris-600: oklch(46.16% 0.206 266.19);
+    --color-iris-700: oklch(38.37% 0.17 266.15);
+    --color-iris-800: oklch(30.27% 0.133 266.09);
+    --color-iris-900: oklch(22.26% 0.099 265.95);
+    --color-iris-950: oklch(18.1% 0.082 265.83);
+}
+
+@layer utilities {
+    .font-thin {
+        font-variation-settings: 'wght' 100;
+    }
+    .font-extralight {
+        font-variation-settings: 'wght' 200;
+    }
+    .font-light {
+        font-variation-settings: 'wght' 300;
+    }
+    .font-normal {
+        font-variation-settings: 'wght' 400;
+    }
+    .font-medium {
+        font-variation-settings: 'wght' 500;
+    }
+    .font-semibold {
+        font-variation-settings: 'wght' 600;
+    }
+    .font-bold {
+        font-variation-settings: 'wght' 700;
+    }
+    .font-extrabold {
+        font-variation-settings: 'wght' 800;
+    }
+    .font-black {
+        font-variation-settings: 'wght' 900;
+    }
+}

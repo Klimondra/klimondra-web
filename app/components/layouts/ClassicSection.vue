@@ -21,7 +21,7 @@ const props = defineProps({
 
 <template>
   <section
-      :class="'w-full min-h-dvh px-4 sm:px-8 ' + props.outerClass"
+      :class="'w-full min-h-dvh px-4 sm:px-8 xl:px-22 ' + props.outerClass"
       v-bind="props.outerProps"
   >
     <div

@@ -12,13 +12,26 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@pinia/nuxt',
         '@nuxtjs/i18n',
+        'motion-v/nuxt',
     ],
 
-    css: ['~/assets/css/global.css'],
+    css: [
+        '~/assets/css/tailwind.css',
+    ],
+
     vite: {
         plugins: [
             tailwindcss(),
         ],
+    },
+
+    app: {
+        head: {
+            htmlAttrs: {
+                lang: 'cs',
+                class: 'dark',
+            },
+        },
     },
 
     fonts: {
@@ -26,7 +39,7 @@ export default defineNuxtConfig({
             weights: ['100 900'],
         },
         families: [
-            { name: "Geologica", provider: "google"}
+            {name: "Geologica", provider: "google"}
         ]
     },
 

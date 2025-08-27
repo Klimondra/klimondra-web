@@ -10,6 +10,28 @@
           "4": "Dělám grafiku (občas)"
         },
         "learnMore": "Zjistit více"
+      },
+      "aboutme": {
+        "title": "O mně",
+        "article": "Jmenuji se Ondřej Klíma, ale v online světě používám přezdívku Klimondra. Studuji střední školu v oboru IT a programování. Tady pak bude stejně text z Linkedinu.\n \nLorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc at dignissim lorem. Donec velit felis, venenatis nec fermentum id, pulvinar id ante. Duis ligula tellus, porttitor in lorem in, iaculis tempus ligula. Vivamus mollis ligula sit amet tellus convallis, non ornare felis efficitur. Fusce dapibus lacus lacinia sapien consequat, aliquam pharetra massa lobortis. In lacinia leo at sodales auctor. Donec vehicula blandit sapien vitae tempor. Nullam vel tristique nulla. Suspendisse dignissim tincidunt tortor, et consectetur mi consequat eget. Quisque ornare porta fringilla. Donec sollicitudin ultrices interdum. Maecenas ultricies augue at vehicula sodales.",
+        "moreAboutMe": "Více o mně",
+        "cards": {
+          "nationality": {
+            "title": "PŮVOD",
+            "czechia": "Česko"
+          },
+          "age": {
+            "title": "ŽIJU UŽ",
+            "years": "let"
+          },
+          "music": {
+            "title": "POHÁNÍ MĚ",
+            "rock": "ROCKová hudba"
+          },
+          "follow": {
+            "title": "SLEDUJ MĚ"
+          }
+        }
       }
     }
   },
@@ -18,6 +40,10 @@
       "themeSwitcher": {
         "switchToLight": "Přepnout do světlého režimu",
         "switchToDark": "Přepnout do tmavého režimu"
+      },
+      "settings": {
+        "theme": "Motiv",
+        "language": "Jazyk"
       }
     }
   }

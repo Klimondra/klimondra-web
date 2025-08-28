@@ -9,6 +9,10 @@ const props = defineProps({
   buttonClass: {
     type: String,
     default: '',
+  },
+  ariaLabel: {
+    type: String,
+    default: 'Icon button',
   }
 })
 
@@ -25,6 +29,7 @@ const handleClick = (e) => {
   <button
       :class='"flex items-center justify-center w-10 h-10 rounded-full relative overflow-hidden hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
       + props.buttonClass'
+      :aria-label="props.ariaLabel"
       @click="handleClick"
   >
     <MaterialRippleEffect

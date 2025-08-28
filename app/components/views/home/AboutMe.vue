@@ -12,7 +12,7 @@ const age = sub(new Date(), { years: 2009, months: 7, days: 10 });
 
 <template>
   <ClassicSection
-      inner-class="min-h-dvh flex flex-col gap-12 pb-12"
+      inner-class="min-h-lvh flex flex-col gap-12 pb-12"
   >
     <SectionShadowHeading :text="$t('pages.home.aboutme.title')"/>
     <div class="w-full h-full flex flex-col lg:flex-row gap-12">
@@ -53,9 +53,21 @@ const age = sub(new Date(), { years: 2009, months: 7, days: 10 });
               :heading="$t('pages.home.aboutme.cards.follow.title')"
           >
             <div class="flex-1 flex items-center justify-center gap-4">
-              <a href="https://www.instagram.com/klimondra/" target="_blank"><Icon name="mdi:instagram" class="text-5xl text-iris-950 dark:text-iris-50 hover:text-iris-400 active:scale-98 transition-all duration-200"/></a>
-              <a href="https://www.threads.com/@klimondra" target="_blank"><Icon name="ion:logo-threads" class="text-5xl text-iris-950 dark:text-iris-50 hover:text-iris-400 active:scale-98 transition-all duration-200"/></a>
-              <a href="https://discordapp.com/users/821336004643520512" target="_blank"><Icon name="ic:baseline-discord" class="text-5xl text-iris-950 dark:text-iris-50 hover:text-iris-400 active:scale-98 transition-all duration-200"/></a>
+              <a
+                  href="https://www.instagram.com/klimondra/"
+                  target="_blank"
+                  :aria-label="$t('pages.home.aboutme.cards.follow.accessLabels.instagram')"
+              ><Icon name="mdi:instagram" class="text-5xl text-iris-950 dark:text-iris-50 hover:text-iris-400 active:scale-98 transition-all duration-200"/></a>
+              <a
+                  href="https://www.threads.com/@klimondra"
+                  target="_blank"
+                  :aria-label="$t('pages.home.aboutme.cards.follow.accessLabels.threads')"
+              ><Icon name="ion:logo-threads" class="text-5xl text-iris-950 dark:text-iris-50 hover:text-iris-400 active:scale-98 transition-all duration-200"/></a>
+              <a
+                  href="https://discordapp.com/users/821336004643520512"
+                  target="_blank"
+                  :aria-label="$t('pages.home.aboutme.cards.follow.accessLabels.discord')"
+              ><Icon name="ic:baseline-discord" class="text-5xl text-iris-950 dark:text-iris-50 hover:text-iris-400 active:scale-98 transition-all duration-200"/></a>
             </div>
           </HomeAboutCard>
         </div>

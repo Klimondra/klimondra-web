@@ -1,6 +1,10 @@
 {
   "pages": {
     "home": {
+      "meta": {
+        "title": "Hlavní stránka",
+        "description": "Osobní webová stránka Ondřeje Klímy - na internetu vystupující pod přezdívkou Klimondra. Zjistěte více, nejen o životopisu a portfoliu."
+      },
       "hero": {
         "hiIam": "Ahoj, já jsem",
         "typewriter": {
@@ -29,9 +33,17 @@
             "rock": "ROCKová hudba"
           },
           "follow": {
-            "title": "SLEDUJ MĚ"
+            "title": "SLEDUJ MĚ",
+            "accessLabels": {
+              "instagram": "Přejít na Instagram",
+              "threads": "Přejít na Threads",
+              "discord": "Přejít na Discord"
+            }
           }
         }
+      },
+      "technologies": {
+        "title": "Technologie"
       }
     }
   },
@@ -42,6 +54,7 @@
         "switchToDark": "Přepnout do tmavého režimu"
       },
       "settings": {
+        "accessName": "Nastavení stránky",
         "theme": "Motiv",
         "language": "Jazyk"
       }

@@ -28,15 +28,15 @@ const langSwitch = () => {
         Klimondra
       </NuxtLink>
       <nav class="flex items-center gap-4">
-        <ul>
+        <div>
           <NuxtLink class="text-black dark:text-white" to="/projects">
             Projekty
           </NuxtLink>
-        </ul>
+        </div>
 
         <NavHeaderItemWithDetail detail-class="-right-4">
           <template #toggleButton>
-            <IconSingleRounded icon="material-symbols:settings-outline"/>
+            <IconSingleRounded icon="material-symbols:settings-outline" :aria-label="$t('composites.navigation.settings.accessName')"/>
           </template>
           <template #detail>
             <div class="flex flex-col items-end gap-2">

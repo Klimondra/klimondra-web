@@ -3,7 +3,7 @@ const {oneLink} = defineProps({
   oneLink: {
     type: Object,
     required: true
-  }
+  },
 })
 
 const hover = ref(false)
@@ -15,6 +15,7 @@ const hover = ref(false)
       :href="oneLink.link"
       target="_blank"
       class="relative flex justify-center items-center"
+      :aria-label="oneLink.name"
   >
     <Icon
         :name="oneLink.icon"

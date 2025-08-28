@@ -13,7 +13,7 @@ export const useThemeStore = defineStore('theme', () => {
 
     const initTheme = () => {
         addClass()
-        dark.value = localStorage.getItem('dark') === 'true'
+        dark.value = localStorage.getItem('dark') !== 'false'
         addClass()
     }
 

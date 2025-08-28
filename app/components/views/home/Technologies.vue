@@ -83,11 +83,11 @@ const technologies = [
               v-for="tech in technologies"
               :key="tech.name"
               class="p-2 flex flex-row items-center gap-3
-                bg-slate-100/70 dark:bg-white/4 backdrop-blur-xl rounded-lg
-                border-1 border-slate-300/20 dark:border-iris-500/5
-                shadow-md dark:shadow-white/5
+                bg-slate-100/70 dark:bg-white/5 backdrop-blur-xl rounded-lg
+                border-1 border-iris-600/15 dark:border-iris-500/5
+                shadow-sm dark:shadow-white/5
               text-slate-700 dark:text-white font-main text-xl
-                transition-all duration-200 hover:shadow-lg hover:scale-105"
+                transition-all duration-200 hover:shadow-lg hover:scale-102"
           >
             <Icon :name="tech.icon" :style="{color: tech.color}" class="text-3xl"/>
             <span>{{ tech.name }}</span>

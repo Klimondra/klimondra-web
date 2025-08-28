@@ -25,7 +25,7 @@ const hover = ref(false)
         @mouseleave="hover = false"
     />
     <span
-        :class='`absolute top-1/2 -translate-y-1/2 -left-7/5  font-main font-medium text-lg text-black: dark:text-white pointer-events-none p-1 bg-black/50 rounded-2xl
+        :class='`absolute top-1/2 -translate-y-1/2 -left-8/5 font-main font-medium text-lg text-black: dark:text-white pointer-events-none py-1 px-2 bg-black/30 dark:bg-black/50 rounded-2xl
         ${hover ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2"} transition-all duration-200`'
     >{{oneLink.name}}</span>
   </a>

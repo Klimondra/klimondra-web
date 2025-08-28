@@ -11,7 +11,7 @@ import { motion } from "motion-v"
       inner-class="min-h-dvh flex flex-col justify-center items-start"
   >
     <motion.div
-        class="absolute top-0 left-0 right-0 w-full h-96 bg-gradient-to-b dark:from-iris-400/20 from-iris-500/20 to-transparent transition-all duration-200"
+        class="absolute top-0 left-0 right-0 w-full h-96 bg-gradient-to-b dark:from-iris-400/20 from-iris-500/25 to-transparent transition-all duration-200"
         :initial="{
           opacity: 0
         }"

@@ -37,7 +37,7 @@ const buttonSize = props.size
 <template>
   <button
       :style="{ width: `${boxWidth}px`, height: `${boxHeight}px`, padding: `${padding}px` }"
-      class="border-1 inset-shadow-sm inset-shadow-black/3 dark:inset-shadow-white/3 border-slate-950/10 dark:border-white/10 rounded-2xl transition-all duration-200"
+      class="border-1 cursor-pointer inset-shadow-sm inset-shadow-black/3 dark:inset-shadow-white/3 border-slate-950/10 dark:border-white/10 rounded-2xl transition-all duration-200"
       v-bind="buttonProps"
       @click="handleClick"
   >

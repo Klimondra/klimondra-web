@@ -23,7 +23,7 @@ const handleClick = (e) => {
 <template>
   <button
       class="flex flex-row items-center gap-1 px-4 py-2 relative overflow-hidden
-        bg-iris-500 rounded-2xl shadow-sm border-1 border-iris-500
+        bg-iris-500 rounded-2xl shadow-sm border-1 border-iris-500 cursor-pointer
         hover:border-iris-600 hover:shadow-md
           active:scale-98 active:border-iris-700 transition-all duration-200"
       @mouseenter="hover = true"

@@ -4,6 +4,7 @@ import Hero from "~/components/views/home/Hero.vue";
 import AboutMe from "~/components/views/home/AboutMe.vue";
 import Technologies from "~/components/views/home/Technologies.vue";
 import Projects from "~/components/views/home/Projects.vue";
+import Contact from "~/components/views/home/Contact.vue";
 
 useHead({
   title: `Klimondra | ${$t("pages.home.meta.title")}`,
@@ -19,4 +20,5 @@ useHead({
   <AboutMe/>
   <Technologies />
   <Projects />
+  <Contact />
 </template>

@@ -27,7 +27,7 @@ const handleClick = (e) => {
 
 <template>
   <button
-      :class='"flex items-center justify-center w-10 h-10 rounded-full relative overflow-hidden hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
+      :class='"flex cursor-pointer items-center justify-center w-10 h-10 rounded-full relative overflow-hidden hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
       + props.buttonClass'
       :aria-label="props.ariaLabel"
       @click="handleClick"

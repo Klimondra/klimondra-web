@@ -3,6 +3,7 @@ import QuickLinks from "~/components/composites/QuickLinks.vue";
 import Hero from "~/components/views/home/Hero.vue";
 import AboutMe from "~/components/views/home/AboutMe.vue";
 import Technologies from "~/components/views/home/Technologies.vue";
+import Projects from "~/components/views/home/Projects.vue";
 
 useHead({
   title: `Klimondra | ${$t("pages.home.meta.title")}`,
@@ -17,4 +18,5 @@ useHead({
   <Hero />
   <AboutMe/>
   <Technologies />
+  <Projects />
 </template>

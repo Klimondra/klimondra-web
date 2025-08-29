@@ -12,7 +12,7 @@ const age = sub(new Date(), { years: 2009, months: 7, days: 10 });
 
 <template>
   <ClassicSection
-      inner-class="min-h-lvh flex flex-col gap-12 pb-12"
+      inner-class="min-h-lvh flex flex-col gap-12 pb-12 overflow-x-hidden"
   >
     <SectionShadowHeading :text="$t('pages.home.aboutme.title')"/>
     <div class="w-full h-full flex flex-col lg:flex-row gap-12">

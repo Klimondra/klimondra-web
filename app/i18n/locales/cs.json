@@ -44,6 +44,15 @@
       },
       "technologies": {
         "title": "Technologie"
+      },
+      "projects": {
+        "title": "Projekty",
+        "projects": {
+          "chatapp": {
+            "subtitle": "Real-time chatovací aplikace",
+            "description": "Jednoduchá chatovací aplikace umožňující uživatelům komunikaci v reálném čase. Využívá frontend v Next.js a backend v jazyce Go. Databáze je v PostgreSQL. Naučil jsem se zde jak fungují WebSockety a jak je implementovat. Živou demoverzi najdete na odkazu níže. Kód je na mém GitHubu."
+          }
+        }
       }
     }
   },

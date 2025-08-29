@@ -2,8 +2,6 @@
 import ClassicSection from "~/components/layouts/ClassicSection.vue";
 import SectionShadowHeading from "~/components/ui/headings/SectionShadowHeading.vue";
 import HomeProjectArticle from "~/components/composites/special/HomeProjectArticle.vue";
-
-
 </script>
 
 <template>
@@ -23,7 +21,6 @@ import HomeProjectArticle from "~/components/composites/special/HomeProjectArtic
               { label: 'Demo', url: 'https://chatapp.klimondra.eu'},
           ]"
       />
-
     </div>
   </ClassicSection>
 </template>

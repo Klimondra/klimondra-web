@@ -67,6 +67,11 @@
         "theme": "Motiv",
         "language": "Jazyk"
       }
+    },
+    "footer": {
+      "madein": "Vytvořil Klimondra v roce",
+      "allrights": "Všechna práva vyhrazena",
+      "nospy": "Stránka nevyužívá trackovací cookies"
     }
   }
 }

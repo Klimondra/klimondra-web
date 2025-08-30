@@ -59,6 +59,13 @@
         "subtitle": "Pojďme vytvořit něco úžasného!",
         "description": "Máte zájem o spolupráci nebo jen chcete říct ahoj? Můžete mě kontaktovat na následujících platformách."
       }
+    },
+    "error": {
+      "notFound": {
+        "title": "Jejda!",
+        "subtitle": "Tato stránka nebyla nalezena :(",
+        "backHome": "Zpět na hlavní stránku"
+      }
     }
   },
   "composites": {

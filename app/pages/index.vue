@@ -12,7 +12,7 @@ useHead({
     { name: 'description', content: $t("pages.home.meta.description") },
     { name: 'author', content: "Ondřej Klíma | Klimondra" },
     { name: 'og:title', content: "Klimondra | Main page" },
-    { name: 'og:description', content: $t("pages.home.meta.description") },
+    { name: 'og:description', content: "Personal website of Ondřej Klíma - known on the internet under the nickname Klimondra. Find out more, not just about the resume and portfolio." },
     { name: 'og:type', content: "website" },
     { name: 'og:url', content: "https://klimondra.eu" },
     { name: 'og:image', content: "https://klimondra.eu/images/og-image.webp" },

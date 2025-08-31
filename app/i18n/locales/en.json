@@ -1,3 +1,95 @@
 {
-
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "Home page",
+        "description": "Personal website of Ondřej Klíma - known on the internet under the nickname Klimondra. Find out more, not just about the resume and portfolio."
+      },
+      "hero": {
+        "hiIam": "Hi, I'm",
+        "typewriter": {
+          "1": "I do websites",
+          "2": "I do software",
+          "3": "I do graphics",
+          "4": "I do graphics (sometimes)"
+        },
+        "learnMore": "Learn more"
+      },
+      "aboutme": {
+        "title": "About me",
+        "article": "My name is Ondřej Klíma, but in the online world you can know me by the nickname Klimondra. I am studying IT and programming at the High School of Applied Cybernetics in Hradec Králové. Computers and software have fascinated me since I was a child. Around the age of thirteen, I started learning to create websites using HTML and CSS and gradually tried other technologies, such as Python or C#.\n\nCurrently, I am actively learning to program and expanding my knowledge in both Frontend and Backend development. I also try to move forward outside of school in my free time, because I enjoy discovering new technologies, looking for effective solutions and moving forward.",
+        "moreAboutMe": "More about me",
+        "cards": {
+          "nationality": {
+            "title": "ORIGIN",
+            "czechia": "Czechia"
+          },
+          "age": {
+            "title": "ALIVE FOR",
+            "years": "years"
+          },
+          "music": {
+            "title": "DRIVEN BY",
+            "rock": "ROCK music"
+          },
+          "follow": {
+            "title": "FOLLOW ME",
+            "accessLabels": {
+              "instagram": "Go to Instagram",
+              "threads": "Go to Threads",
+              "discord": "Go to Discord"
+            }
+          }
+        }
+      },
+      "technologies": {
+        "title": "Technologies"
+      },
+      "projects": {
+        "title": "Projects",
+        "projects": {
+          "chatapp": {
+            "subtitle": "Real-time chat application",
+            "description": "A simple chat application that allows users to communicate in real time. It uses a frontend in Next.js and a backend in Go. The database is in PostgreSQL. Here I learned how WebSockets work and how to implement them. You can find a live demo at the link below. The code is on my GitHub."
+          }
+        }
+      },
+      "contact": {
+        "title": "Contact",
+        "subtitle": "Let's create something amazing!",
+        "description": "Are you interested in cooperation or just want to say hi? You can contact me on the following platforms."
+      }
+    },
+    "error": {
+      "notFound": {
+        "title": "Oops!",
+        "subtitle": "This page was not found :(",
+        "backHome": "Back to Home page"
+      }
+    }
+  },
+  "composites": {
+    "navigation": {
+      "links": {
+        "about": "About me",
+        "technologies": "Technologies",
+        "projects": "Projects",
+        "contact": "Contact"
+      },
+      "themeSwitcher": {
+        "switchToLight": "Switch to light mode",
+        "switchToDark": "Switch to dark mode"
+      },
+      "settings": {
+        "accessName": "Page settings",
+        "theme": "Theme",
+        "language": "Language"
+      }
+    },
+    "footer": {
+      "madein": "Created by Klimondra in",
+      "allrights": "All rights reserved",
+      "nospy": "This site does not use tracking cookies"
+    }
+  }
 }

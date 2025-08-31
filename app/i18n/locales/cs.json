@@ -17,7 +17,7 @@
       },
       "aboutme": {
         "title": "O mně",
-        "article": "Jmenuji se Ondřej Klíma, ale v online světě používám přezdívku Klimondra. Studuji střední školu v oboru IT a programování. Tady pak bude stejně text z Linkedinu.\n \nLorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc at dignissim lorem. Donec velit felis, venenatis nec fermentum id, pulvinar id ante. Duis ligula tellus, porttitor in lorem in, iaculis tempus ligula. Vivamus mollis ligula sit amet tellus convallis, non ornare felis efficitur. Fusce dapibus lacus lacinia sapien consequat, aliquam pharetra massa lobortis. In lacinia leo at sodales auctor. Donec vehicula blandit sapien vitae tempor. Nullam vel tristique nulla. Suspendisse dignissim tincidunt tortor, et consectetur mi consequat eget. Quisque ornare porta fringilla. Donec sollicitudin ultrices interdum. Maecenas ultricies augue at vehicula sodales.",
+        "article": "Jmenuji se Ondřej Klíma, v online světě mě ale můžete znát pod přezdívkou Klimondra. Studuji IT a programování na Střední škole aplikované kybernetiky v Hradci Králové. Počítače a software mě fascinují už od dětství. Kolem třinácti let jsem se začal učit tvořit webové stránky pomocí HTML a CSS a postupně jsem zkoušel i další technologie, například Python nebo C#.\n\nV současnosti se aktivně učím programovat a rozšiřuji své znalosti jak v oblasti Frontend vývoje, tak i Backendu. Snažím se posouvat i mimo školu ve volném čase, protože mě baví objevovat technologie, hledat efektivní řešení a posouvat se dál.",
         "moreAboutMe": "Více o mně",
         "cards": {
           "nationality": {

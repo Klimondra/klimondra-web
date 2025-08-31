@@ -5,7 +5,13 @@ import HomeAboutCard from "~/components/composites/special/HomeAboutCard.vue";
 import PrimaryActionButton from "~/components/ui/buttons/PrimaryActionButton.vue";
 import { sub } from "date-fns";
 
-const articleParagraphs = $t("pages.home.aboutme.article").split("\n")
+const {locale} = useI18n()
+
+const articleParagraphs = ref($t("pages.home.aboutme.article").split("\n"))
+
+watch(locale, () => {
+  articleParagraphs.value = $t("pages.home.aboutme.article").split("\n")
+})
 
 const age = sub(new Date(), { years: 2009, months: 7, days: 10 });
 </script>

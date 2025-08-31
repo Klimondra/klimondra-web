@@ -1,11 +1,6 @@
 <script setup>
 import IconLinkTooltip from "~/components/ui/buttons/IconLinkTooltip.vue";
-
-const links = [
-  {name: "GitHub", icon: "mdi:github", link: "https://github.com/Klimondra"},
-  {name: "LinkedIn", icon: "akar-icons:linkedin-box-fill", link: "https://www.linkedin.com/in/ond%C5%99ej-kl%C3%ADma/"},
-  {name: "E-mail", icon: "material-symbols:mail-outline", link: "mailto:ondrej.klima@klimondra.eu"}
-]
+import {quicklinks} from "~/data/quicklinks.js"
 
 // Scroll detection
 const scrolled = ref(false)
@@ -43,7 +38,7 @@ onUnmounted(() => {
         name="material-symbols:keyboard-arrow-up"
         :class="`text-black dark:text-white text-3xl transition-all duration-200 ${visible ? 'rotate-180' : 'rotate-0'}`"/>
     </div>
-    <IconLinkTooltip v-for="oneLink in links" :key="oneLink" :one-link="oneLink"/>
+    <IconLinkTooltip v-for="oneLink in quicklinks" :key="oneLink" :one-link="oneLink"/>
     <div class="h-40 w-1 bg-slate-950 dark:bg-slate-50 transition-all duration-200"/>
   </aside>
 </template>

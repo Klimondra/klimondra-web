@@ -15,3 +15,9 @@ onMounted(() => {
     <Footer/>
   </main>
 </template>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>

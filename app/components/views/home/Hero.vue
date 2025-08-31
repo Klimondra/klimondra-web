@@ -7,8 +7,9 @@ import { motion } from "motion-v"
 
 <template>
   <ClassicSection
+      id="hero"
       outer-class="relative"
-      inner-class="min-h-dvh flex flex-col justify-center items-start"
+      inner-class="min-h-dvh! flex flex-col justify-center items-start"
   >
     <motion.div
         class="absolute top-0 left-0 right-0 w-full h-96 bg-gradient-to-b dark:from-iris-400/20 from-iris-500/25 to-transparent transition-all duration-200"
@@ -41,7 +42,9 @@ import { motion } from "motion-v"
       </div>
 
       <div class="flex flex-row gap-2">
-        <PrimaryActionButton :text="$t('pages.home.hero.learnMore')"/>
+        <NuxtLink to="/#about">
+          <PrimaryActionButton :text="$t('pages.home.hero.learnMore')"/>
+        </NuxtLink>
       </div>
     </div>
   </ClassicSection>

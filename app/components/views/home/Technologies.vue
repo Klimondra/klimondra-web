@@ -6,6 +6,7 @@ import {technologies} from "~/data/technologies.js";
 
 <template>
   <ClassicSection
+      id="technologies"
       outer-class="min-h-0!"
       inner-class="flex flex-col gap-12 pb-24 overflow-x-hidden"
   >

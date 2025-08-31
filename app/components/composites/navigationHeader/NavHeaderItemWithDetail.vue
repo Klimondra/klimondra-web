@@ -5,6 +5,10 @@ const props = defineProps({
   detailClass: {
     type: String,
     default: '',
+  },
+  class: {
+    type: String,
+    default: '',
   }
 })
 
@@ -27,7 +31,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div ref="componentReference" class="flex items-center justify-center relative">
+  <div ref="componentReference" class="flex items-center justify-center relative" :class="props.class" >
     <span @click="detail?.toggle">
       <slot name="toggleButton"/>
     </span>

@@ -70,6 +70,12 @@
   },
   "composites": {
     "navigation": {
+      "links": {
+        "about": "O mně",
+        "technologies": "Technologie",
+        "projects": "Projekty",
+        "contact": "Kontakt"
+      },
       "themeSwitcher": {
         "switchToLight": "Přepnout do světlého režimu",
         "switchToDark": "Přepnout do tmavého režimu"

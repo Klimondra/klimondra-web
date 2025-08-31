@@ -6,6 +6,7 @@ import HomeProjectArticle from "~/components/composites/special/HomeProjectArtic
 
 <template>
   <ClassicSection
+      id="projects"
       inner-class="flex flex-col gap-12 pb-12 "
   >
     <SectionShadowHeading :text="$t('pages.home.projects.title')"/>

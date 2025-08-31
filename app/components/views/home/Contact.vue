@@ -5,6 +5,7 @@ import SectionShadowHeading from "~/components/ui/headings/SectionShadowHeading.
 
 <template>
   <ClassicSection
+      id="contact"
       outer-class="min-h-0!"
       inner-class="flex flex-col gap-12 pb-12 "
   >

@@ -12,6 +12,7 @@ const age = sub(new Date(), { years: 2009, months: 7, days: 10 });
 
 <template>
   <ClassicSection
+      id="about"
       inner-class="min-h-lvh flex flex-col gap-12 pb-12 overflow-x-hidden"
   >
     <SectionShadowHeading :text="$t('pages.home.aboutme.title')"/>
@@ -78,7 +79,9 @@ const age = sub(new Date(), { years: 2009, months: 7, days: 10 });
             {{ paragraph }} <br v-if="index !== articleParagraphs.length - 1">
           </span>
         </p>
-        <PrimaryActionButton :text="$t('pages.home.aboutme.moreAboutMe')"/>
+        <NuxtLink href="/aboutme">
+          <PrimaryActionButton :text="$t('pages.home.aboutme.moreAboutMe')"/>
+        </NuxtLink>
       </article>
     </div>
   </ClassicSection>

@@ -76,6 +76,10 @@
         "projects": "Projekty",
         "contact": "Kontakt"
       },
+      "mobileMenuSwitcher": {
+        "open": "Otevřít mobilní menu",
+        "close": "Zavřít mobilní menu"
+      },
       "themeSwitcher": {
         "switchToLight": "Přepnout do světlého režimu",
         "switchToDark": "Přepnout do tmavého režimu"

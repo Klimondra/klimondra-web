@@ -22,6 +22,12 @@ const links = [
   { name: $t("composites.navigation.links.projects"), href: '/#projects' },
   { name: $t("composites.navigation.links.contact"), href: '/#contact' },
 ]
+watch(locale, () => {
+  links[0].name = $t("composites.navigation.links.about")
+  links[1].name = $t("composites.navigation.links.technologies")
+  links[2].name = $t("composites.navigation.links.projects")
+  links[3].name = $t("composites.navigation.links.contact")
+})
 </script>
 
 <template>
@@ -90,6 +96,7 @@ const links = [
 
         <button 
             class="md:hidden flex items-center justify-center p-1"
+            :aria-label="mobileVisible ? $t('composites.navigation.mobileMenu.close') : $t('composites.navigation.mobileMenu.open')"
             @click="mobileVisible=!mobileVisible"
         >
           <Icon name="material-symbols:menu" class="text-4xl text-black dark:text-white active:scale-95 transition-all duration-200 md:hidden"/>

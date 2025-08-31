@@ -48,8 +48,8 @@ const props = defineProps({
     </div>
     <div class="flex-1 p-2 flex flex-col justify-between items-start gap-4 ">
       <div class="flex flex-col gap-3 items-start justify-start">
-        <h4 class="text-black dark:text-white font-main font-semibold text-4xl transition-all duration-200">
-          {{ props.title }}</h4>
+        <h5 class="text-black dark:text-white font-main font-semibold text-4xl transition-all duration-200">
+          {{ props.title }}</h5>
         <p class="text-neutral-600 dark:text-neutral-400 font-main font-medium text-xl transition-all duration-200">
           {{ props.subtitle }}</p>
         <div class="flex items-center gap-4 flex-wrap">
@@ -62,7 +62,7 @@ const props = defineProps({
             {{ item }}
           </span>
         </div>
-        <p class="text-neutral-500 font-main font-light">{{ props.description }}</p>
+        <p class="text-neutral-600 dark:text-neutral-400 font-main font-light transition-all duration-200">{{ props.description }}</p>
       </div>
       <div class="flex items-center gap-2">
         <span

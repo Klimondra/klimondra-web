@@ -16,7 +16,7 @@ import HomeProjectArticle from "~/components/composites/special/HomeProjectArtic
           :subtitle="$t('pages.home.projects.projects.chatapp.subtitle')"
           :description="$t('pages.home.projects.projects.chatapp.description')"
           :used-technologies="['Next.js', 'React', 'Tailwind', 'Go', 'Git', 'GitHub']"
-          image="/images/chat-app-screenshot.png"
+          image="/images/chat-app-screenshot.webp"
           image-background-class="bg-gradient-to-b from-emerald-700/50 to-emerald-500/90"
           :links="[
               { label: 'Demo', url: 'https://chatapp.klimondra.eu'},

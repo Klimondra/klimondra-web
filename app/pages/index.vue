@@ -15,7 +15,7 @@ useHead({
     { name: 'og:description', content: $t("pages.home.meta.description") },
     { name: 'og:type', content: "website" },
     { name: 'og:url', content: "https://klimondra.eu" },
-    { name: 'og:image', content: "/images/og-image.webp" },
+    { name: 'og:image', content: "https://klimondra.eu/images/og-image.webp" },
   ],
 })
 </script>

@@ -51,6 +51,10 @@
           "chatapp": {
             "subtitle": "Real-time chatovací aplikace",
             "description": "Jednoduchá chatovací aplikace umožňující uživatelům komunikaci v reálném čase. Využívá frontend v Next.js a backend v jazyce Go. Databáze je v PostgreSQL. Naučil jsem se zde jak fungují WebSockety a jak je implementovat. Živou demoverzi najdete na odkazu níže. Kód je na mém GitHubu."
+          },
+          "zvonek-web": {
+            "subtitle": "Webová stránka pro Divadélko Zvonek",
+            "description": "Webová stránka pro Louktové divadlo Zvonek v Hořicích, jehož jsem členem. Stránku jsem tvořil v redakčním systému WordPress, s použitím šablony OceanWP a pluginů jako Elementor, Advanced Custom Fields nebo třeba Yoast SEO. Místy jsem tam dopsal i vlastní HTML a CSS kód. Web nadále spravuji, občas zde píšu i články a aktuality. Při vytváření jsem oprášil své zkušenosti ve WordPressu, a opět jsem se přesvědčil o tom, že na WordPress zase nějakou dobu nesáhnu :)"
           }
         }
       },

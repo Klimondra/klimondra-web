@@ -45,6 +45,11 @@ export const technologies = [
         color: "#0072f5",
     },
     {
+        name: "WordPress",
+        icon: "mdi:wordpress",
+        color: "#21759b",
+    },
+    {
         name: "C#",
         icon: "mdi:language-csharp",
         color: "#953dac",

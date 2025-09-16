@@ -51,6 +51,10 @@
           "chatapp": {
             "subtitle": "Real-time chat application",
             "description": "A simple chat application that allows users to communicate in real time. It uses a frontend in Next.js and a backend in Go. The database is in PostgreSQL. Here I learned how WebSockets work and how to implement them. You can find a live demo at the link below. The code is on my GitHub."
+          },
+          "zvonek-web": {
+            "subtitle": "Website for Divadélko Zvonek",
+            "description": "A website for the puppet theater Zvonek in Hořice, of which I am a member. I created the site in the WordPress CMS, using the OceanWP theme and plugins such as Elementor, Advanced Custom Fields or Yoast SEO. In some places, I also added my own HTML and CSS code. I still maintain the website and occasionally write articles and news there. While creating it, I refreshed my experience with WordPress, and once again convinced myself that I won't be touching WordPress again for a while :)"
           }
         }
       },
@@ -75,6 +79,10 @@
         "technologies": "Technologies",
         "projects": "Projects",
         "contact": "Contact"
+      },
+      "mobileMenuSwitcher": {
+        "open": "Open mobile menu",
+        "close": "Close mobile menu"
       },
       "themeSwitcher": {
         "switchToLight": "Switch to light mode",

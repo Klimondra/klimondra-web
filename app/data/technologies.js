@@ -21,8 +21,13 @@ export const technologies = [
     },
     {
         name: "JavaScript",
-        icon: "ion:logo-javascript",
+        icon: "devicon-plain:javascript",
         color: "#e8d44d",
+    },
+    {
+        name: "TypeScript",
+        icon: "devicon-plain:typescript",
+        color: "#3178c6",
     },
     {
         name: "Vue",

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import SlideInTransition from "~/components/ui/transitions/SlideInTransition.vue";
 
 const props = defineProps({
@@ -29,7 +29,7 @@ defineExpose({
     <article
         v-if="visible"
         :class='`absolute top-7/5 -right-4 p-2
-        bg-white/10 backdrop-blur-xl rounded-2xl border-1 border-slate-950/5 shadow-sm/5
+        bg-white/10 backdrop-blur-xl rounded-2xl border border-slate-950/5 shadow-sm/5
         dark:shadow-white dark:border-white/5 transition-all duration-200` + props.class'
     >
       <slot/>

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import NavHeaderDetails from "~/components/composites/navigationHeader/NavHeaderDetails.vue";
 
 const props = defineProps({
@@ -15,9 +15,9 @@ const props = defineProps({
 const reference = useTemplateRef('componentReference')
 const detail = useTemplateRef('detail')
 
-function handleClickOutside(event) {
-  if (reference.value && !reference.value.contains(event.target)) {
-    detail.value.close()
+function handleClickOutside(event: MouseEvent) {
+  if (reference.value && !reference.value.contains(event.target as Element)) {
+    detail.value?.close()
   }
 }
 

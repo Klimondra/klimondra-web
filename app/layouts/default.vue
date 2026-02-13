@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import NavigationHeader from "~/components/composites/navigationHeader/NavigationHeader.vue";
 import Footer from "~/components/composites/Footer.vue";
 

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import ClassicSection from "~/components/layouts/ClassicSection.vue";
 import SectionShadowHeading from "~/components/ui/headings/SectionShadowHeading.vue";
 </script>

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {technologies} from "~/data/technologies";
 
 const props = defineProps({
@@ -27,7 +27,7 @@ const props = defineProps({
     default: () => []
   },
   links: {
-    type: Array,
+    type: Array as () => {url: string, label: string}[],
     default: () => ([])
   }
 })
@@ -66,12 +66,12 @@ const props = defineProps({
       </div>
       <div class="flex items-center gap-2">
         <span
-            v-for="(link, index) in props.links"
+            v-for="(oneLink, index) in props.links"
             :key="index"
             class="flex items-center gap-2 text-black dark:text-white font-main font-medium text-lg transition-all duration-200"
         >
           <span v-if="index !== 0">|</span>
-          <a :href="link.url" class="underline-offset-2 hover:underline flex gap-1 items-center">{{link.label}} <Icon name="material-symbols:open-in-new" class="text-xl "/></a>
+          <a :href="oneLink.url" class="underline-offset-2 hover:underline flex gap-1 items-center">{{oneLink.label}} <Icon name="material-symbols:open-in-new" class="text-xl "/></a>
         </span>
       </div>
     </div>

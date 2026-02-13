@@ -6,5 +6,13 @@ export default withNuxt(
         rules: {
             'vue/no-multiple-template-root': 'off',
         }
+    },
+    {
+        files: ['**/*.vue'],
+        languageOptions: {
+            parserOptions: {
+                parser: '@typescript-eslint/parser'
+            }
+        }
     }
 )

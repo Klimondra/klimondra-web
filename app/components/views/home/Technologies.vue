@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import SectionShadowHeading from "~/components/ui/headings/SectionShadowHeading.vue";
 import ClassicSection from "~/components/layouts/ClassicSection.vue";
 import {technologies} from "~/data/technologies.js";
@@ -18,7 +18,7 @@ import {technologies} from "~/data/technologies.js";
               :key="tech.name"
               class="p-2 flex flex-row items-center gap-3
                 bg-slate-100/70 dark:bg-white/5 backdrop-blur-xl rounded-lg
-                border-1 border-iris-600/15 dark:border-iris-500/5
+                border border-iris-600/15 dark:border-iris-500/5
                 shadow-sm dark:shadow-white/5
               text-slate-700 dark:text-white font-main text-xl
                 transition-all duration-200 hover:shadow-lg hover:scale-102"

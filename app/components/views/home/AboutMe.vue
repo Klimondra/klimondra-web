@@ -1,16 +1,16 @@
-<script setup>
+<script setup lang="ts">
 import ClassicSection from "~/components/layouts/ClassicSection.vue";
 import SectionShadowHeading from "~/components/ui/headings/SectionShadowHeading.vue";
 import HomeAboutCard from "~/components/composites/special/HomeAboutCard.vue";
 import PrimaryActionButton from "~/components/ui/buttons/PrimaryActionButton.vue";
 import { sub } from "date-fns";
 
-const {locale} = useI18n()
+const { t, locale } = useI18n()
 
-const articleParagraphs = ref($t("pages.home.aboutme.article").split("\n"))
+const articleParagraphs = ref(t("pages.home.aboutme.article").split("\n"))
 
 watch(locale, () => {
-  articleParagraphs.value = $t("pages.home.aboutme.article").split("\n")
+  articleParagraphs.value = t("pages.home.aboutme.article").split("\n")
 })
 
 const age = sub(new Date(), { years: 2009, months: 7, days: 10 });

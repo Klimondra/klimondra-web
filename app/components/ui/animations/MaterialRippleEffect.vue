@@ -1,13 +1,13 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   speed: { type: Number, default: 600 },
   rippleClass: { type: String, default: '' }
 });
 
-const ripples = ref([]);
+const ripples = ref([] as { id: number; x: number; y: number; size: number }[]);
 
-function createRipple(e) {
-  const target = e.currentTarget.closest('button, .ripple-parent');
+function createRipple(e: MouseEvent) {
+  const target = (e.currentTarget as Element)?.closest('button, .ripple-parent');
   if (!target) return;
 
   const rect = target.getBoundingClientRect();
@@ -56,6 +56,7 @@ defineExpose({
     opacity: 0;
   }
 }
+
 .animate-ripple {
   animation: ripple linear;
   transform: scale(0);

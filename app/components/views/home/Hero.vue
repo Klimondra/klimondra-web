@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Typewriter from "~/components/ui/animations/Typewriter.vue";
 import ClassicSection from "~/components/layouts/ClassicSection.vue";
 import PrimaryActionButton from "~/components/ui/buttons/PrimaryActionButton.vue";
@@ -8,11 +8,11 @@ import { motion } from "motion-v"
 <template>
   <ClassicSection
       id="hero"
-      outer-class="relative"
       inner-class="min-h-dvh! flex flex-col justify-center items-start"
+      outer-class="relative"
   >
     <motion.div
-        class="absolute top-0 left-0 right-0 w-full h-96 bg-gradient-to-b dark:from-iris-400/20 from-iris-500/25 to-transparent transition-all duration-200"
+        class="absolute top-0 left-0 right-0 w-full h-96 bg-linear-to-b dark:from-iris-400/20 from-iris-500/25 to-transparent transition-all duration-200"
         :initial="{
           opacity: 0
         }"

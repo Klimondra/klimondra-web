@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { motion } from "motion-v"
 
 defineProps({
@@ -18,7 +18,7 @@ defineProps({
     </h2>
     <motion.p
         class="font-main font-bold text-4xl sm:text-6xl
-          bg-clip-text text-transparent bg-gradient-to-br from-black/6 to-black/2 dark:from-white/8 dark:to-white/4
+          bg-clip-text text-transparent bg-linear-to-br from-black/6 to-black/2 dark:from-white/8 dark:to-white/4
           absolute select-none pointer-events-none"
 
         :initial="{

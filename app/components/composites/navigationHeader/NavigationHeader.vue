@@ -1,11 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import IconToggleButton from "~/components/ui/buttons/IconToggleButton.vue";
 import IconSingleRounded from "~/components/ui/buttons/IconSingleRounded.vue";
 import NavHeaderItemWithDetail from "~/components/composites/navigationHeader/NavHeaderItemWithDetail.vue";
 import IconLinkTooltip from "~/components/ui/buttons/IconLinkTooltip.vue";
 import {quicklinks} from "~/data/quicklinks.js";
 
-const {locale, setLocale} = useI18n()
+const {t, locale, setLocale} = useI18n()
 const theme = useThemeStore()
 
 const mobileVisible = ref(false)
@@ -17,16 +17,17 @@ const langSwitch = () => {
 }
 
 const links = [
-  { name: $t("composites.navigation.links.about"), href: '/#about' },
-  { name: $t("composites.navigation.links.technologies"), href: '/#technologies' },
-  { name: $t("composites.navigation.links.projects"), href: '/#projects' },
-  { name: $t("composites.navigation.links.contact"), href: '/#contact' },
+  { name: t("composites.navigation.links.about"), href: '/#about' },
+  { name: t("composites.navigation.links.technologies"), href: '/#technologies' },
+  { name: t("composites.navigation.links.projects"), href: '/#projects' },
+  { name: t("composites.navigation.links.contact"), href: '/#contact' },
 ]
+
 watch(locale, () => {
-  links[0].name = $t("composites.navigation.links.about")
-  links[1].name = $t("composites.navigation.links.technologies")
-  links[2].name = $t("composites.navigation.links.projects")
-  links[3].name = $t("composites.navigation.links.contact")
+  links[0]!.name = t("composites.navigation.links.about")
+  links[1]!.name = t("composites.navigation.links.technologies")
+  links[2]!.name = t("composites.navigation.links.projects")
+  links[3]!.name = t("composites.navigation.links.contact")
 })
 </script>
 
@@ -34,7 +35,7 @@ watch(locale, () => {
   <header class="w-full h-18 fixed top-0 z-50 flex flex-row items-end justify-center px-4 sm:px-8">
     <div
         class="w-full max-w-7xl h-14 flex items-center justify-between px-4 relative
-        rounded-2xl border-1 border-slate-950/5 shadow-sm/5 dark:shadow-white
+        rounded-2xl border border-slate-950/5 shadow-sm/5 dark:shadow-white
         dark:border-white/5 transition-all duration-200"
     >
       <div class="absolute inset-0 bg-white/10 backdrop-blur-xl rounded-2xl -z-10"/>
@@ -151,7 +152,7 @@ watch(locale, () => {
         </div>
       </div>
       <div class="flex-1 flex flex-col items-end gap-2 justify-end">
-        <IconLinkTooltip v-for="oneLink in quicklinks" :key="oneLink" :one-link="oneLink"/>
+        <IconLinkTooltip v-for="oneLink in quicklinks" :key="oneLink.name" :one-link="oneLink"/>
       </div>
     </div>
   </section>

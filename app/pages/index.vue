@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import QuickLinks from "~/components/composites/QuickLinks.vue";
 import Hero from "~/components/views/home/Hero.vue";
 import AboutMe from "~/components/views/home/AboutMe.vue";
@@ -6,10 +6,12 @@ import Technologies from "~/components/views/home/Technologies.vue";
 import Projects from "~/components/views/home/Projects.vue";
 import Contact from "~/components/views/home/Contact.vue";
 
+const { t } = useI18n();
+
 useHead({
-  title: `Klimondra | ${$t("pages.home.meta.title")}`,
+  title: `Klimondra | ${t("pages.home.meta.title")}`,
   meta: [
-    { name: 'description', content: $t("pages.home.meta.description") },
+    { name: 'description', content: t("pages.home.meta.description") },
     { name: 'author', content: "Ondřej Klíma | Klimondra" },
     { name: 'og:title', content: "Klimondra | Main page" },
     { name: 'og:description', content: "Personal website of Ondřej Klíma - known on the internet under the nickname Klimondra. Find out more, not just about the resume and portfolio." },

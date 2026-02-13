@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import MaterialRippleEffect from "~/components/ui/animations/MaterialRippleEffect.vue";
 
 const props = defineProps({
@@ -19,8 +19,8 @@ const props = defineProps({
 const rippleEffect = useTemplateRef('ripple')
 const emit = defineEmits(['click'])
 
-const handleClick = (e) => {
-  rippleEffect.value.createRipple(e)
+const handleClick = (e: MouseEvent) => {
+  rippleEffect.value?.createRipple(e)
   emit('click')
 }
 </script>

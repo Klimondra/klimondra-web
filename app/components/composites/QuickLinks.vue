@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import IconLinkTooltip from "~/components/ui/buttons/IconLinkTooltip.vue";
 import {quicklinks} from "~/data/quicklinks.js"
 
@@ -38,7 +38,7 @@ onUnmounted(() => {
         name="material-symbols:keyboard-arrow-up"
         :class="`text-black dark:text-white text-3xl transition-all duration-200 ${visible ? 'rotate-180' : 'rotate-0'}`"/>
     </div>
-    <IconLinkTooltip v-for="oneLink in quicklinks" :key="oneLink" :one-link="oneLink"/>
+    <IconLinkTooltip v-for="oneLink in quicklinks" :key="oneLink.name" :one-link="oneLink"/>
     <div class="h-40 w-1 bg-slate-950 dark:bg-slate-50 transition-all duration-200"/>
   </aside>
 </template>

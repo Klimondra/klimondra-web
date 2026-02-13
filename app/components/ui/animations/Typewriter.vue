@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   stringArray: {
     type: Array,
@@ -31,7 +31,7 @@ const currentStringIndex = ref(0)
 const state = ref('typing')
 
 const step = () => {
-  const target = props.stringArray[currentStringIndex.value]
+  const target = props.stringArray[currentStringIndex.value] as string
 
   if (state.value === 'typing') {
     activeText.value = target.slice(0, activeText.value.length + 1)
@@ -46,7 +46,7 @@ const step = () => {
     state.value = "deleting"
     return setTimeout(step, props.deleteSpeed)
   } else if (state.value === 'deleting') {
-    const nextTarget = props.stringArray[(currentStringIndex.value + 1) % props.stringArray.length]
+    const nextTarget = props.stringArray[(currentStringIndex.value + 1) % props.stringArray.length] as string
     const prefixLength = getPrefixLength(target, nextTarget)
 
     if (activeText.value.length <= prefixLength) {
@@ -59,7 +59,7 @@ const step = () => {
   }
 }
 
-const getPrefixLength = (strA, strB) => {
+const getPrefixLength = (strA: string, strB: string) => {
   const minLen = Math.min(strA.length, strB.length)
 
   for (let i = 0; i < minLen; i++) {

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   iconFalse: {
     type: String,
@@ -37,12 +37,12 @@ const buttonSize = props.size
 <template>
   <button
       :style="{ width: `${boxWidth}px`, height: `${boxHeight}px`, padding: `${padding}px` }"
-      class="border-1 cursor-pointer inset-shadow-sm inset-shadow-black/3 dark:inset-shadow-white/3 border-slate-950/10 dark:border-white/10 rounded-2xl transition-all duration-200"
+      class="border cursor-pointer inset-shadow-sm inset-shadow-black/3 dark:inset-shadow-white/3 border-slate-950/10 dark:border-white/10 rounded-2xl transition-all duration-200"
       v-bind="buttonProps"
       @click="handleClick"
   >
-    <div
-        :class="`relative bg-slate-950 dark:bg-slate-50 rounded-[12px] ${props.value ? 'translate-x-full' : ''} transition-all duration-200`"
+    <span
+        :class="`relative block bg-slate-950 dark:bg-slate-50 rounded-xl ${props.value ? 'translate-x-full' : ''} transition-all duration-200`"
         :style="{ width: `${buttonSize}px`, height: `${buttonSize}px` }"
     >
       <!--suppress JSValidateTypes -->
@@ -59,6 +59,6 @@ const buttonSize = props.size
           text-white dark:text-black
           ${!props.value ? 'opacity-0 rotate-0' : 'opacity-100 rotate-360'} transition-all duration-200`"
       />
-    </div>
+    </span>
   </button>
 </template>

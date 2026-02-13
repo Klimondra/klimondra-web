@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Default from "~/layouts/default.vue";
 import PrimaryActionButton from "~/components/ui/buttons/PrimaryActionButton.vue";
 

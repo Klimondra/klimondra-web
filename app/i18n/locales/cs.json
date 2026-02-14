@@ -55,6 +55,11 @@
           "zvonek-web": {
             "subtitle": "Webová stránka pro Divadélko Zvonek",
             "description": "Webová stránka pro Louktové divadlo Zvonek v Hořicích, jehož jsem členem. Stránku jsem tvořil v redakčním systému WordPress, s použitím šablony OceanWP a pluginů jako Elementor, Advanced Custom Fields nebo třeba Yoast SEO. Místy jsem tam dopsal i vlastní HTML a CSS kód. Web nadále spravuji, občas zde píšu i články a aktuality. Při vytváření jsem oprášil své zkušenosti ve WordPressu, a opět jsem se přesvědčil o tom, že na WordPress zase nějakou dobu nesáhnu :)"
+          },
+          "election-calculator": {
+            "title": "Volební kalkulačka",
+            "subtitle": "Kalkulačka pro výpočet politické shody",
+            "description": "Volební kalkulačka je nástroj, který pomáhá voličům najít jejich politickou shodu, především s Petrem Cibulkou. Projekt reaguje na názor Petra Cibulky, že \"Všichni v pozicích jsou ruští fízlové\". O dalších politických kandidátech bohužel nemám věrohodné informace, abych je mohl zařadit do výpočtu. Určitě se sluší zdůraznit, že se jedná o satiru, nikoliv o seriozní politickou kalkulačku."
           }
         }
       },

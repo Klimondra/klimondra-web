@@ -33,6 +33,18 @@ import HomeProjectArticle from "~/components/composites/special/HomeProjectArtic
               { label: 'Demo', url: 'https://divadelko-zvonek.cz/' },
           ]"
       />
+      <HomeProjectArticle
+          :title="$t('pages.home.projects.projects.election-calculator.title')"
+          :subtitle="$t('pages.home.projects.projects.election-calculator.subtitle')"
+          :description="$t('pages.home.projects.projects.election-calculator.description')"
+          :used-technologies="['Next.js', 'React', 'Tailwind', 'Git', 'GitHub']"
+          image="/images/volebni-kalkulacka-screenshot.webp"
+          image-background-class="bg-gradient-to-b from-sky-600/50 to-sky-500/90"
+          :links="[
+              { label: 'Demo', url: 'https://volebni-kalkulacka.klimondra.eu' },
+              { label: 'GitHub', url: 'https://github.com/klimondra/volebni-kalkulacka-2025' },
+          ]"
+      />
     </div>
   </ClassicSection>
 </template>

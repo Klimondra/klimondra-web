@@ -55,6 +55,11 @@
           "zvonek-web": {
             "subtitle": "Website for Divadélko Zvonek",
             "description": "A website for the puppet theater Zvonek in Hořice, of which I am a member. I created the site in the WordPress CMS, using the OceanWP theme and plugins such as Elementor, Advanced Custom Fields or Yoast SEO. In some places, I also added my own HTML and CSS code. I still maintain the website and occasionally write articles and news there. While creating it, I refreshed my experience with WordPress, and once again convinced myself that I won't be touching WordPress again for a while :)"
+          },
+          "election-calculator": {
+            "title": "Election Calculator",
+            "subtitle": "Calculator for determining political alignment",
+            "description": "The Election Calculator is a tool that helps voters find their political match, primarily with Petr Cibulka. The project responds to Petr Cibulka's view that \"Everyone in positions of power is a Russian informant\". Unfortunately, I do not have reliable information about other political candidates to include them in the calculation. It is certainly worth emphasizing that this is satire, not a serious political calculator."
           }
         }
       },

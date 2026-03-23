@@ -30,16 +30,6 @@ export const technologies = [
         color: "#3178c6",
     },
     {
-        name: "Vue",
-        icon: "simple-icons:vuedotjs",
-        color: "#41b883",
-    },
-    {
-        name: "Nuxt",
-        icon: "simple-icons:nuxt",
-        color: "#00dc82",
-    },
-    {
         name: "React",
         icon: "mdi:react",
         color: "#3998b6",
@@ -50,6 +40,21 @@ export const technologies = [
         color: "#0072f5",
     },
     {
+        name: "Vue",
+        icon: "simple-icons:vuedotjs",
+        color: "#41b883",
+    },
+    {
+        name: "Nuxt",
+        icon: "simple-icons:nuxt",
+        color: "#00dc82",
+    },
+    {
+        name: "Svelte",
+        icon: "simple-icons:svelte",
+        color: "#ff3e00",
+    },
+    {
         name: "WordPress",
         icon: "mdi:wordpress",
         color: "#21759b",
@@ -58,11 +63,6 @@ export const technologies = [
         name: "C#",
         icon: "mdi:language-csharp",
         color: "#953dac",
-    },
-    {
-        name: "Go",
-        icon: "simple-icons:go",
-        color: "#00a7d0",
     },
     {
         name: "Git",

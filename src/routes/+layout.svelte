@@ -1,6 +1,8 @@
 <script lang="ts">
-	import './layout.css';
+	import '$lib/css/layout.css';
 	import favicon from '$lib/assets/favicon.svg';
+
+	import '@fontsource-variable/host-grotesk';
 
 	let { children } = $props();
 </script>

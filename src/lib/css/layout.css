@@ -2,10 +2,13 @@
 
 @theme {
     --font-sans: 'Host Grotesk Variable', 'Host Grotesk', 'Inter', 'Inter Variable', 'sans-serif';
+    --color-bg-light: #f6f9fa;
 }
 
 body {
     font-family: var(--font-sans);
+    /* @apply bg-stone-50; */
+    background-color: var(--color-bg-light);
 }
 
 

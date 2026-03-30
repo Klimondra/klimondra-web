@@ -68,6 +68,7 @@
             <Button variant="primary">Zjistit více</Button>
             <Button variant="secondary">Zavolat</Button>
         </div>
+        <div class="absolute top-0 left-0 w-full h-full bg-linear-to-b from-transparent via-transparent to-azure-800 blur-3xl"></div>
         <div bind:this={photosContainer} class="absolute -bottom-8 w-full h-36 flex items-center justify-center gap-8">
             {#each heroImages as image, index (index)}
                 <img src={image.src} alt={image.alt} class={"animated-hero-image h-36 rounded-sm " + (index % 2 === 0 ? "-rotate-3" : "rotate-3")} />

@@ -2,7 +2,7 @@
     import Section from '$lib/components/ui/Section.svelte';
 </script>
 
-<Section>
+<Section class="">
     <div class="grid grid-cols-7 grid-rows-2 gap-6">
         <article class="col-span-4 bg-white p-6 border border-gray-200 rounded-3xl">
             <h2 class="text-2xl font-semibold text-black mb-3">Nějaký kecy</h2>

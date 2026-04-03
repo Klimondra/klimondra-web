@@ -209,7 +209,7 @@ export default defineConfig({
 		printWidth: 100,
 		sortImports: true,
 		sortTailwindcss: {
-			stylesheet: "./src/routes/layout.css",
+			stylesheet: "./src/lib/css/layout.css",
 		},
 		sortPackageJson: false,
 		ignorePatterns: [

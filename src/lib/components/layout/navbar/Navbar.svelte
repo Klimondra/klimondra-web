@@ -1,6 +1,6 @@
 <script lang="ts">
     import logo_image from '$lib/assets/branding/Logomark-black.svg';
-    import { navigationItems } from '$lib/data/NavigationItems';
+    import { navigationItems } from '$lib/data/navigationItems';
 	import { onMount } from 'svelte';
 
     let isScrolled = $state(false);

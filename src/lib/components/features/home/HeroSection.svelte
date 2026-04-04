@@ -4,7 +4,7 @@
     import { gsap } from 'gsap';
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { onMount } from 'svelte';
-    import { heroImages } from '$lib/data/HeroImages';
+    import { heroImages } from '$lib/data/heroImages';
 
     gsap.registerPlugin(ScrollTrigger);
 

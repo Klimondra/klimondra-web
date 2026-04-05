@@ -4,6 +4,7 @@ import zvonekWebImage from "$lib/assets/images/zvonek-web-screenshot.webp";
 
 export interface Project {
 	name: string;
+	slug: string;
 	description: string;
 	technologies: string[];
 	thumbnailImage: string;
@@ -12,6 +13,7 @@ export interface Project {
 export const projects: Project[] = [
 	{
 		name: "Chat Application",
+		slug: "chatapp",
 		description:
 			"Real-time chatovací aplikace s podporou skupinových konverzací a sdílení souborů.",
 		technologies: ["TypeScript", "Svelte", "Tailwind CSS", "Docker"],
@@ -19,6 +21,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: "Volební kalkulačka",
+		slug: "volebni-kalkulacka",
 		description:
 			"Interaktivní nástroj pro porovnání politických programů a nalezení shody s kandidáty.",
 		technologies: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
@@ -26,6 +29,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: "Zvonek Web",
+		slug: "zvonek-web",
 		description: "Moderní webová prezentace s intuitivním rozhraním a responzivním designem.",
 		technologies: ["HTML", "CSS", "JavaScript", "Git"],
 		thumbnailImage: zvonekWebImage,

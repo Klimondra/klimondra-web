@@ -172,7 +172,7 @@
     </div>
 
     <div class="hidden lg:block lg:col-span-4">
-      <div class="flex flex-col gap-3 sticky top-4">
+      <div class="flex flex-col gap-3 sticky top-18">
         {#each projects as project, index (index)}
           <button
             onclick={() => selectProject(index)}

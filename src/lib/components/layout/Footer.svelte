@@ -1,6 +1,5 @@
 <script lang="ts">
   import Icon from "@iconify/svelte";
-  import logoBlack from "$lib/assets/branding/Logomark-black.svg";
   import logoWhite from "$lib/assets/branding/Logomark-white.svg";
   import { navigationItems } from "$lib/data/navigationItems";
 

@@ -3,16 +3,17 @@
 
     interface Props {
         children: Snippet;
-        variant?: 'primary' | 'secondary' | 'outline';
+        variant?: 'primary' | 'secondary' | 'outline' | 'accent';
         href?: string;
     }
 
     let { children, variant = 'primary', href }: Props = $props();
 
     const variantClasses = {
-        primary: 'bg-white text-blue-950 text-lg hover:bg-neutral-200',
+        primary: 'bg-white text-azure-950 text-lg hover:bg-neutral-100',
         secondary: 'bg-transparent border border-white/40 text-white hover:bg-white/10 hover:border-white/60',
-        outline: 'bg-transparent border-2 border-white/60 text-white hover:bg-white hover:text-blue-950'
+        outline: 'bg-transparent border-2 border-white/60 text-white hover:bg-white hover:text-azure-950',
+        accent: 'bg-accent-500 text-azure-950 text-lg hover:bg-accent-400',
     };
 
     const baseClasses = 'px-6 py-2.5 rounded-lg font-medium transition-all duration-300 ease-out active:scale-95';

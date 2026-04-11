@@ -5,7 +5,7 @@
   import TechnologySlider from "$lib/components/features/home/TechnologySlider.svelte";
 </script>
 
-<main class="min-h-screen flex flex-col gap-16">
+<main class="min-h-screen flex flex-col gap-20 lg:gap-28 pt-14">
   <HeroSection />
   <AboutSection />
   <TechnologySlider />

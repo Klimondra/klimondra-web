@@ -90,4 +90,10 @@ export const technologies: Technology[] = [
 		color: "#336791",
 		featured: true,
 	},
+	{
+		name: "WordPress",
+		icon: "devicon-plain:wordpress",
+		color: "#21759B",
+		featured: false,
+	},
 ];

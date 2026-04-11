@@ -71,7 +71,7 @@
             >{age}</span
           >,
   <span class="text-yellow-400">"skills"</span>: [
-    <span class="text-green-400">"UI/UX"</span>,
+    <span class="text-green-400">"UI/UX design"</span>,
     <span class="text-green-400">"Clean Code"</span>,
     <span class="text-green-400">"Animations"</span>
   ]

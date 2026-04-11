@@ -111,8 +111,8 @@
         class="rounded-2xl overflow-hidden shadow-sm ring-1 ring-gray-200 bg-white"
       >
         <img
-          src={activeProject.thumbnailImage}
-          alt={activeProject.name}
+          src={activeProject.thumbnailImage.source}
+          alt={activeProject.thumbnailImage.alt}
           class="w-full object-cover aspect-video"
           loading="lazy"
         />

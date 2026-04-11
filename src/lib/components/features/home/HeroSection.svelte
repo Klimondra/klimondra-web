@@ -4,9 +4,11 @@
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import { onMount } from "svelte";
-  import { heroImages } from "$lib/data/heroImages";
+  import { projects } from "$lib/data/projects";
 
   gsap.registerPlugin(ScrollTrigger);
+
+  const heroProjects = projects.filter((project) => project.visibleInHero);
 
   // Appear animation
   let sectionContainer: HTMLDivElement;
@@ -85,10 +87,10 @@
       bind:this={photosContainer}
       class="absolute -bottom-8 w-full h-36 hidden md:flex items-center justify-center gap-8"
     >
-      {#each heroImages as image, index (index)}
+      {#each heroProjects as project, index (index)}
         <img
-          src={image.src}
-          alt={image.alt}
+          src={project.thumbnailImage.source}
+          alt={project.thumbnailImage.alt}
           class={"animated-hero-image h-36 rounded-sm " +
             (index % 2 === 0 ? "-rotate-3" : "rotate-3")}
         />

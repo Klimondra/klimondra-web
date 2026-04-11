@@ -4,6 +4,8 @@
   import Icon from "@iconify/svelte";
   import { technologies } from "$lib/data/technologies";
 
+  const featuredTechnologies = technologies.filter((tech) => tech.featured);
+
   let isHovered = $state(false);
 </script>
 
@@ -16,7 +18,7 @@
         class:paused={isHovered}
         aria-hidden={i > 0}
       >
-        {#each technologies as technology (technology.name)}
+        {#each featuredTechnologies as technology (technology.name)}
           <div class="relative group">
             <Icon
               icon={technology.icon}

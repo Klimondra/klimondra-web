@@ -1,5 +1,7 @@
 <script lang="ts">
   import Section from "$lib/components/ui/Section.svelte";
+  import Icon from "@iconify/svelte";
+  import { socialLinks } from "$lib/data/socialLinks";
 
   const BIRTH_DATE = new Date("2009-08-10T00:00:00");
   const PRECISION = 8;
@@ -39,16 +41,35 @@
     </article>
 
     <article
-      class="lg:col-span-2 col-start-1 bg-white p-6 border border-gray-200 rounded-3xl"
+      class="sm:col-span-2 lg:col-span-4 col-start-1 bg-white p-6 border border-gray-200 rounded-3xl flex flex-col gap-5"
     >
-      <h3 class="text-2xl text-black">Další kecy</h3>
+      <h3 class="text-xl font-semibold text-black">Najdete mě na sítích</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {#each socialLinks.filter((l) => l.showInAbout) as link}
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noreferrer noopener"
+            class="group flex items-center justify-between p-3 rounded-2xl bg-gray-50 border border-gray-100 hover:border-gray-200 hover:bg-white hover:shadow-xs transition-all duration-300"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-gray-600 group-hover:text-azure-600 group-hover:border-azure-200 transition-all duration-300"
+              >
+                <Icon icon={link.iconId} class="w-5 h-5" />
+              </div>
+              <span class="font-medium text-gray-900">{link.platformName}</span>
+            </div>
+            <Icon 
+              icon="lucide:arrow-up-right" 
+              class="w-5 h-5 text-gray-400 group-hover:text-azure-600 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 shrink-0" 
+            />
+          </a>
+        {/each}
+      </div>
     </article>
 
-    <article
-      class="lg:col-span-2 lg:col-start-3 bg-white p-6 border border-gray-200 rounded-3xl"
-    >
-      <h3 class="text-2xl text-black">Další kecy</h3>
-    </article>
+
 
     <div
       class="sm:col-span-2 lg:col-span-3 lg:row-span-2 lg:col-start-5 lg:row-start-1 flex flex-col rounded-3xl border border-gray-200 overflow-hidden h-full"

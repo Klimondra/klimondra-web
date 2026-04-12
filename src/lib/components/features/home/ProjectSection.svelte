@@ -74,7 +74,7 @@
       {#each projects as project, index (index)}
         <button
           onclick={() => selectProject(index)}
-          class="shrink-0 text-left p-3 rounded-xl transition-all duration-200 ring-1 w-64 {index ===
+          class="shrink-0 text-left p-3 rounded-xl transition-all duration-300 ring-1 w-64 group {index ===
           activeIndex
             ? 'bg-white ring-azure-500 shadow-md'
             : 'ring-transparent hover:bg-white hover:ring-gray-300'}"
@@ -83,10 +83,10 @@
           <div class="flex items-start justify-between gap-2">
             <div class="min-w-0">
               <h4
-                class="font-semibold text-sm leading-tight {index ===
+                class="font-semibold text-sm leading-tight transition-colors duration-300 {index ===
                 activeIndex
                   ? 'text-azure-700'
-                  : 'text-gray-900'}"
+                  : 'text-gray-900 group-hover:text-azure-700'}"
               >
                 {project.name}
               </h4>
@@ -95,10 +95,10 @@
               </p>
             </div>
             <Icon
-              icon="lucide:arrow-up-right"
-              class="w-4 h-4 mt-0.5 shrink-0 {index === activeIndex
-                ? 'text-azure-600'
-                : 'text-gray-400'}"
+              icon="lucide:arrow-right"
+              class="w-4 h-4 mt-0.5 shrink-0 transition-all duration-300 {index === activeIndex
+                ? 'text-azure-600 translate-x-0.5'
+                : 'text-gray-400 group-hover:text-azure-600 group-hover:translate-x-0.5'}"
             />
           </div>
         </button>
@@ -179,19 +179,19 @@
         {#each projects as project, index (index)}
           <button
             onclick={() => selectProject(index)}
-            class="text-left p-4 rounded-xl transition-all duration-200 ring-1 {index ===
+            class="text-left p-4 rounded-xl transition-all duration-300 ring-1 group {index ===
             activeIndex
               ? 'bg-white ring-azure-500 shadow-sm'
               : 'ring-transparent hover:bg-white hover:ring-gray-300'}"
             aria-current={index === activeIndex ? "true" : "false"}
           >
             <div class="flex items-start justify-between gap-3">
-              <div class="min-w-0">
+              <div class="min-w-0 flex-1">
                 <h4
-                  class="font-semibold text-base leading-tight {index ===
+                  class="font-semibold text-base leading-tight transition-colors duration-300 {index ===
                   activeIndex
                     ? 'text-azure-700'
-                    : 'text-gray-900'}"
+                    : 'text-gray-900 group-hover:text-azure-700'}"
                 >
                   {project.name}
                 </h4>
@@ -201,17 +201,23 @@
                   {project.description}
                 </p>
               </div>
+              <Icon
+                icon="lucide:arrow-right"
+                class="w-5 h-5 shrink-0 transition-all duration-300 {index === activeIndex
+                  ? 'text-azure-600 translate-x-1'
+                  : 'text-gray-300 opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-azure-500'}"
+              />
             </div>
           </button>
         {/each}
         <a
           href="/projects"
-          class="text-left p-4 rounded-xl transition-all duration-200 ring-1 ring-dashed ring-gray-300 hover:ring-azure-400 hover:bg-azure-50/50 group"
+          class="text-left p-4 rounded-xl transition-all duration-300 ring-1 ring-dashed ring-gray-300 hover:ring-azure-400 hover:bg-azure-50/50 group"
         >
           <div class="flex items-start justify-between gap-3">
-            <div class="min-w-0">
+            <div class="min-w-0 flex-1">
               <h4
-                class="font-semibold text-base leading-tight text-gray-900 group-hover:text-azure-700"
+                class="font-semibold text-base leading-tight text-gray-900 transition-colors duration-300 group-hover:text-azure-700"
               >
                 Více projektů
               </h4>
@@ -221,7 +227,7 @@
             </div>
             <Icon
               icon="lucide:arrow-right"
-              class="w-4 h-4 mt-0.5 shrink-0 text-gray-400 group-hover:text-azure-600 transition-colors"
+              class="w-5 h-5 mt-0.5 shrink-0 text-gray-400 transition-all duration-300 group-hover:text-azure-600 group-hover:translate-x-1"
             />
           </div>
         </a>

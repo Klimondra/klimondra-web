@@ -80,8 +80,8 @@
       </p>
     </div>
     <div class="flex flex-col sm:flex-row gap-4 mt-3 z-0">
-      <Button href="/o-mne" variant="primary">Zjistit více</Button>
-      <Button href="/kontakt" variant="secondary">Spojit se</Button>
+      <Button href="/o-mne" variant="light" size="lg">Zjistit více</Button>
+      <Button href="/kontakt" variant="outline" size="lg">Spojit se</Button>
     </div>
     <div
       bind:this={photosContainer}

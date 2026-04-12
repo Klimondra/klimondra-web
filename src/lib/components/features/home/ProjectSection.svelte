@@ -1,6 +1,7 @@
 <script lang="ts">
   import Section from "$lib/components/ui/Section.svelte";
   import SectionTitle from "$lib/components/ui/SectionTitle.svelte";
+  import Button from "$lib/components/ui/Button.svelte";
   import { projects } from "$lib/data/projects";
   import { technologies } from "$lib/data/technologies";
   import Icon from "@iconify/svelte";
@@ -150,23 +151,25 @@
         </div>
 
         <div class="hidden lg:block shrink-0">
-          <a
+          <Button
             href={`/projects/${activeProject.slug}`}
-            class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium bg-azure-500 text-white hover:bg-azure-600 transition-all shadow-sm hover:shadow whitespace-nowrap"
+            variant="accent"
+            size="sm"
           >
             Zjistit více
-            <Icon icon="lucide:arrow-right" class="w-4 h-4" />
-          </a>
+            <Icon icon="lucide:arrow-right" class="w-5 h-5" />
+          </Button>
         </div>
 
-        <div class="lg:hidden">
-          <a
+        <div class="lg:hidden mt-2">
+          <Button
             href={`/projects/${activeProject.slug}`}
-            class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium bg-azure-500 text-white hover:bg-azure-600 transition-all shadow-sm hover:shadow"
+            variant="accent"
+            size="sm"
           >
             Zjistit více
-            <Icon icon="lucide:arrow-right" class="w-4 h-4" />
-          </a>
+            <Icon icon="lucide:arrow-right" class="w-5 h-5" />
+          </Button>
         </div>
       </div>
     </div>

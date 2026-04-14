@@ -28,7 +28,7 @@
                 >
               </a>
               <p class="text-sm text-white/75 max-w-md leading-relaxed">
-                Pojďme společně postavit rychlý, moderní a udržovatelný web.
+                Tvořím digitální řešení a neustále zkouším nové věci.
               </p>
             </div>
 
@@ -90,7 +90,7 @@
               Vytvořil Ondřej Klíma v roce 2026. Všechna práva vyhrazena.
             </div>
             <div class="text-xs text-white/60">
-              Web nevyužívá žádné trackovací cookies ani nic podobného.
+              Web nevyužívá žádné trackovací technologie.
             </div>
           </div>
         </div>

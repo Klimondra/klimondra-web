@@ -45,7 +45,7 @@
     >
       <h3 class="text-xl font-semibold text-black">Najdete mě na sítích</h3>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {#each socialLinks.filter((l) => l.showInAbout) as link}
+        {#each socialLinks.filter((l) => l.showInAbout) as link (link.platformName)}
           <a
             href={link.url}
             target="_blank"
@@ -60,16 +60,14 @@
               </div>
               <span class="font-medium text-gray-900">{link.platformName}</span>
             </div>
-            <Icon 
-              icon="lucide:arrow-up-right" 
-              class="w-5 h-5 text-gray-400 group-hover:text-azure-600 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 shrink-0" 
+            <Icon
+              icon="lucide:arrow-up-right"
+              class="w-5 h-5 text-gray-400 group-hover:text-azure-600 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 shrink-0"
             />
           </a>
         {/each}
       </div>
     </article>
-
-
 
     <div
       class="sm:col-span-2 lg:col-span-3 lg:row-span-2 lg:col-start-5 lg:row-start-1 flex flex-col rounded-3xl border border-gray-200 overflow-hidden h-full"
@@ -78,26 +76,33 @@
         <span class="text-gray-500 text-sm font-mono">GET /api/v1/me</span>
       </div>
       <div
-        class="flex-1 p-6 font-mono text-sm leading-relaxed text-white bg-azure-950"
+        class="flex-1 p-6 font-mono text-sm leading-relaxed text-white bg-azure-950 flex flex-col"
       >
-        <pre>
-&lbrace;
-  <span class="text-yellow-400">"name"</span>: <span class="text-green-400"
-            >"Ondřej Klíma"</span
-          >,
-  <span class="text-yellow-400">"nickname"</span>: <span class="text-green-400"
-            >"Klimondra"</span
-          >,
-  <span class="text-yellow-400">"age"</span>: <span class="text-blue-400"
-            >{age}</span
-          >,
-  <span class="text-yellow-400">"skills"</span>: [
-    <span class="text-green-400">"UI/UX design"</span>,
-    <span class="text-green-400">"Clean Code"</span>,
-    <span class="text-green-400">"Animations"</span>
-  ]
-&rbrace;
-</pre>
+        <div>&lbrace;</div>
+        <div class="pl-4 ml-4 -indent-4 wrap-break-word">
+          <span class="text-yellow-400">"name"</span>:
+          <span class="text-green-400">"Ondřej Klíma"</span>,
+        </div>
+        <div class="pl-4 ml-4 -indent-4 wrap-break-word">
+          <span class="text-yellow-400">"nickname"</span>:
+          <span class="text-green-400">"Klimondra"</span>,
+        </div>
+        <div class="pl-4 ml-4 -indent-4 wrap-break-word">
+          <span class="text-yellow-400">"age"</span>:
+          <span class="text-blue-400">{age}</span>,
+        </div>
+        <div class="pl-4 ml-4 -indent-4 wrap-break-word">
+          <span class="text-yellow-400">"languages"</span>: [<span
+            class="text-green-400">"cs-CZ"</span
+          >, <span class="text-green-400">"en-US"</span>,
+          <span class="text-green-400">"TypeScript"</span>,
+          <span class="text-green-400">"C#"</span>],
+        </div>
+        <div class="pl-4 ml-4 -indent-4 wrap-break-word">
+          <span class="text-yellow-400">"status"</span>:
+          <span class="text-green-400">"Hlavou v cloudu ☁️"</span>
+        </div>
+        <div>&rbrace;</div>
       </div>
     </div>
   </div>

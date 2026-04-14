@@ -1,6 +1,7 @@
 <script lang="ts">
   import Button from "$lib/components/ui/Button.svelte";
   import Section from "$lib/components/ui/Section.svelte";
+  import Icon from "@iconify/svelte";
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import { onMount } from "svelte";
@@ -76,12 +77,25 @@
       <p
         class="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-neutral-100 tracking-wide text-center"
       >
-        Neustále se učím a zkouším nové věci v programování
+        Neustále se učím a zkouším nové věci.
       </p>
     </div>
-    <div class="flex flex-col sm:flex-row gap-4 mt-3 z-0">
-      <Button href="/o-mne" variant="light" size="lg">Zjistit více</Button>
-      <Button href="/kontakt" variant="outline" size="lg">Spojit se</Button>
+    <div
+      class="flex flex-col sm:flex-row gap-4 mt-3 z-0 w-full sm:w-auto px-4 sm:px-0"
+    >
+      <Button href="/o-mne" variant="light" size="lg" class="w-full sm:w-auto">
+        Zjistit více
+        <Icon
+          icon="lucide:arrow-right"
+          class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 opacity-70"
+        />
+      </Button>
+      <Button
+        href="/kontakt"
+        variant="outline"
+        size="lg"
+        class="w-full sm:w-auto">Spojit se</Button
+      >
     </div>
     <div
       bind:this={photosContainer}

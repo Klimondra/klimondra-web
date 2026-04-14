@@ -154,21 +154,22 @@
           <Button
             href={`/projects/${activeProject.slug}`}
             variant="accent"
-            size="sm"
+            size="md"
           >
             Zjistit více
-            <Icon icon="lucide:arrow-right" class="w-5 h-5" />
+            <Icon icon="lucide:arrow-right" class="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-1" />
           </Button>
         </div>
 
-        <div class="lg:hidden mt-2">
+        <div class="lg:hidden mt-2 flex">
           <Button
             href={`/projects/${activeProject.slug}`}
             variant="accent"
-            size="sm"
+            size="md"
+            class="w-full sm:w-auto"
           >
             Zjistit více
-            <Icon icon="lucide:arrow-right" class="w-5 h-5" />
+            <Icon icon="lucide:arrow-right" class="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-1" />
           </Button>
         </div>
       </div>

@@ -6,14 +6,14 @@ export interface NavigationItem {
 export const navigationItems: NavigationItem[] = [
 	{
 		label: "O mně",
-		href: "/about",
+		href: "#o-mne",
 	},
 	{
 		label: "Projekty",
-		href: "/projects",
+		href: "#projekty",
 	},
 	{
 		label: "Kontakt",
-		href: "/contact",
+		href: "#kontakt",
 	},
 ];

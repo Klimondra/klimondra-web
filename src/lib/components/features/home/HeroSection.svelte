@@ -83,7 +83,7 @@
     <div
       class="flex flex-col sm:flex-row gap-4 mt-3 z-0 w-full sm:w-auto px-4 sm:px-0"
     >
-      <Button href="/o-mne" variant="light" size="lg" class="w-full sm:w-auto">
+      <Button href="#o-mne" variant="light" size="lg" class="w-full sm:w-auto">
         Zjistit více
         <Icon
           icon="lucide:arrow-right"
@@ -91,7 +91,7 @@
         />
       </Button>
       <Button
-        href="/kontakt"
+        href="#kontakt"
         variant="outline"
         size="lg"
         class="w-full sm:w-auto">Spojit se</Button

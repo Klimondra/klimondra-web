@@ -5,7 +5,7 @@
   import { socialLinks } from "$lib/data/socialLinks";
 </script>
 
-<footer class="w-full">
+<footer id="kontakt" class="w-full">
   <div
     class="w-full max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-14 flex flex-col gap-10"
   >

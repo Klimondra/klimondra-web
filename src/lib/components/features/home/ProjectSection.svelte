@@ -45,7 +45,7 @@
   const activeProject = $derived(projects[activeIndex]);
 </script>
 
-<Section class="flex flex-col gap-6 lg:gap-10">
+<Section id="projekty" class="flex flex-col gap-6 lg:gap-10">
   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4">
     <SectionTitle title="Vybrané projekty" />
     <div class="flex gap-2">
@@ -151,6 +151,7 @@
         </div>
 
         <div class="hidden lg:block shrink-0">
+          <!-- TODO: Komentované tlačítko Zjistit více - zatím neexistuje podstránka
           <Button
             href={`/projects/${activeProject.slug}`}
             variant="accent"
@@ -159,9 +160,11 @@
             Zjistit více
             <Icon icon="lucide:arrow-right" class="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-1" />
           </Button>
+          -->
         </div>
 
         <div class="lg:hidden mt-2 flex">
+          <!-- TODO: Komentované tlačítko Zjistit více - zatím neexistuje podstránka
           <Button
             href={`/projects/${activeProject.slug}`}
             variant="accent"
@@ -171,6 +174,7 @@
             Zjistit více
             <Icon icon="lucide:arrow-right" class="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-1" />
           </Button>
+          -->
         </div>
       </div>
     </div>
@@ -211,6 +215,7 @@
             </div>
           </button>
         {/each}
+        <!-- TODO: Komentovaný odkaz Více projektů - zatím neexistuje podstránka
         <a
           href="/projects"
           class="text-left p-4 rounded-xl transition-all duration-300 ring-1 ring-dashed ring-gray-300 hover:ring-azure-400 hover:bg-azure-50/50 group"
@@ -232,6 +237,7 @@
             />
           </div>
         </a>
+        -->
       </div>
     </div>
   </div>

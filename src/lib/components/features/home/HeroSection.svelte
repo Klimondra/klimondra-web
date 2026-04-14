@@ -2,7 +2,6 @@
   import Button from "$lib/components/ui/Button.svelte";
   import Section from "$lib/components/ui/Section.svelte";
   import Icon from "@iconify/svelte";
-  import { gsap } from "gsap";
   import { onMount } from "svelte";
   import { projects } from "$lib/data/projects";
 
@@ -13,12 +12,13 @@
   let photosContainer: HTMLDivElement;
 
   onMount(() => {
-    let ctx: gsap.Context;
+    let ctx: any;
 
     (async () => {
-      const ScrollTriggerPkg = await import("gsap/ScrollTrigger");
-      const { ScrollTrigger } = ScrollTriggerPkg;
+      const gsapModule = await import("gsap");
+      const ScrollTrigger = (await import("gsap/ScrollTrigger")).default;
 
+      const gsap = gsapModule.gsap;
       gsap.registerPlugin(ScrollTrigger);
 
       ctx = gsap.context(() => {

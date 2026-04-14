@@ -3,11 +3,8 @@
   import Section from "$lib/components/ui/Section.svelte";
   import Icon from "@iconify/svelte";
   import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
   import { onMount } from "svelte";
   import { projects } from "$lib/data/projects";
-
-  gsap.registerPlugin(ScrollTrigger);
 
   const heroProjects = projects.filter((project) => project.visibleInHero);
 
@@ -16,46 +13,55 @@
   let photosContainer: HTMLDivElement;
 
   onMount(() => {
-    let ctx = gsap.context(() => {
-      // Full section animation
-      gsap.fromTo(
-        sectionContainer,
-        {
-          autoAlpha: 0,
-          y: 100,
-          filter: "blur(12px)",
-        },
-        {
+    let ctx: gsap.Context;
+
+    (async () => {
+      const ScrollTriggerPkg = await import("gsap/ScrollTrigger");
+      const { ScrollTrigger } = ScrollTriggerPkg;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      ctx = gsap.context(() => {
+        gsap.fromTo(
+          sectionContainer,
+          {
+            autoAlpha: 0,
+            y: 100,
+            filter: "blur(12px)",
+          },
+          {
+            scrollTrigger: {
+              start: "top 100%",
+              toggleActions: "play none none reverse",
+            },
+            duration: 1.5,
+            autoAlpha: 1,
+            filter: "blur(0px)",
+            y: 0,
+            ease: "power3.out",
+          },
+        );
+
+        gsap.from(".animated-hero-image", {
           scrollTrigger: {
+            trigger: photosContainer,
             start: "top 100%",
             toggleActions: "play none none reverse",
           },
-          duration: 1.5,
-          autoAlpha: 1,
-          filter: "blur(0px)",
-          y: 0,
+          duration: 1,
+          delay: 1.5,
+          opacity: 0,
+          y: 100,
           ease: "power3.out",
-        },
-      );
-
-      // Animate hero images with blur effect
-      gsap.from(".animated-hero-image", {
-        scrollTrigger: {
-          trigger: photosContainer,
-          start: "top 100%",
-          toggleActions: "play none none reverse",
-        },
-        duration: 1,
-        delay: 1.5,
-        opacity: 0,
-        y: 100,
-        ease: "power3.out",
-        stagger: 0.2,
-        filter: "blur(8px)",
+          stagger: 0.2,
+          filter: "blur(8px)",
+        });
       });
-    });
+    })();
 
-    return () => ctx.revert();
+    return () => {
+      ctx?.revert();
+    };
   });
 </script>
 

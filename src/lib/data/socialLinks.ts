@@ -11,7 +11,7 @@ export const socialLinks: SocialLink[] = [
 	{
 		iconId: "lucide:mail",
 		platformName: "Email",
-		url: "mailto:hello@example.com",
+		url: "mailto:ahoj@klimondra.eu",
 		ctaText: "Napište mi",
 		showInFooter: true,
 		showInAbout: false,
@@ -19,7 +19,7 @@ export const socialLinks: SocialLink[] = [
 	{
 		iconId: "simple-icons:linkedin",
 		platformName: "LinkedIn",
-		url: "https://example.com/linkedin",
+		url: "https://www.linkedin.com/in/ond%C5%99ej-kl%C3%ADma/",
 		ctaText: "Spojme se",
 		showInFooter: true,
 		showInAbout: true,
@@ -27,7 +27,7 @@ export const socialLinks: SocialLink[] = [
 	{
 		iconId: "simple-icons:github",
 		platformName: "GitHub",
-		url: "https://example.com/github",
+		url: "https://github.com/Klimondra",
 		ctaText: "Mrkněte na kód",
 		showInFooter: true,
 		showInAbout: true,
@@ -35,7 +35,7 @@ export const socialLinks: SocialLink[] = [
 	{
 		iconId: "simple-icons:instagram",
 		platformName: "Instagram",
-		url: "https://example.com/instagram",
+		url: "https://www.instagram.com/klimondra/",
 		ctaText: "Sledujte mě",
 		showInFooter: true,
 		showInAbout: true,
@@ -43,7 +43,7 @@ export const socialLinks: SocialLink[] = [
 	{
 		iconId: "simple-icons:discord",
 		platformName: "Discord",
-		url: "https://example.com/discord",
+		url: "https://discordapp.com/users/821336004643520512",
 		ctaText: "Napište na Discord",
 		showInFooter: true,
 		showInAbout: false,

@@ -19,7 +19,7 @@ export const socialLinks: SocialLink[] = [
 	{
 		iconId: "simple-icons:linkedin",
 		platformName: "LinkedIn",
-		url: "https://www.linkedin.com/in/ond%C5%99ej-kl%C3%ADma/",
+		url: "https://www.linkedin.com/in/ondrej-klima/",
 		ctaText: "Spojme se",
 		showInFooter: true,
 		showInAbout: true,
